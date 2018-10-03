@@ -1,0 +1,18 @@
+% ./appendices/image-processing/modulation-transfer-function/analytical-methods/region-of-interest.tex
+% ============================================================================ %
+\documentclass[../../../../main.tex]{subfiles}
+\begin{document}%
+% ============================================================================ %
+    \subsubsection{Region of Interest}%
+    \label{app:image-processing:modulation-transfer-function:analytical-methods:region-of-interest}%
+    % ======================================================================== %
+    The user specified \gls{roi} captures an area that roughly splits the edge profile between open beam and attenuated sections.
+    To preserve the fidelity of the calculation, this region should be exclusive of image artifacts or sensor dead zones (\Xreffigure*{mtf-roi}).
+    The \gls{roi} is cropped to the specified area (\Xmath{m\times n}), reducing the data size and accelerating the calculation processing time. 
+    The smaller image area (\Xreffigure*{mtf-cropped}) more clearly depicts the edge profile angle.
+    Increasing the data index, perpendicular to the edge profile, benefits the analytical process without contaminating the data.
+    As a smoothing algorithm, interpolation prevents artificial edge sharpening as seen in the \Xmath{10\times} gain image (\Xmath{m\times n^{*}}) shown in \Xreffigure{mtf-cropped:c} and \Xreffigure{mtf-cropped:d}.
+    The increased sampling rate benefits the subsequent alignment and differentiation steps.
+    Furthermore, the extra data points will not change the overall shape of the final \gls{mtf} curve but will provide more points to accurately estimate the \SI{10}{\percent} threshold.
+% ============================================================================ %
+\end{document}%

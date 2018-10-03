@@ -1,0 +1,59 @@
+% ./tables/default.tex
+% ============================================================================ %
+\documentclass[../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \Xtable%    
+    \begin{table}[p]%
+    % ======================================================================== %
+        \caption%
+            [\Glstext{pcb} wet etching process]%
+            {\Gls{pcb} wet etching process}%
+        \label{tbl:pcb-etch-process}%
+        % ==================================================================== %
+        \begin{tabu}{ c p{5.00in} }%
+        % ==================================================================== %
+            \toprule%            
+            \centering\textbf{Step} &%
+            \centering\textbf{Action}\\%
+            \toprule%
+            % ================================================================ %
+            1 & \textit{Add solution}\\%
+            $(a)$ & Measure \SI{40}{\milli\liter} of \SI{3}{\percent} \gls{h2o2} in graduated cylinder.\\%
+            $(b)$ & Pour contents of graduated cylinder into large Pyrex dish.\\%
+            $(c)$ & Rinse graduated cylinder with \gls{di-water} and dispose in acid waste.\\%
+            \midrule%
+            % ================================================================ %
+            2 & \textit{Add acid}\\%
+            $(a)$ & Measure \SI{20}{\milli\liter} of \SI{37}{\percent} \gls{hcl} in graduated cylinder.\\%
+            $(b)$ & Pour contents of graduated cylinder into large Pyrex dish.\\%
+            $(c)$ & Rinse graduated cylinder with \gls{di-water} and dispose rinse solution in acid waste.\\%
+            \midrule%
+            % ================================================================ %
+            3 & \textit{Charge solution}\\%
+            $(a)$ & Prepare a section of thin \ce{Cu} foil of roughly \SI{1.0}{\centi\meter\squared} area.\\%
+            $(b)$ & Add \ce{Cu} test strip to solution to charge etchant with \ce{Cu} ions.\\%
+            $(c)$ & Monitor the dissolution rate and add \SI{35}{\percent} \gls{h2o2} with dropper to adjust rate.\\%
+            \midrule%
+            % ================================================================ %
+            4 & Repeat \textbf{Step 3} until the dissolution rate is controllable.\\%
+            \midrule%
+            % ================================================================ %
+            5 & Dip \gls{pcb} in solution using ceramic tweezers.\\%
+            \midrule%
+            % ================================================================ %
+            6 & Lightly agitate board until edge of traces are clearly distinguished.\\%
+            \midrule%
+            % ================================================================ %
+            7 & Rinse \gls{pcb} with \gls{di-water} until board is clean and etching has stopped.\\%
+            \midrule%
+            % ================================================================ %
+            8 & Dispose of etching solution in acid waste bottle. (Alternatively, etching solution may be stored in clean, labeled bottle for later use.)\\%
+            % ================================================================ %
+            \bottomrule%            
+        % ==================================================================== %
+        \end{tabu}%
+    % ======================================================================== %
+    \end{table}%
+% ============================================================================ %
+\end{document}%

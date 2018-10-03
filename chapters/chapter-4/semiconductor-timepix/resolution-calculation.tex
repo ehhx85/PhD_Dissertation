@@ -1,0 +1,38 @@
+% ./chapters/chapter-4/semiconductor-timepix/resolution-calculation.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \subsection{Resolution Calculation}%
+    \label{sec:chapter-4:semiconductor-timepix:resolution-calculation}%
+    % ======================================================================== %    
+    In accordance with neutron imaging resolution experiments, the \gls{siemens-star} was imaged using the \gls{lisepix}, shown in \Xreffigure*{timepix-psi-mask}.
+    After confirming a suitable exposure window using the neutron flux at the largest aperture, the beam was reconfigured with the \SI{8.2}{\milli\meter} aperture to enhance resolution.    
+    The configuration provided a larger, \Xmath{L/D=\num{732}}, with a target distance measured at, \Xmath{l=\SI{7}{\milli\meter}}.
+    The \gls{siemens-star} image was captured across \SI{400}{\frames} at \SI{1}{\second} exposures, with the larger frame count providing additional statistics to overcome the now heavily obstructed beam.
+    The \SI{200}{\micro\meter} indication ring is circumscribed across the bottom and left side of the sensor, with clearly separated line pairs on the outside of the ring, and some line pairs extending inwards towards the \SI{100}{\micro\meter} ring.
+    Shown in the center of the imaging area, the \SI{100}{\micro\meter} radius marker is partially visible ($\sim$\SI{75}{\percent}) while the innermost \SI{50}{\micro\meter} ring is identifiable ($\sim$\SI{25}{\percent}).
+    It should also be noted, the darker \gls{roi} in the lower left corner provides approximately equivalent performance in the cleaned and normalized output image, suggesting the isotopic composition and electronic performance remains consistent across the sensor.
+    As a preliminary qualitative assessment, this experiment indicates the spatial resolution of the system is at a minimum equivalent or better than \SI{200}{\micro\meter}, even with sub-optimized fabrication \cite{Herrera_2018}.
+    % ======================================================================== %    
+    \par%
+    % ======================================================================== %    
+    A \gls{knife-edge} experiment provided data for use with the \gls{mtf} technique to quantitatively evaluate the operational spatial resolution.
+    The experiment follows the same principals as described in \Xrefsection{chapter-3:imaging-techniques:mtf-resolution}, creating an abrupt change in the beam intensity to determine the edge resolution across the full contrast, from open beam to fully attenuated (dark field) intensity.
+    Two long slits, shown in \Xreffigure*{timepix-slits}, provided the sharp edge at widths of \SIlist[list-units={repeat}]{500; 750}{\micro\meter}, captured using \SI{50}{\frames} at \SI{1}{\second} exposures.
+    Extending past the width of the detector, the slits were milled into a \SI{1/16}{\inch} thick aluminum sheet, treated in a borated coating to heavily attenuate the cold neutron beam.
+    The aluminum plate was installed at distance of \Xmath{l=\SI{10}{\milli\meter}} from the detector.
+    The \SI{500}{\micro\meter} wide slit (\Xreffigure{timepix-slits:a}) showed uniform open beam intensity across the horizontal direction, broken in the middle corresponding to the dead pixel region.
+    Alternatively, the \SI{750}{\micro\meter} wide slit (\Xreffigure{timepix-slits:b}) ran the entire length of the sensor area, showing a slight drop in intensity in the bottom corner as seen in the previous figures.
+    Both slits were imaged at a slight angle, rotated approximately \SI{2}{\degree} counterclockwise from horizontal, to overcome the pixel size limit in the \gls{mtf} analysis \cite{Herrera_2018}.
+    % ======================================================================== %    
+    \par%
+    % ======================================================================== %   
+    For the \gls{mtf} analysis, the \SI{750}{\micro\meter} slit was used, offering a continuous edge profile.
+    Shown in \Xreffigure*{timepix-mtf}, the edge profile consisted of a \gls{roi} \SI{80}{\pixels} long by \SI{25}{\pixels} wide across the edge transition, outlined in yellow.
+    The averaged \gls{esf} and \gls{lsf} are also shown (\Xreffigures{timepix-mtf:c}{timepix-mtf:d}), processed following the methodology described in \Xrefappendix{image-processing:modulation-transfer-function}.
+    Applying a \gls{fft} to the \gls{lsf} produced the final \gls{mtf} curve, providing a spatial resolution of \SI{14.7}{\linepairs}, assessed at the \SI{10}{\percent} cutoff limit.
+    Converting this spatial resolution from the frequency domain corresponds to an experimental material resolution limit of approximately \SI{34}{\micro\meter}, around \num{2/3} of the \SI{55}{\micro\meter} pixel pitch \cite{Herrera_2018}.
+    For comparison, a spatial resolution of \SI{111}{\micro\meter} was found using the \gls{fwhm}, shown in \Xreffigure*{fwhm}.
+% ============================================================================ %
+\end{document}%

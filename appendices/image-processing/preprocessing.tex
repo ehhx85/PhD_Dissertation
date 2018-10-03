@@ -1,0 +1,78 @@
+% ./appendices/image-processing/preprocessing.tex
+% ============================================================================ %
+\documentclass[../../main.tex]{subfiles}
+\begin{document}%
+% ============================================================================ %
+    \section{Neutron Image Pre-Processing}%
+    \label{app:image-processing:preprocessing}%
+    % ======================================================================== %
+    Typically, neutron images start with 3 sets of data: the dark field, the open beam or white field, and the object image.
+    Each data set is composed of multiple frames, captured using identical settings, to create an average image.
+    % ======================================================================== %
+    \subsubsection{Digital Imaging}%
+    % ======================================================================== %
+    The pre-processing sequence is used to accumulate the individual, raw acquisition files into a compiled image, representative of the data set.
+    This processing may be completed using a range of image analysis tools, however the size and number of images are best accommodated by a well planned processing algorithm.
+    A standard tool in the digital image community, \gls{imagej} features a wide range of prepackaged functions and algorithms.
+    For larger jobs, or multiple experimental setups, the practical approach incorporates matrix based computing environments such as \gls{matlab} or open source scripting languages such as \gls{python}.
+    The specific \gls{python} code to process the \gls{lisepix} binary data files has been included in \Xrefsupplement*{timepix-image-preprocessor}.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    Using the programmatic software approach can render a set of final images from hundreds or thousands of input frames without the need for manual user intervention.
+    This strategy helps to minimize user input, code authoring redundancy and user error in large data set analysis.
+    A digital image is defined by an \Xmath{M\times N} array of intensity values, given in \Xrefequation{image-matrix-function} \cite{book:Gonzalez_2007}.
+    % ======================================================================== %
+    \Xequationfile{image-matrix-function}%
+    % ======================================================================== %
+    The functional representation \Xvariable{f(x,y)} describes the intensity at each pixel location given by the indices \Xvariable{(x,y)}[].
+    The traditional matrix form may also be used and serves as an equivalent representation.
+    Using the definition \Xvariable{a_{ij}=f(x=i,y=j)=f(i,j)} the matrix takes the form given in \Xrefequation{image-matrix-traditional} \cite{book:Gonzalez_2007}.
+    % ======================================================================== %
+    \Xequationfile{image-matrix-traditional}%
+    % ======================================================================== %
+    \subsubsection{Dark Field}%
+    % ======================================================================== %
+    The dark field image captures the system response, fully powered and biased, without the radiation source or beam.
+    This measurement will capture the electronic baseline, defined by the leakage current, also known as the dark current, along with any dead (non-responsive) or hot (fully saturated) channels.
+    The dark field also serves as the initial operational check, ensuring the cabling, and readout electronics have been properly installed at the experiment site.
+    If the device was damage, a cable is shorted, or the operational temperatures of the system are outside the normal parameters, the dark field measurement will show a non-radiation based response, indicating system malfunction.
+    % ======================================================================== %
+    \subsubsection{Open Beam}%
+    % ======================================================================== %
+    The open beam image, also referred to as the white field, shows the characteristic response of the imaging system to a given radiation field.
+    The name white field describes the image produced from capturing an unobstructed radiation source, returning a value approaching the saturation limit for all functioning pixels.
+    Depending on the intensity of the radiation source, the acquisition is tailored to collect data that spans a significant portion of the dynamic system intensity range without over saturating the sensor.
+    The open beam image is a convolution of the non-uniformities in the radiation beam and each sensor channel. 
+    As a neutron beam is moderated, redirected and filtered to a desired energy range, periodic banding will occur perpendicular to the beam.
+    Furthermore, the output in a given channel to a detection event may vary across channels as a result of minor inhomogeneities during manufacturing.
+    The subsequent acquisitions for the object image should ideally be repeated using identical operational settings, counting time, and averaging frames.
+    % ======================================================================== %
+    \subsubsection{Object Image}%
+    % ======================================================================== %
+    The object image is the last data set to be collected.
+    The imaging target object should be a radiation absorber, removing a significant portion of the radiation flux to create a discernible change from the open beam response (\gls{latin:ie} contrast).
+    While the object may be any article under investigation, it helps if the material has a uniform composition, or posses constituents with significantly varying levels of attenuation to enhance image contrast.
+    % ======================================================================== %
+    \subsubsection{Process}%
+    % ======================================================================== %
+    The first pre-processing step averages each frame in a sequence into a single raw image file.
+    For the most basic imaging experiment with a fixed acquisition time (or temporally normalized frames), this process reduces \Xvariable[]{K_{exp}=K_{DF}+K_{OB}+K_{I}}[] frames into 3 mean images corresponding to the dark field, open beam, and object image.
+    Each mean image \Xvariable{\bar{f}(x,y)} is created following \Xrefequation{image-matrix-average} from \Xvariable[]{K}[] frames in the set.
+    % ======================================================================== %
+    \Xequationfile{image-matrix-average}%
+    % ======================================================================== %    
+    The dark field typically requires only a few frames \Xvariable{K_{DF}} to capture the radiation independent electronic signal.
+    The number of open beam frames \Xvariable{K_{OB}} will depend on the radiation source strength as well as the sensitivity of the detection system to the given radiation spectrum.
+    As the experimental variable, the object image will generally require the largest number of frames \Xvariable{K_{I}} to ensure sufficient contrast between the open beam and attenuated signal from the object.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    After averaging, the dark field is subtracted from both the open beam and the object images.
+    This effectively reduces the image baseline intensity to zero, facilitating the normalization process.
+    In most cases, the dark field will respond as a uniform gray value, however, dead and hot pixels will be resolved by this subtractive procedure.
+    The baseline corrected object image is divided by the baseline corrected open beam image to produce the normalized experimental image.
+    The resultant image is scaled between zero and one, with zero indicating non-beam areas and one corresponding to full beam view.
+    By normalizing the object image to the open beam, any inconsistencies in the neutron flux should be removed from the final image.
+% ============================================================================ %
+\end{document}%

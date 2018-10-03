@@ -1,0 +1,27 @@
+% ./chapters/chapter-3/early-designs/basic-readout.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}
+\begin{document}%
+% ============================================================================ %
+    \subsection{Basic Readout System}%
+    \label{sec:chapter-3:early-designs:basic-readout}%
+    % ======================================================================== %
+    The readout electronics provide the bias, collect the charge induced from the radiation event, process the charge into a current or voltage pulse, and generate a conditioned output for further signal processing.
+    A \gls{csp} handles the signal processing and must be carefully tailored to the charge produced from the radiation sensor.
+    The following three \glspl{csp} were tested with \gls{lise}: the \gls{caen} A1422, the \gls{cr110}, and the \gls{amptek} A250CF CoolFet featuring the optional Peltier cooled input \gls{fet}.
+    The \gls{cr110} (shown in \Xreffigure{cr110-pinout:a}) was selected for multiple reasons including: smaller size, circuit simplicity and low cost ($\sim$\SI{50}[\$]{}).
+    The basic function of the \gls{preamp} is to rapidly store the total charge created by the detector, as it generates a current pulse.
+    The feedback capacitor and resistor \Xvariable{C_f}[] and \Xvariable[]{R_f}[] respectively (see \Xreffigure*{cr110-pinout}), function as an \gls{ac} op-amp integrator with \gls{dc} gain control, creating a slow discharge, at \Xmath{V_{out}}, in the form of a tail pulse signal.
+    The rise time of the output signal is rapid and typically on the same time scale as the detector charge collection.
+    Ideally, the rise time of the \gls{preamp} should be roughly equivalent to the pulse width of the current pulse from the detector.
+    The decay time is much longer to ensure the total charge from the detector is collected, allowing the \gls{preamp} to produce a voltage output proportional to the integrated charge.   
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    While the \gls{preamp} chip handles signal processing on the readout \gls{pcb}, the supporting power electronics provide \gls{high-voltage} bias to the detector via \gls{ac} coupling, as shown in \Xreffigure*{cr150-schematic}.
+    The use of \gls{ac} coupling isolates the \gls{dc} bias voltage from the \gls{preamp} while still permitting the superimposed \gls{ac} signal from the detection event to be passed to the \gls{preamp}.
+    The \gls{high-voltage} bias is cleaned via passive filters following a ladder design; very large resistors (\Xmath{R=\SI{10}{\mega\ohm}}) are connected in series with the bias and small capacitors (\Xmath{C=\SI{0.01}{\micro\farad}}) are connected in parallel to the ground after each resistor.
+    Regarding the interconnects, the \gls{high-voltage} bias is applied via \gls{shv}, permitting voltages exceeding \SI{500}{\volt}, while the output signal uses the more traditional \gls{bnc} (\SI{50}{\ohm}).
+    \Gls{low-voltage} (\Xmath{\pm\SI{12}{\volt}}) power supplies are used to drive the \gls{preamp} circuitry and connectors vary based on user or designer preference.
+% ============================================================================ %
+\end{document}%

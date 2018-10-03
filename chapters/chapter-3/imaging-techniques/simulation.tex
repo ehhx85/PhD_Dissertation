@@ -1,0 +1,36 @@
+% ./chapters/chapter-3/imaging-techniques/simulation.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}
+\begin{document}%
+% ============================================================================ %
+    \subsection{Simulation}%
+    \label{sec:chapter-3:imaging-techniques:simulation}%
+    % ======================================================================== %
+    During the construction of the single channel \gls{lise} neutron detector, the anticipated \gls{siemens-star} experiment using the \gls{lise16} was simulated using \gls{mcnp}. 
+    Because the experiment would require \gls{beamline} time at \gls{hfir} to obtain an appropriate neutron flux, the simulation served as a method to justify the experiment, inspect the pixel array geometry prior to fabrication, and create an idealized output image for reference. 
+    Compared against a photo of the \gls{siemens-star} on the left of \Xreffigure{psi-mask-sim-layout}, the right side depicts the experimental geometry.
+    The green array illustrates the sensor starting position while the red array represents the final scan position, with the black outline representing the swept area covered during the scan.
+    The blue lines, corresponding to spoke cutouts in the \ce{Gd} mask, extend into the swept area, with the outer two concentric rings (\SIlist{400; 500}{\micro\meter}) spanning the scan area.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    The pixel detector design reflected dimensions closer to the first iteration of the \gls{lise16}, using \SI{900}{\micro\meter} pixels.
+    For design simplicity, the pixels were simulated edge-to-edge, omitting inter pixel spacing and the surrounding guard ring necessary for real detector electronic operation.
+    A plane wave neutron source, positioned \SI{15}{\centi\meter} from the detector surface along the \Xmath{z}-axis, simulated the transport of \num{E9} neutrons at \SI{25}{\milli\electronvolt} for each position.
+    The detector was translated in the \Xmath{x} and \Xmath{y}-directions at \SI{50}{\micro\meter} steps, resulting in a total of \num{5329} individual simulations \cite{Herrera_2016}.
+    To generate the large number of input deck files, a single file using the starting geometry provided the template.
+    Reading this template into \gls{matlab}, a series of near identical files were created, modifying the detector geometry for each input deck, indexing the file name with the positional coordinates.
+    These simulations exploited the computational power of the Nuclear Engineering Department Cluster, batch processing the large file set \cite{website:NECluster}.
+    The output files were again processed in \gls{matlab}, first rendering 16 individual \gls{super-sampled} images for each channel, composed of a \num{73 x 73} array of \SI{50 x 50}{\micro\meter} virtual pixels, as described in \Xrefappendix{image-processing:super-sampling}.
+    Afterwards, the \gls{super-sampled} images were recombined, following the methods in \Xrefappendix{image-processing:mosaic-stitching}, to produce a single image of the \gls{siemens-star} \gls{super-sampling} experiment, shown in \Xreffigure{psi-mask-sim-lise}.
+    The simulated \gls{lise16} response confirmed the application of \gls{super-sampling} to achieve sub-pixel pitch resolution with a limited number of readout channels.
+    The line pairs are distinctly visible between the \SIlist{400;500}{\micro\meter} rings, indicating a resolution \Xmath{2.25\times} smaller than the \SI{900}{\micro\meter} pixel pitch.
+    As an idealized response, the dark field appears uniform after averaging the images together, while the radial markers exhibit smooth curvature across the \gls{fov}.
+    Furthermore, noticeable rounding occurs near the spoke to ring interface, deviating from the sharp geometry in the physical mask and the ideal edges created by the simulated mask.
+    Shown as the darkest red spots where the spokes perpendicularly meet the ring, these artifacts can be attributed to diffraction effects at the edge of the sharp attenuating feature.
+    The presence of these rounded features near the spoke/ring union is likely exacerbated by the use of \gls{super-sampling} with a large pixel, and should also appear to some degree in the physical experiments.
+    % ======================================================================== %
+    \Xfigurefile{psi-mask-sim-layout}%
+    \Xfigurefile{psi-mask-sim-lise}%
+% ============================================================================ %
+\end{document}%

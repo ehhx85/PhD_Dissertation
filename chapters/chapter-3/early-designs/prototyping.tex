@@ -1,0 +1,26 @@
+% ./chapters/chapter-3/early-designs/prototyping.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \subsection{Prototyping LISe Semiconductor Neutron Imager}%
+    \label{sec:chapter-3:early-designs:prototyping}%
+    % ======================================================================== %
+    A prototype \gls{preamp} was fabricated to study the process of designing and manufacturing custom \gls{pcb} electronics (see \Xreffigure*{preamplifier-pcb-1ch}).
+    The design was similar to the commercially available \gls{cr150} used to drive the \gls{cremat} \gls{preamp}.
+    The circuit was drafted in \gls{eagle}, a \gls{cad} software for circuit layouts and routing. 
+    A photomask was fabricated by using an inkjet printer to transfer the circuit design to a projector transparency sheet.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    The \gls{preamp} started as a single-sided \gls{fr4} board clad in \SI{1}{\ounce} of copper.
+    After coating the \gls{pcb} in photoresist, the pattern was transferred using positive photolithography (see \Xrefappendix{thin-film-processing:positive-photolithography}), creating an etch resistant coating over the circuit traces (\Xreffigure{preamplifier-pcb-1ch:a}).
+    A subsequent wet chemical etch (see \Xrefappendix{general-chemistry:pcb-etching}) removed the copper cladding from the \gls{pcb}, leaving only the finalized circuit traces (\Xreffigure{preamplifier-pcb-1ch:b}). 
+    The board was drilled to create vias for through-hole components and polyethylene coated posts were installed to provide air insulated mounting for noise reduction (\Xreffigure{preamplifier-pcb-1ch:c}).
+    Once the circuit components were solder to the \gls{pcb}, the board installed in an aluminum enclosure equipped with appropriate signal and power bulkhead connectors as shown in \Xreffigure*{preamplifier-pcb-1ch-assembled}.
+    The tight fitment of the board in the enclosure reduced the length of the interconnect wires to prevent signal loss and noise.
+    A chip socket sized to the \gls{cr110} allowed hot swapping in the event a chip was damaged or to test with other versions of \gls{cremat} \glspl{csp}.
+    The standard \gls{shv} and \gls{bnc} connectors were utilized for \gls{high-voltage} bias and signal output respectively, along with banana sockets to directly connect the module to a voltage controlled \gls{dc} power supply. 
+    In conjunction with the \gls{to} header detector module, these two components served as a proof of concept for the \gls{lise} pixel detector.
+% ============================================================================ %
+\end{document}%

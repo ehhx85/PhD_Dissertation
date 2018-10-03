@@ -1,0 +1,28 @@
+% ./chapters/chapter-4/semiconductor-16-channel/version-2.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \subsection{LISe Pixel Detector v2}%
+    \label{sec:chapter-4:semiconductor-16-channel:version-2}%
+    % ======================================================================== %
+    Having confirmed the functionality of the readout electronics and worked through debugging issues with the acquisition and control software, the primary focus in the second system iteration was the sensor.
+    After the first set of experiments, the sensor \gls{pcb} was removed from the imaging system and tested to determine the source of channel performance issues.
+    Using a combination of \gls{iv} curve tests to determine electrical response and visual inspection under the \gls{lm}, the sensor showed signs of electronic decoupling.
+    With an improved fabrication process, the sample was polished, stripping all previous metallization, and completely repackaged with a new sensor \gls{pcb} to facilitate wirebonding.
+    A combination of properly deposited contact metal and properly formed wirebonds ensured the mechanical stability of the electrical connections.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    The \gls{super-sampling} scan used \SI{125}{\micro\meter} steps across a \num{33x33} array generating a total of \num{1089} acquisition positions.
+    Each position consisted of a \SI{10}{\second} exposure, and an additional \SI{2}{\second} window for stage position adjustment, running for a total experiment time of \SI{3}{\hour}:\SI{37}{\minute}.
+    Covering a \SI{4x4}{\milli\meter} sweep area, the scan captured the two outermost radial marking rings, shown in \Xreffigure*{psi-mask-lise-semiconductor}.
+    The reconstructed neutron image was able to resolve line pairs at the \SIlist{500;400;300}{\micro\meter} line pair spacings.
+    At the \SI{300}{\micro\meter} limit, the technique provided a spatial resolution roughly \SI{55}{\percent} of the pixel size, corroborating the efficacy of the \gls{super-sampling} technique in achieving sub-pixel size resolution.
+    Furthermore, in this experiment, the rejuvenated sensor showed minimal performance degradation over the exposure period, with each channel consistently performing through the duration of the experiment.
+    It is hypothesized the performance degradation in the first iteration was incurred as a result of electrical decoupling from weak wirebonds, or delamination of pixels.
+    While all channels were able to generate an image signal, a few showed poorer performance than the others (see \Xreffigure{lise-16ch-mosaic}), possibly due to material defects, fabrication or a combination of the two.
+    At the neutron energies seen in \gls{cg1d}, the anticipated efficiency should have approached \SI{59}{\percent}, however the inefficiencies seen across the devices channels only measured between \SIrange{35}{55}{\percent}.
+    The performance deviation from the idealized value was again attributed to the poor hole charge collection with the sensor bulk, present across all channels \cite{Herrera_2016}.
+% ============================================================================ %
+\end{document}%

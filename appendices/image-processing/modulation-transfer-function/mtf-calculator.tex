@@ -1,0 +1,32 @@
+% ./appendices/image-processing/modulation-transfer-function/mtf-calculator.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}
+\begin{document}%
+% ============================================================================ %
+    \subsection{MTF Calculator}%
+    \label{app:image-processing:modulation-transfer-function:mtf-calculator}%
+    % ======================================================================== %
+    The \gls{mtf} calculator program (see \Xrefsupplement*{mtf-calculator}) comprises a series of \gls{matlab} scripts to process an image file, evaluating the edge resolution parameter.
+    The main script file is run from the root directory.
+    Function source files are stored in the ``/functions" subdirectory.
+    The raw images, saved in \gls{tiff} file format, are stored in the ``/inputs" subdirectory.
+    The individual raw images are pre-processed in an external image software such as \gls{imagej}.
+    All figure files generated from the script are saved in the ``/outputs" subdirectory, in \gls{png} format.
+    % ======================================================================== %
+    \subsubsection{main.m}%
+    % ======================================================================== %
+    This script serves as the user defined input file and the active run.
+    The calculator requires 3 input variables: the file name to select the image, the device pixel size for scaling the output plots, and the region of interest to crop the raw image.%
+    % ======================================================================== %
+    \Xcodefile[mtf-calculator]{main.m}[Matlab]%
+    % ======================================================================== %
+    \subsubsection{calculate\_mtf.m}%
+    % ======================================================================== %
+    This script is the primary function controlling the calculation.
+    The manipulated data exists in the scope of this function, with subfunctions being called to perform specific operations on the data.
+    After processing the data, all figures are sequentially generated at the end of the function.
+    The individual subfunctions have been included in \Xrefsupplement{mtf-calculator}, with their methods detailed in the previous \Xrefappendix{image-processing:modulation-transfer-function:analytical-methods}.%
+    % ======================================================================== %
+    \Xcodefile[mtf-calculator]{calculate_mtf.m}[Matlab]%
+% ============================================================================ %
+\end{document}%

@@ -1,0 +1,32 @@
+% ./chapters/chapter-3/imaging-techniques/contrast.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \subsection{Contrast}%
+    \label{sec:chapter-3:imaging-techniques:contrast}%
+    % ======================================================================== %
+    A key parameter for any imaging system, contrast has been redefined over the past two centuries.
+    In its simplest form, contrast relates the intensity difference of two objects in an image or \gls{fov}, giving rise to the concept of bright and dark regions. 
+    A basic definition of contrast \Xvariable{C} is shown in \Xrefequation{contrast-basic} where the brightest region has an intensity \Xvariable{I_\textrm{max}} and the darkest \Xvariable{I_\textrm{min}}[].
+    % ======================================================================== %
+    \Xequationfile{contrast-basic}%
+    % ======================================================================== %
+    An early definition of contrast was developed by \citeauthor*{book:Weber_1996}, who studied the physiology of the human eye and its ability to distinguish changes in sensory input. 
+    He found that the smallest discernible change from a baseline stimulus remained constant across the range of ocular sensitivity.    
+    Applying to scenarios where a small, luminous object of intensity\Xvariable{I_\textrm{max}} is present among a broad background of lower intensity \Xvariable{I_\textrm{min}} the Weber contrast uses a normalized intensity difference, shown in \Xrefequation{contrast-weber} \cite{book:Weber_1996}.
+    % ======================================================================== %
+    \Xequationfile{contrast-weber}%
+    % ======================================================================== %
+    In these types of images, a relatively uniform background produces an average intensity near one of the extremes, useful in applications such as astronomical images or on-screen text.
+    Alternatively, \citeauthor*{book:Michelson_1927} developed a contrast \Xvariable{C_m} for imaging periodic features using the minimum and maximum intensities \Xvariable{I_\textrm{min}}[] and \Xvariable[]{I_\textrm{max}} as described in \Xrefequation{contrast-michelson} \cite{book:Michelson_1927}.
+    % ======================================================================== %
+    \Xequationfile{contrast-michelson}%
+    % ======================================================================== %
+    The modulation based contrast proposed by \citeauthor*{book:Michelson_1927} applies to neutron imaging, where the noise is generated from a partially transparent target or mask obscuring the view of the open beam.
+    This definition of contrast is applied in the \glsreset{mtf}\gls{mtf} technique used to evaluate the spatial resolution limit for an imaging system \cite{book:Shih_2010}.
+    For less standard patterns and geometries, \citeauthor*{Peli_1990} described a \gls{rms} contrast method, relating the normalized gray level in a given pixel \Xvariable{x_i} to the average for the image \Xvariable{\bar{x}} shown in \Xrefequation{contrast-rms}, then applying advanced band-filtering routines to enhance feature visibility \cite{Peli_1990}.
+    % ======================================================================== %
+    \Xequationfile{contrast-rms}%
+% ============================================================================ %
+\end{document}%

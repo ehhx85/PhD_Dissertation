@@ -1,0 +1,31 @@
+% ./chapters/chapter-2/semiconductor-detectors/pulse-formation/neutrons.tex
+% ============================================================================ %
+\documentclass[../../../../main.tex]{subfiles}
+\begin{document}%
+% ============================================================================ %
+    \subsubsection{Neutron Interactions and Detection}%
+    \label{sec:chapter-2:semiconductor-detectors:pulse-formation:neutrons}%
+    % ======================================================================== %
+    Neutrons, like \glspl{gamma-ray}, are indirectly ionizing radiation, requiring a nuclear reaction to generate directly ionizing secondary particles.
+    Following the neutron interaction mechanisms described in \Xrefsection{chapter-2:radiation-detection:neutron-interactions}, an incident neutron will pass straight through the material until it encounters a nucleus. 
+    In a \gls{lise} detector, the neutron must find a \isotope[6]{Li} nucleus, shown in \Xreffigure*{semiconductor-detection-1}, to induce the desirable \gls{li6-neutron-alpha} reaction, described in \Xrefsection{chapter-2:radiation-detection:neutron-interactions:lithium-6}.
+    The reaction yields two daughter particles, a \gls{triton-particle} and an \gls{alpha-particle}, traveling in opposite directions through the sensor.
+    Following the previous description of charged particle interactions, these secondary particles will ionize atoms through the bulk.
+    Along the ion trajectory, electron-hole pairs will be generated, shown in \Xreffigure*{semiconductor-detection-2}.
+    An analysis described by Klein relates the kinetic energy of an ionizing radiation particle to the anticipated number of resultant electron-hole pairs produced in a target material \cite{Klein_1968}.
+    The quantum yield \Xvariable{Q} describing the number of electron-hole pairs per charged particle is proportional to the energy lost by the ionizing radiation particle \Xvariable{W} and the radiation-ionization energy \Xvariable{\epsilon} shown in \Xrefequation{charge-pair-production-1}.
+    % ======================================================================== %
+    \Xequationfile{charge-pair-production-1}%
+    % ======================================================================== %
+    For semiconductors with a bandgap \Xvariable{E_{g} \gtrapprox \SI{2}{\electronvolt}} the radiation-ionization energy can be approximated using the bandgap \Xvariable{\epsilon \approx 3 E_{g}}[].
+    Assuming an ionizing radiation particle stops within the bulk sensor, depositing its full kinetic energy, the total number of electron-hole pairs produced by the incident particle can be found from \Xrefequation{charge-pair-production-2}.
+    % ======================================================================== %
+    \Xequationfile{charge-pair-production-2}%
+    % ======================================================================== %
+    \citeauthor*{Klein_1968} noted the specific type of radiation does not directly impact this estimation, relying solely on the incident particle's kinetic energy.
+    Given the reaction \gls{q-value} of \SI{4.780}{\mega\electronvolt} and a semiconductor band gap of \Xvariable{E_{g}=\SI{2.85}{\electronvolt}} an incident neutron will produce roughly \num{5.6E5} electron-hole pairs \cite{Tupitsyn_2012}.
+    These charge carriers are driven to the metal electrodes by the internal electric field generated from the bias voltage, as seen in \Xreffigure*{semiconductor-detection-3}.
+    As the charge carriers approach the electrode of opposite polarity, an image charge is created on the thin metal film, generating the electrical pulse indicative of the neutron capture event.
+    This charge pulse is collected by the coupling capacitor as it enters the electronic readout circuit.
+% ============================================================================ %
+\end{document}%

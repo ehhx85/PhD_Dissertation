@@ -1,0 +1,31 @@
+% ./chapters/chapter-2/advanced-detectors/timepix-systems.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \subsection{Medipix / Timepix Coupled Systems}%
+    \label{sec:chapter-2:advanced-detectors:timepix-systems}%
+    % ======================================================================== %
+    \citeauthor*{Jakubek_2004} compared early high resolution neutron imaging systems, first utilizing the \gls{medipix1}, followed by the \gls{medipix2}, with a \SI{300}{\micro\meter} thick silicon wafer coated in a neutron sensitive converter layers \cite{Llopart_2003}.
+    They conducted studies at \gls{psi} with multiple neutron sensitive materials, as described in \Xrefsection{chapter-2:radiation-detection:neutron-sensitive-isotopes}, to determine which materials gave the best overall response with an \gls{asic} based system.
+    With the \gls{medipix2}, a \ce{^6LiF} powder conversion layer produced a spatial resolution of \SI{107}{\micro\meter}, measured using the \gls{fwhm} of the \gls{lsf}, captured with a \SI{1}{\milli\meter} thick \ce{Cd} knife edge mask.
+    While the amorphous \isotope[10]{B} produced a more respectable resolution on par with the pixel pitch size, benefiting from the lower energy and transport range of secondary particles, the detection efficiency accordingly suffered.
+    Because \isotope[113]{Cd} and \ce{Gd} produce \glspl{gamma-ray} and conversion electrons, they create long, weaker interacting paths.
+    The experimental value reported for \isotope[113]{Cd} was \SI{1.7}{\milli\meter} and simulations for \ce{Gd} expected similar emprical results.
+    \citeauthor*{Uher_2005} followed with the resolution values of competing systems, reporting on the \gls{medipix1} (\SI{370}{\micro\meter}), the \gls{medipix2} (\SI{108}{\micro\meter}), a \isotope[6]{Li} based scintillator coupled to a \gls{ccd} (\SI{824}{\micro\meter}), and an imaging plate (\SI{124}{\micro\meter}) \cite{Jakubek_2004, Jakubek_2005, Uher_2005, Jakubek_2006a}.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    In \citeyear*{Jakubek_2007}, \citeauthor*{Jakubek_2007} proposed a set of sensor options for a \gls{medipix2} based neutron imaging system.
+    The active structure may be composed of (a) a sensor chip coated in a neutron sensitive converter layer (as previously mentioned), (b) a \gls{3d} sensor chip with a converter back fill, and (c) a sensor with embedded neutron sensitive isotopes (as seen with \gls{lise}).
+    Experimenting with \ce{CdTe} as an embedded sensor, the neutron images exhibited a spatial resolution of \SI{450}{\micro\meter} with an \SI{8}{\percent} detection efficiency, underperforming other materials used in the study \cite{Jakubek_2007}.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    In \citeyear*{Uher_2009}, \citeauthor*{Uher_2009} suggested the usage of the \gls{timepix} platform for \gls{neutron-fast} imaging by coupling the \gls{asic} with a plastic scintillator.
+    Based on \gls{mcnp} simulations, they predicted an energy resolution of around \SI{1}{\mega\electronvolt} for \glspl{neutron-fast} of \SI{14}{\mega\electronvolt} energy \cite{Uher_2009}.
+    Further design developments suggested a device featuring an EJ 204 plastic scintillator measuring \SI{1 x 1 x 0.3}{\centi\meter\cubed}, with spectroscopic capabilities for \glspl{neutron-fast} \cite{Uher_2011}.
+    Recently, \citeauthor*{Krejci_2016} demonstrated the \num{4x5} \gls{timepix} array, dubbed \gls{widepix}, for neutron imaging.
+    Spanning a \SI{71 x 57}{\milli\meter} area, a thin film of \gls{lif} produced the expected \SI{55}{\micro\meter} resolution, prescribed by the pixel, pitch while a spatial resolution around \SI{10}{\micro\meter} was achievable in the event counting mode \cite{Krejci_2016}.
+% ============================================================================ %
+\end{document}%

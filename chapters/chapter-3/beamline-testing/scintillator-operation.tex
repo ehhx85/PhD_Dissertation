@@ -1,0 +1,28 @@
+% ./chapters/chapter-3/beamline-testing/scintillator-operation.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}
+\begin{document}%
+% ============================================================================ %
+    \subsection{Scintillator Operation}%
+    \label{sec:chapter-3:beamline-testing:scintillator-operation}%
+    % ======================================================================== %
+    The \gls{cg1d} \gls{beamline} features a fixed \gls{high-res}, scintillator based imaging system installed at the end of the beam line (see \Xreffigure*{scintillator-experiment}).
+    A \gls{dark-box} houses the \gls{andor-ccd}, featuring a \SI{7 x 7}{\centi\meter} \gls{fov}, yielding a typical spatial resolution around \SI{75}{\micro\meter} using the \gls{scintillator-screen} \cite{Santodonato_2015}.
+    The \gls{andor-ccd} rests at the bottom of the \gls{dark-box}, aiming vertically towards an aluminum reflecting mirror.
+    Oriented at a \SI{90}{\degree} angle to the \gls{andor-ccd}, the \gls{scintillator-screen} consists of a thin aluminum plate (\SI[product-units=power]{22 x 22}{\centi\meter} by \SI{0.4}{\milli\meter} thick) coated in a neutron sensitive film mixture of a \gls{lif} absorber, \ce{ZnS} fluorescent pigment, and \ce{Cu} activator, ranging from \SIrange{50}{200}{\micro\meter} thick \cite{website:RC-TRITEC}.
+    When a neutron strikes the plate, an absorption reaction produces scintillation light that reflects off the \SI{45}{\degree} mirror, redirected downwards through a magnification lens to the \gls{andor-ccd} \cite{Bilheux_2014}.
+    In this research, a \gls{scintillator-screen} with a \SI{50}{\micro\meter} thick coating was used.    
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    This neutron imaging system served as a standard for comparison against both \gls{lise} modes, as well as positioning the semiconductor systems in the neutron beam.
+    Using the in-house optics stage, \gls{lise} scintillating sensors were attached to an identical aluminum plate (see \Xreffigure*{lise-scintillator-array}), installed in the \gls{ccd} \gls{dark-box}.
+    Sensors were affixed using aluminum tape, minimizing neutron attenuation and scattering, with both transparent (reflective) and opaque (anti-reflective) coatings.
+    Operating with an aperture of \Xmath{D=} \SI{16}{\milli\meter} and sitting at the full \gls{beamline} distance, the \gls{dark-box} produced an \Xmath{L/D=} \num{412} \cite{Lukosi_2016a}.
+    The first version of the scintillator array (\Xreffigure{lise-scintillator-array:a}) tested the \num{11} available sensors to compare light output, measure spatial resolution, and test the \gls{super-sampling} technique.
+    Tested individually in an earlier experiment, sample \gls{lise}-1 provided the multi-position images used for image reconstruction \cite{Lukosi_2016a}.
+    In the second iteration of the scintillator array (\Xreffigure{lise-scintillator-array:b}) the sensors formed a pseudo open beam area, packing the crystals as close together as possible.
+    To better asses the significance of surface finish and material thickness, the scintillators were specifically prepared at varying finishes, shown in \Xreftable*{lise-scintillator-finishes}.
+    This experiment focused on determining the spatial resolution limit of the scintillator mode, along with applications of neutron \gls{ct} \cite{Lukosi_2017}.
+% ============================================================================ %
+\end{document}%

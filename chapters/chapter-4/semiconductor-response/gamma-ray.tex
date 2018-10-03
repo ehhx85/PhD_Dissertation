@@ -1,0 +1,27 @@
+% ./chapters/chapter-4/semiconductor-response/gamma-ray.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \Xsubsection%    
+    % ======================================================================== %
+    \subsubsection*{Gamma-ray Sensitivity}%
+    \label{sec:chapter-4:semiconductor-response:gamma-ray}%
+    % ======================================================================== %
+    A major feature requirement of a robust neutron detector is the ability to discriminate between neutrons and \glspl{gamma-ray}.
+    \citeauthor*{Kouzes_2011} specified a set of criteria for evaluating the effects of intrinsic \gls{gamma-ray} sensitivity, with a \SI{10}{\percent} limit imposed on the deviation between the intrinsic efficiency for neutrons and mixed neutron/\gls{gamma-ray} fields, necessary in national security applications \cite{Kouzes_2011}.
+    Applied across a wide range of liquid and plastic scintillators, neutron/\gls{gamma-ray} discrimination has been achieved through a few different techniques.
+    \citeauthor*{McBeth_1971} described a \gls{zc} \gls{psd} technique for distinguishing particle types based on their scintillation profiles.
+    Pulse shape will vary between different types of radiation, corresponding to the decay time characteristic for each particle or photon.
+    Using a series of analog \gls{nim} modules, the timing is converted to an amplitude for processing using a \gls{mca} \cite{McBeth_1971}.    
+    Charge comparison is another method for discrimination, integrating the slow and fast components of the scintillation pulse to determine the associated particle type \cite{Szczesmak_2014}.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    In neutron imaging, such techniques are not practical, instead favoring a material with low \gls{gamma-ray} detection efficiency, or the capability of direct energy discrimination. 
+    Using \gls{mcnp} simulations, it was shown that \gls{lise} demonstrated poor \gls{gamma-ray} detection efficiency at thicknesses used for the semiconductor systems.
+    For samples less than \SI{1}{\milli\meter} thickness, the \gls{gamma-ray} detection efficiency was less than \SI{5}{\percent} for energies \SI{100}[>]{\kilo\electronvolt}.
+    This feature helps to explain why the higher energy \glspl{gamma-ray} produced from the various indium reactions did not contribute significant noise in any of the imaging experiments in either mode \cite{Lukosi_2016}.
+    Furthermore, under full charge collection a neutron interaction produces energetic particles an order of magnitude larger than the \SI{100}{\kilo\electronvolt} limit: \SI{2.73}{\mega\electronvolt} for the \gls{triton-particle}, \SI{2.05}{\mega\electronvolt} for the \gls{alpha-particle} and \SI{4.78}{\mega\electronvolt} for the full event deposition.
+% ============================================================================ %
+\end{document}%

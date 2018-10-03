@@ -1,0 +1,22 @@
+% ./chapters/chapter-4/semiconductor-timepix/feature-detection.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \subsection{Feature Detection}%
+    \label{sec:chapter-4:semiconductor-timepix:feature-detection}%
+    % ======================================================================== %    
+    Along with resolution measurements, object identification experiments offered a practical example of the imaging systems capabilities for neutron imaging in other scientific areas of study.
+    While a biological specimen, an adult red paper wasp (\textit{Polistes carolina}), was prepared for imaging, the specimen did not exhibit the same depth of contrast as seen in the brown marmorated stink bug (\textit{Halyomorpha halys}) specimen, and was omitted from further testing.
+    A series of \gls{3d} printed imaging targets were investigated, providing simple geometric features to qualify the \gls{lisepix} system.
+    The \gls{power-t} target, shown in \Xreffigure*{timepix-power-t}, provided the best preliminary performance and was selected at the beam line for extended exposures.
+    The \SI{1}{\centi\meter\cubed} target block provided a thick medium for neutron attenuation, with the \gls{power-t} inscription permitting an unobstructed view of the open beam.
+    The logo, following the university template, measured approximately \SI{6}{\milli\meter} tall, and less than \SI{1}{\milli\meter} at the most narrow points (see \Xrefsection{chapter-3:beamline-testing:imaging-targets:additive-manufacturing}).
+    Two different image sequences were acquired, each for \SI{50}{\frames} at \SI{10}{\second}, to test the effects of signal threshold adjustment.
+    The longer acquisition time was used to account for the decreases in count rate due to heavy attenuation as well as signal rejection.
+    The lower threshold setting (\SI{4}[+]{\volt}) provided higher contrast and accommodated shorter exposure windows, thus being used for the bulk of the experiments. 
+    The higher threshold setting (\SI{24}[+]{\volt}) significantly enhanced overall resolution, even cleaning the areas surrounding dead pixels, at the cost of contrast and timing.
+    Furthermore, the higher threshold had significant reduction in signal along the dark \gls{roi} in the lower left corner, suggesting the neutron interaction rate may have been equivalent, while the charge carrier transport and pulse production suffered.
+    At the higher threshold, the geometric structure in the \gls{3d} printed part is visible, with minor rounding along the sharp outer edges. 
+% ============================================================================ %
+\end{document}%

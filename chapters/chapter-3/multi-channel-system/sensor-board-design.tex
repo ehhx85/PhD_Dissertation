@@ -1,0 +1,40 @@
+% ./chapters/chapter-3/multi-channel-system/sensor-board-design.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \subsection{Sensor Board Design}%
+    \label{sec:chapter-3:multi-channel-system:sensor-board-design}%
+    % ======================================================================== %
+    The sensor board or substrate \gls{pcb} provides the physical mount for the radiation sensor while also containing the electronic traces needed to couple the readout electronics.
+    In attempts to minimize the neutron interactions with the sensor board itself, a thin \gls{alumina} substrate was fabricated into a sensor board.
+    The \gls{alumina} board (\Xreffigure*{alumina-pcb-design}), measuring \SI{3 x 3}{\inch} and \SI{635}{\micro\meter} thickness was first metalized using the negative photolithography process and subsequent plasma sputtering (see \Xrefappendix{thin-film-processing:negative-photolithography}).
+    The board design was routed in \gls{eagle} with emphasis on shallow bends and near equivalent length signal traces.
+    A standard quartz photomask (see \Xreffigure{clean-room:a}) was generated from the circuit design (see \Xreffigure{alumina-pcb-design:a}) and a thin layer of aluminum was deposited on a single side of the \gls{pcb}.
+    The initial aluminum metalization offered a relatively inexpensive pattern guide for locating the circuit vias.
+    Using a \SI{2}{\milli\meter} diameter diamond studded ceramic drill, each hole was manually carved through the ultra hard \gls{alumina} substrate.
+    Holes were drilled while submerged in a water bath to remove heat and debris from the drilling site while also lubricating the cutting surface.
+    Even so, some boards cracked during this fabrication step and the process had to be restarted.
+    After successfully drilling all vias in the substrate, the board was polished to remove the guide metal and a second photolithograhy run was used to deposit the final gold layering as shown in \Xreffigure{alumina-pcb-design:b}.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    While a prototype \gls{alumina} substrate board was successfully fabricated, the final product did not exhibit favorable electronic characteristics.
+    The line resistances across the surface were considerably large due to the trace layer thickness, measuring \Xmath{<}\SI{1}{\micro\meter} versus \SI{34.79}{\micro\meter} for a \SI{1}{\ounce} copper clad \gls{fr4} board.
+    Soldering to the board also proved incredibly difficult, with only limited wetting occurring between the copper wire and the solder vias.
+    These disadvantages outweighed the benefits of the \gls{alumina} board, and a standard \gls{fr4} board was elected as the replacement.
+    The revised substrate board was sized similar to the professionally manufactured \gls{preamp} boards, fitting in the enclosure \gls{pcb} slots for easier mounting.
+    \Gls{high-voltage} bias lines (red) were routed on the top of the board, shown in \Xreffigure*{sensor-pcb-layers}, while the signal output traces (blue), run perpendicular across the bottom of the board.
+    The bond pads form a circle around the main sensor mounting pad, abruptly connected to a via traversing the \gls{pcb} to the signal trace on the bottom of the board.
+    Furthermore, top and bottom ground planes filled the remaining space around the traces to eliminate stray current leaking between signal lines.    
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    Both ground planes feature a cutout region surrounding the sensor bonding pad, minimizing the amount of material immediately next to the sensor.
+    Copper is used in neutron activation experiments due to its appreciable cross section, and activating the copper cladding on both sides of the board would introduce undesirable \gls{gamma-ray} background (see \Xrefappendix{nuclear-cross-sections:engineering-materials}).
+    The light green circle surrounding the sensor in \Xreffigure*{sensor-pcb-fabricated} represents the cutout region.
+    The primary experimental \gls{beamline} at \gls{hfir} offered an adjustable beam window via attenuating slits, so neutrons could be directed to only the cutout region and crystal.
+    The nine red copper wires at the top of the image correspond to the signal and guard ring lines, soldered directly between the substrate and \gls{preamp} \glspl{pcb}.
+    Not shown are the eight matching white wires connecting the remaining channels to the second \gls{preamp} \gls{pcb}.
+% ============================================================================ %
+\end{document}%

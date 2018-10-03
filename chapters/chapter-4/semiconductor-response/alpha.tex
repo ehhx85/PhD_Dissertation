@@ -1,0 +1,26 @@
+% ./chapters/chapter-4/semiconductor-response/alpha.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \Xsubsection%    
+    \subsubsection*{Alpha Exposures}%
+    \label{sec:chapter-4:semiconductor-response:alpha}%
+    % ======================================================================== %
+    %\LipsumSection
+    % ======================================================================== %
+    A convenient way of testing semiconductor signal generation and energy resolution, \gls{alpha-particle} injection introduces the large charged particle into the sensor bulk without the need for a neutron source.
+    Because the \gls{li6-neutron-alpha} reaction spawns \glspl{triton-particle} and \glspl{alpha-particle}, directly injecting an \gls{alpha-particle} of equivalent energy serves as an analog for charge collection.
+    Shown in \Xreffigure*{lise-response-spectra-alpha}, this type of experiment was used to evaluate whether a new semiconductor sample exhibited sufficient electrical performance, assuming appropriate \isotope[6]{Li} enrichment would ensure the precursory reaction in the presence of neutrons. 
+    The natural decay of \isotope[234]{U}, following \Xrefequation{decay-uranium-234}, releases a highly energetic \gls{alpha-particle}, with over double the energy of the \gls{alpha-particle} released in the \gls{li6-neutron-alpha} reaction. 
+    % ======================================================================== %
+    \Xequationfile{decay-uranium-234}%
+    % ======================================================================== %
+    Operating in a vacuum at close proximity to the detector surface, the higher energy \glspl{alpha-particle} will penetrate into the sensor bulk, generating a large number of charge carriers, comparable to or exceeding the actual neutron reaction, near the incident electrode.
+    In this way, it was determined that \gls{lise} has significantly better electron charge carrier properties compared to those for the holes.
+    With both positive and negative polarity \gls{high-voltage} bias, the sensor generates minimal background signal, as expected from a high resistivity ohmic semiconductor.
+    Introducing the \gls{alpha-particle} from a \isotope[234]{U} electroplated button source, the positive bias exhibits a much larger tail, extending into the higher energy channels and creating a broad energy peak.
+    Under a negative bias, the spectrum is compressed to the lower energies, covering less integrated area, without exhibiting an energy peak.
+    A similar spectra was captured using other actinide series alpha emitters including: \isotope[238]{Pu} (\SI{5.593}{\mega\electronvolt}), \isotope[241]{Am} (\SI{5.637}{\mega\electronvolt}), and \isotope[244]{Cm} (\SI{5.901}{\mega\electronvolt}), as well as \isotope[210]{Po} (\SI{5.407}{\mega\electronvolt}).
+% ============================================================================ %
+\end{document}%

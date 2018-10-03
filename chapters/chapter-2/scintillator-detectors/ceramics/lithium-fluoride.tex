@@ -1,0 +1,42 @@
+% ./chapters/chapter-2/scintillator-detectors/ceramics/lithium-fluoride.tex
+% ============================================================================ %
+\documentclass[../../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \subsubsection{Lithium Fluoride}%
+    \label{sec:chapter-2:scintillator-detectors:ceramics:lithium-fluoride}%
+    % ======================================================================== %
+    \citeauthor*{Stedman_1960} briefly discussed a scintillator consisting of \gls{lif-zns}, enriched in \isotope[6]{Li}, mixed with a Lucite binder, a trade name for \gls{plastic:pmma}.
+    In this complex, the \gls{lif} compound acts as the neutron absorber, and the \ce{ZnS} acts as the fluorophore, producing scintillation light when excited by the daughter products from the \gls{li6-neutron-alpha} reaction.
+    Comparing the detection effeciency to a \isotope[10]{BF_3} counter, the \gls{lif-zns} scintillator yielded \SIlist[list-units={repeat}]{60; 50; 25}{\percent} efficiency at \SIlist[list-units={repeat}]{0.005; 0.025; 0.2}{\electronvolt} neutron energies, repstively.
+    Testing the scintillator with a \isotope[90]{Sr}-\isotope[90]{Y} \gls{gamma-ray} source provided little response, utilizing a basic discrimination circuit to supply \gls{gamma-ray} rejection \cite{Stedman_1960}.
+    \citeauthor*{Helm_1962} tested a similar mixture of \gls{lif-zns}(\ce{Ag}) and Lucite in a 2:1:1 ratio.
+    Testing the use of corrugated surfaces and reflectors, he reported an efficiency of \SI{28}{\percent} noting the presence of \isotope[6]{Li} accounted for the primary increase in performance \cite{Helm_1962}.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    \citeauthor*{Iikura_2011} worked towards increasing the usable brightness from \gls{lif-zns} for applications in high frame rate imaging, such as motors and engines.
+    They investigated two mixtures of \gls{lif-zns}(\ce{Ag}), a previously tested \ce{Cl} doped mixture and a newly developed \ce{Al} doped scintillator.
+    Using brightness enhancing films common in \glspl{lcd} the light output saw a factor of \num{3} increase in intensity, while the spatial resolution calculated via \gls{mtf} saw a \num{2} times performance drop.
+    With the enhanced scintillator performance, they were able to continuously image an operating car engine at \SI{2000}{\rpm} \cite{Iikura_2011}.
+    \citeauthor*{Kawaguchi_2011} improved a Bridgman growth method to create lamellar structure in a \isotope[6]{LiF}/\ce{CaF2}:\ce{Eu} eutectic.
+    Using fluoride precursors \ce{LiF}, \ce{CaF2}, and \ce{EuF3}, the material was grown varying the lamellae thickness by adjusting the pull rate, measuring from \SIrange{3}{7}{\micro\meter} thick.
+    The largest count rate was observed for the thinnest layers (\SI{3}{\micro\meter}), producing a noticible peak in response to a \isotope[252]{Cf} neutron source \cite{Kawaguchi_2011}.
+    \citeauthor*{Matsubayashi_2011} used a \SI{20}{\milli\meter} diameter by \SI{3}{\milli\meter} thick crystal of \gls{lif}, along with a \gls{nip}, to conduct a sensitivity study for \gls{lif}.
+    At the time, the reported spatial resolution for \glspl{nip} was \SI{58}{\micro\meter}, providing the capability to qualify the spatial resolution in \gls{lif}.
+    Viewing a neutron sensitivity indicator fabricated from aluminum shims, the \gls{lif} crystal was able to observe a \SI{22}{\micro\meter} gap between shim stacks \cite{Matsubayashi_2011}.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    \citeauthor*{Yang_2013} presented a modified compound composed of the fluorophore \ce{ZnS}, typically used with \gls{lif}, and \gls{plastic:pp} to be used as a fast neutron detector.
+    The self opaque material yielded an optimum light output between \SIlist{2; 3}{\milli\meter}, optimizing for \gls{neutron-fast} by the exclusion of \gls{lif} \cite{Yang_2013}.
+    \citeauthor*{Santodonato_2015} documented the current experimental capabilities of the \gls{scintillator-screen} installed at the \gls{cg1d} \gls{beamline}, also discussed later as related to this research.
+    A range of \gls{lif-zns} film thicknesses from \SIrange{50}{200}{\micro\meter} are currently available as commercial products \cite{website:RC-TRITEC}.
+    At this beam line, the \gls{scintillator-screen} offers a \SI{7x7}{\centi\meter} \gls{fov} at just below \SI{80}{\micro\meter} spatial resolution under standard operating conditions \cite{Santodonato_2015}.
+    To directly address the question of replacing large, \isotope[3]{He} base proportional counting systems, \citeauthor*{Stave_2015} fabricated a prototype neutron multiplicity counter using \gls{lif-zns}.
+    The system implemented \SI{500}{\micro\meter} thick sheets of \gls{lif-zns} sandwiched between \SI{7}{\milli\meter} thick layers of \gls{plastic:pmma}.
+    As a viable design for \isotope[3]{He} proportional counter replacement, other problems must be solved first, including size reduction of the \gls{pmt}, potentially using \glspl{sipm} as well as a real time \gls{psd} algorithm \cite{Stave_2015}.
+    \citeauthor*{Stoykov_2015} demonstrated the construction of single-channel \gls{lif-zns} scintillator coupled to a \gls{sipm}.
+    Withing the \SI{2.4 x 2.8 x 50}{\milli\meter\cubed} \gls{lif-zns} module, \num{12} \gls{wls} fibers were embedded in the crystal, reducing the energy of the scintillation photons, while acting as a multiplier, conforming to the device sensitivity of the \gls{sipm} \cite{Stoykov_2015}.
+% ============================================================================ %
+\end{document}%

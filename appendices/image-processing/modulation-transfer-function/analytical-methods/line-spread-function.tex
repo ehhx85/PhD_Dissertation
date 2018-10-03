@@ -1,0 +1,47 @@
+% ./appendices/image-processing/modulation-transfer-function/analytical-methods/line-spread-function.tex
+% ============================================================================ %
+\documentclass[../../../../main.tex]{subfiles}
+\begin{document}%
+% ============================================================================ %
+    \subsubsection{Line Spread Function}%
+    \label{app:image-processing:modulation-transfer-function:analytical-methods:line-spread-function}%
+    % ======================================================================== %
+    The \gls{esf} is differentiated using a \gls{matlab} function implementing a first order numerical approximation.
+    Increasing the sampling rate by interpolating the raw \gls{esf} profiles helps to smooth the differentiation approximation.
+    The value for the \gls{lsf} at each index \Xvariable{L_{i}} is calculated from the difference between the corresponding \gls{esf} element \Xvariable{E_i} and the following value \Xvariable{E_{i+1}} as in \Xrefequation{numerical-diff}.
+    % ======================================================================== %
+    \Xequationfile{numerical-diff}%
+    % ======================================================================== %
+    For an \gls{esf} curve containing \Xmath{n} points, the resulting \gls{lsf} curve will have a length of \Xmath{n-1}.
+    A simple correction can be made by appending the final value \Xvariable{E_n} to the original vector, extending the length of the \gls{lsf} without affecting the final result.
+    The resultant, raw \gls{lsf} curve is shown in \Xreffigure*{mtf-lsf-raw}.
+    The raw \gls{lsf} is normalized to the peak maximum, scaling the data to the intensity range \Xmath{y=[0,1]}.
+    A Gaussian fit calculates the peak position as shown in \Xreffigure*{mtf-lsf-normalized}.
+    The peak position is measured from the origin, giving the approximate offset required to center the \gls{lsf}.
+    This value results in the centered \gls{lsf} as shown in \Xreffigure*{mtf-lsf-centered}, along with the previous \Xreffigure{mtf-esf-centered}.
+    For the \gls{mtf} calculation, ideally the \gls{lsf} tails should approach zero, indicating a uniform white or dark field region.
+    The extraneous intensity fluctuations near the tails will contaminate the \gls{mtf} curve once converted to frequency space.
+    Applying a window function is useful in preserving the \gls{lsf} peak data, while minimizing the tail information.   
+    For a given window size of \Xmath{N} points, the most generic function is the rectangular window, given by \Xrefequation{rectangular-window}.
+    % ======================================================================== %
+    \Xequationfile{rectangular-window}%
+    % ======================================================================== %
+    Effectively passing data within this window preserves the value, while points outside the window are zeroed.    
+    Another type of window uses a cosine shape to reduce the function value to zero at the edge of the tails.
+    The basic form of the Hann window is given in \Xrefequation{hann-window}, producing a single lobe of a raised cosine function.
+    % ======================================================================== %
+    \Xequationfile{hann-window}%
+    % ======================================================================== %
+    The Tukey window provides a modified version of the Hann window by combining it with the standard rectangular function.
+    The window shape depends on the parameter \Xvariable{\alpha} indicating the percentage of the window width corresponding to the cosine component as in \Xrefequation{tukey-window}.
+    % ======================================================================== %
+    \Xequationfile{tukey-window}%
+    % ======================================================================== %
+    For the \gls{mtf} calculator, the Tukey window maintains \Xmath{\alpha=0.5}, splitting the cosine and rectangular regions equally.
+    The length of the window is defined as half the length of the \gls{lsf} as shown in \Xreffigure*{mtf-window}.
+    Multiplying the centered \gls{lsf} by the modified Tukey window provides a cleaned input for the \gls{mtf} process.
+    The tails have been significantly tapered while maintaining an unchanged differentiated edge peak as shown in \Xreffigure*{mtf-lsf-windowed}.
+    At this point, the \gls{lsf} is fully processed, providing a smooth edge profile with a Gaussian shape.
+    The curve represents sensor data in the spatial domain and needs to be converted to the frequency domain to assess the spatial resolution limit.
+% ============================================================================ %
+\end{document}%

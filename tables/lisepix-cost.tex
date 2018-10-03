@@ -1,0 +1,74 @@
+% ./tables/lisepix-cost.tex
+% ============================================================================ %
+\documentclass[../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \Xtable%    
+    \begin{table}%
+    % ======================================================================== %
+        \caption%
+            [Estimated cost for hypothetical \glstext{lisepix} (\Xmath{4\times}) \gls{high-res} neutron imaging system]%
+            {Estimated cost for hypothetical \gls{lisepix} (\Xmath{4\times}) \gls{high-res} neutron imaging system}%
+        \label{tbl:lisepix-cost}%
+        % ==================================================================== %
+        \sisetup{%
+            table-number-alignment = center,%        
+            table-figures-integer = 5,%            
+            table-figures-decimal = 2,%
+            table-auto-round,%
+            group-minimum-digits = 4,%
+            per-mode = symbol,%
+        }%
+        % ==================================================================== %
+        \renewcommand{\arraystretch}{1.1}%
+        % ==================================================================== %
+        \begin{tabular}{ p{0.25cm} l S S S }%
+        % ==================================================================== %
+            \toprule%
+            % ================================================================ %
+            \multicolumn{2}{c}{\textbf{Item 1}} &%
+            {\centering\textbf{Unit Cost (\si{\dollarUS})}} &%
+            {\centering\textbf{Qty}} &%
+            {\centering\textbf{Total Cost (\si{\dollarUS})}} \\%
+            % ================================================================ %
+            \toprule%
+            % ================================================================ %
+            \multicolumn{2}{l}{\textbf{\Glstext{timepix} Readout}} &&& \\%
+            & main processing module$^\dagger$& 10000. & 1 & 10000. \\%
+            & \glstext{timepix} (\Xmath{4\times}) detector module & 150. & 1 & 150. \\%
+            & detector dock and data bus cabling & 400. & 1 & 400. \\
+            & A-Class \glstext{timepix} \glstext{asic} & 625. & 4 & 2500. \\%
+            % ================================================================ %
+            \midrule%
+            % ================================================================ %
+            \multicolumn{2}{l}{\textbf{\Glstext{lise} Sensor}} &&& \\%
+            & material (\si{cost\per\centi\meter\squared})$^*$ & 100. & 8 & 800. \\%
+            & contact metallizaton: gold (\si{cost\per\hour}) & 40. & 20 & 800. \\%
+            & flip-chip bump bonding & 150. & 4 & 600. \\%
+            % ================================================================ %
+            \midrule%
+            % ================================================================ %
+            \multicolumn{2}{l}{\textbf{Acquisition PC}} & 1000. & 1 & 1000. \\%
+            % ================================================================ %
+            \\[-1.0ex]%
+            \toprule%
+            % ================================================================ %
+            \multicolumn{2}{l}{\textbf{Total Estimated Cost}} &&& 16250. \\%
+            % ================================================================ %
+            \bottomrule%
+            \\[-1.5ex]%
+            % ================================================================ %
+            \multicolumn{5}{l}{%
+                \begin{minipage}{5.00in}%
+                \begin{scriptsize}%
+                    $^*$ Projected cost of \glstext{lise6} following commercialization of material growth\\%
+                    $^\dagger$ Supports up to \num{16} \glstext{timepix} modules, configured for \num{4} in this design
+                \end{scriptsize}%            
+                \end{minipage}%
+            }%
+        % ==================================================================== %
+        \end{tabular}%
+    % ======================================================================== %
+    \end{table}%
+% ============================================================================ %
+\end{document}%

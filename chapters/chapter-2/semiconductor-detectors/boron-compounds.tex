@@ -1,0 +1,33 @@
+% ./chapters/chapter-2/semiconductor-detectors/boron-compounds.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}
+\begin{document}%
+% ============================================================================ %
+    \subsection{Boron Compounds}%
+    \label{sec:chapter-2:semiconductor-detectors:boron-compounds}%
+    % ======================================================================== %
+    The boron semiconductor concept functions as an analog of the lithium based \gls{lise} detector.
+    By embedding one of the light-weight isotopes (\isotope[6]{Li} or \isotope[10]{B}) into a semiconductor compound, the number density largely exceeds what is possible in a proportional gas.
+    The increased reaction density would result in higher neutron stopping power and detection efficiency while reducing the required size of the device.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    Citing earlier studies by \citeauthor*{Kumashiro_1988}, using \ce{^{10}BP}, and \citeauthor*{Bykovskii_1993}, using lithium doped \ce{B_4C} semiconductors, \citeauthor*{Robertson_2002} investigated the application of \ce{B_4C} grown on silicon substrates for neutron detection \cite{Kumashiro_1988, Bykovskii_1993, Robertson_2002}.
+    In the study, a \SI{276(5)}{\nano\meter} thick boron carbide layer formed the neutron sensitive film, utilizing natural \isotope[10]{B} enrichment.
+    The detector was able to sense reactor neutrons coming from a \gls{triga} neutron beam port, however, the exceedingly thin boron carbide film only achieved a reported \num{3.2e-4} neutron detection efficiency.
+    Deviating from the standard semiconductor design, \citeauthor*{Emin_2005} proposed a detector made of two cells, one enriched in \isotope[10]{B} and the other in \isotope[11]{B}.
+    He proposed the large Seebeck coefficient of boron carbide could be utilized to detect thermal excitation from neutron absorption in the \isotope[10]{B} side.
+    Electronically coupling the two sides, a neutron interaction would produce a small amount of heating, creating a detectable electrical potential between the chemically identical compounds \cite{Emin_2005}.
+    Building on prior works implementing boron carbide in heterojunctions, \citeauthor*{Caruso_2006} proposed a heteroisomeric stack, using two distinct isomers of boron carbide to create the diode junction.
+    The neutron pulse height spectrum differed from the conversion layer systems, favoring the reaction sum peak over the individual product peaks \cite{Caruso_2006}.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    Conversion layer detectors suffer from conflicting design goals, limited in thickness by the range of secondary particles, creating a ceiling on the detection efficiency.  
+    Leaning on decades of research in the semiconductor industry, \citeauthor*{Li_2011} presented a design for a hexagonal boron nitride (\ce{hBN}) micro-strip detector.
+    The \SI{1}{\micro\meter} thick \ce{hBN} detector exhibited a conversion efficiency of \SI{80}{\percent} for absorbed neutrons \cite{Li_2011}.
+    A few years later, \citeauthor*{Doan_2015} reported the team was able to resolve the individual particle peaks in the neutron pulse height spectrum.
+    The refined design switched to an interdigitated micro-strip detector layout (\SI{6}{\micro\meter} spacing and width), across a \SI{0.3}{\micro\meter} thick \ce{hBN} substrate.
+    They noted the probability of a sum peak response would remain low until the thickness was increased beyond \SI{5}{\micro\meter}, exceeding the secondary particle ranges \cite{Doan_2015}.
+% ============================================================================ %
+\end{document}%

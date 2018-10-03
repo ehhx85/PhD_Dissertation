@@ -1,0 +1,41 @@
+% ./appendices/thin-film-processing/wire-bonding.tex
+% ============================================================================ %
+\documentclass[../../main.tex]{subfiles}
+\begin{document}%
+% ============================================================================ %
+    \section{Wire Bonding}%    
+    \label{app:thin-film-processing:wire-bonding}%
+    % ======================================================================== %
+    An analog to soldering wires on \glsplural{pcb}, wire bonding describes a process of electronically coupling micron-scale electronics. 
+    The \gls{kns} \gls{wirebonder} implements a wedge bond technique to connect \SIrange{0.5}{3.0}{\mil} diameter wire between device contacts.
+    The standard process for wedge bonding follows the sequence described by \citeauthor*{Fischer_2013} in \Xreffigure*{wedge-bond-process} \cite{Fischer_2013}.
+    In Step (\Xsubreffigure{wedge-bond-process:a}), the wire is threaded through the bonding wedge tip.
+    Care is taken when passing the wire through the wedge orifice to avoid bending the wire, introducing kinks that reduce the mechanical stability of the wire bond.
+    The wire clamp closes on the bonding wire to ensure the ultra-light wire remains in position and does not retract on the spool.
+    Step (\Xsubreffigure{wedge-bond-process:b}) makes the first bond on the sensor, by depressing the wire bonder head into the contact surface with a specified compressive force ranging from \SIrange{10}{160}{\gram}.
+    The established settings for the \gls{kns} \gls{wirebonder} are presented in \Xreftable*{wire-bonder-settings}. 
+    The bonding head utilizes a \SI{60}{\kilo\hertz} \gls{usonic} transducer to vibrate the wedge, creating the metallic weld between the bond wire and contact pad.
+    In Step (\Xsubreffigure{wedge-bond-process:c}), the wire clamp opens and the wedge bonding tool is lifted to a prescribed height while moving in the direction of the next bond.
+    Step (\Xsubreffigure{wedge-bond-process:d}) shows the wedge tool descending on the second bond, smoothly arching the wire, creating a permanent bend to suspend the wire over other electronics.
+    Again, the wedge is compressed into the bonding pad with \gls{usonic} agitation to establish the second bond.
+    Finally in Step (\Xsubreffigure{wedge-bond-process:e}), the wire is pinched by the wire clamp and the wedge tool jerks backwards, breaking the wire and leaving the finished bond.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    All bonds fabricated in this research utilized \SI{99.99}{\percent} \ce{Au} wire of \SI{1.0}{\mil} diameter bonded with a \SI{45}{\degree} wedge.
+    The heated bonding stage was also set to a temperature of \SI{100}{\celsius} to promote the \ce{Au} wire to \ce{Au} bonding pad adhesion.
+    Common practice finds \gls{asic} devices housed in a chip carrier.
+    This type of packaging bonds an \gls{asic} substrate to the center well of a multi-channel readout chip, with wire bonds extending from the top of the \gls{asic} to the readout pads, as shown in \Xreffigure{wire-bonding:a}.
+    Each channel is insulated, connecting to a pin extending from the back of the chip, allowing the chip carrier to mate with a matched socket.
+    Chip carriers may be directly attached, or mounted via chip socket to a \gls{pcb} containing peripheral electronics and connections.
+    This configuration offers a small form factor, with a replaceable package in the event of \gls{asic} failure.
+    For radiation detectors, this type of packaging permits the testing of multiple sensors without having to alter the electrical connections to readout electronics.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    Alternatively, the sensor may be directly mated to a device specific \gls{pcb} as seen in \Xreffigure*{wire-bonding}.
+    Wire bonding pads are included on the surface of the \gls{pcb}, routed directly to through hole soldering vias.
+    The traces from the sensor \gls{pcb} are connected with a smaller jumper wire to the input traces of the \gls{preamp} module.
+    This configuration offers a nearly direct connection between the radiation sensor and readout electronics.
+% ============================================================================ %
+\end{document}%

@@ -1,0 +1,40 @@
+% ./chapters/chapter-4/semiconductor-response/beta.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \Xsubsection%    
+    % ======================================================================== %
+    \subsubsection*{Beta Sensitivity}%
+    \label{sec:chapter-4:semiconductor-response:beta}%
+    % ======================================================================== %
+    As a neutron imaging sensor, \gls{lise} is subjected to extremely high neutron fluences, producing a series of neutron reactions, including  neutron capture ($n,\gamma$), generating heavier isotopes.
+    In the compound \glschemical{lise6}, isotopes of lithium and indium provide the majority of neutron interacting species.
+    Mostly present as \isotope[6]{Li}, the lithium component interacts following the desirable \gls{li6-neutron-alpha} as discussed in \Xrefsection{chapter-2:radiation-detection:neutron-interactions:lithium-6} (see \Xreffigures{cross-section-003-li-6}{cross-section-003-li-7}).
+    Alternatively, the natural indium component, consisting of isotopes \isotope[113]{In} and \isotope[115]{In} (\SI{4.28}{\percent} and \SI{95.71}{\percent} respectively), also possesses a significant neutron cross section, competing with the lithium reaction.
+    For the low neutron energies present at \gls{cg1d}, the indium isotopes will account for approximately \SI{20}{\percent} of the reactions in the \gls{lise} sensor \cite{Lukosi_2016a}.
+    The neutron interaction cross sections for both indium isotopes are dominated by capture reactions (see \Xreffigures{cross-section-049-in-113}{cross-section-049-in-113}) producing \glspl{gamma-ray}, such as the \isotope[113]{In} neutron capture reactions shown in \Xrefequation{reaction-indium-113}.
+    % ======================================================================== %
+    \Xequationfile{reaction-indium-113}%
+    % ======================================================================== %
+    The ground state, \isotope[114]{In}, and the meta-stable isomeric states \isotope[114m]{In} and \isotope[114m2]{In} are shown with their associated half-lives, branching ratios, and decay reactions in the \Xrefequation{decay-indium-114} series \cite{Blachot_2012}. 
+    % ======================================================================== %
+    \Xequationfile{decay-indium-114}%
+    % ======================================================================== %
+    The \gls{beta-particle} produced in \Xrefequation{decay-indium-114:d} has a mean energy of \SI{778}{\kilo\electronvolt} along with a \SI{1.3}{\mega\electronvolt} \gls{gamma-ray}.
+    Following suit, the neutron capture reactions for \isotope[115]{In} are shown in \Xrefequation{reaction-indium-115}.
+    % ======================================================================== %
+    \Xequationfile{reaction-indium-115}%
+    % ======================================================================== %
+    The ground and isomeric states for indium-116 are shown below in \Xrefequation{decay-indium-116}, with their associated decay schemes \cite{Blachot_2010}.
+    % ======================================================================== %
+    \Xequationfile{decay-indium-116}%
+    % ======================================================================== %
+    The \gls{beta-particle} produced in \Xrefequation{decay-indium-116:b} has a mean energy of \SI{309}{\kilo\electronvolt} while the \gls{beta-particle} in \Xrefequation{decay-indium-116:c} has a much larger mean energy of \SI{1.365}{\mega\electronvolt}, with both reactions producing highly energetic electrons (\SI{1}[>]{\mega\electronvolt}) and \glspl{gamma-ray} (\SI{2}[>]{\mega\electronvolt}).
+    The indium interaction rate, compared to \isotope[6]{Li}, comprises approximately \SI{20}{\percent} of the total neutron interactions at \gls{neutron-thermal} energies.
+    Therefor the higher isomer decay energy will manifest itself around \SI{4}{\percent} of the time in all neutron interactions at \gls{cg1d} \cite{Lukosi_2016a}.
+    The range for \SI{1}{\mega\electronvolt} \glspl{beta-particle} in \gls{lise} is roughly \SI{1.5}{\milli\meter}, linearly increasing at a rate of around \SI[per-mode=symbol]{1.25}{\milli\meter\per\mega\electronvolt}, significantly distributing charge carrier generatation across a large fraction of the sensor active area.
+    The low production rate, along with their significant range, minimizes noise caused by \glspl{beta-particle} in the neutron images \cite{Lukosi_2016}.
+    The significance of the \glspl{x-ray} and \glspl{gamma-ray} produced from indium isotopes will be discussed in the following section.
+% ============================================================================ %
+\end{document}%

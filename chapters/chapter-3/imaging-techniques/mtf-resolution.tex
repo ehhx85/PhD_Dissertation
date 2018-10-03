@@ -1,0 +1,21 @@
+% ./chapters/chapter-3/imaging-techniques/mtf-resolution.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \subsection{Modulation Transfer Function Resolution Calculation}%
+    \label{sec:chapter-3:imaging-techniques:mtf-resolution}%
+    % ======================================================================== %
+    The contrast in an imaging system may be evaluated using the experimental technique shown in \Xreffigure*{mtf-process}, followed by \gls{mtf} analysis as detailed in \Xrefappendix{image-processing:modulation-transfer-function}.
+    The left column of the process diagram represents conditions where the spatial period \Xvariable{P_s} (or inverse spatial frequency \Xvariable{f^{-1}_{s}}[]), is equivalent or greater than the resolution limit \Xvariable{R_\textrm{lim}} of the imaging device.
+    As the spatial frequency increases past the resolution limit, the response will follow the right column, where contrast reduction limits the ability to fully resolve image features.
+    The resolution experiment begins with the selection of an appropriate line pair pattern or sharp knife-edge feature, shown in Step (a).
+    An idealized knife-edge feature fully attenuates the incident beam, providing a sudden change in response ranging from the fully open beam of maximum intensity, to the dark field of minimum intensity.
+    Step (b) shows the attenuating mask in the neutron radiation field, where a highly absorbing film (such as \ce{Gd}) of given thickness \Xvariable{x} removes a significant portion of the incident beam \Xvariable{I_0} resulting in a modulated output \Xvariable{I_m} captured by the imaging system. 
+    The resulting output image, shown in Step (c), follows a periodic shift from open beam (white) to the dark field (black), where minimal gray region indicates high contrast.
+    While the left image demonstrates fully black regions along the centerline of attenuating mask, the right image only achieves a gray color, indicative of contrast deficit. 
+    This concept is further illustrated in Step (d), where the image is flattened to yield the repeating \glsreset{esf}\gls{esf}.
+    Again, the sinusoidal \glspl{esf} (blue) on the left span the full contrast range, in close agreement with the idealized step response (gray), while those on the right side cover a shallow contrast range, significantly above the dark field level.
+    The experimentally determined \gls{esf} serves as the input for \gls{mtf} analysis to calculate the resolution limit.
+% ============================================================================ %
+\end{document}%

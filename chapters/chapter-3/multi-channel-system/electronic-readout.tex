@@ -1,0 +1,34 @@
+% ./chapters/chapter-3/multi-channel-system/electronic-readout.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \subsection{Electronic Readout System}%
+    \label{sec:chapter-3:multi-channel-system:electronic-readout}%
+    % ======================================================================== %
+    As the system would house both the active sensor and the readout electronics, a larger aluminum enclosure was necessary.
+    A split-body aluminum extruded enclosure was selected for its internal capacity as well as the \gls{pcb} slots designed to secure circuit boards, show in \Xreffigure*{lise-imager-cad-design}.
+    The enclosure's external dimensions measured \SI{8.5 x 6.15 x 3}{\inch} with room for a \SI{6}{\inch} wide board with up to a \SI{0.070}{\inch} thickness.
+    A \gls{cad} model of the system was generated prior to fabrication to ensure the narrow fitment would leave enough clearance for the bank of \glspl{cr110}.
+    The \glspl{preamp} were connected to two identical 8-channel readout boards, installed in an opposing configuration.
+    With this design, the entire \gls{preamp} assembly was fabricated outside of the enclosure, attached to one of the enclosure end caps.
+    The \gls{high-voltage} and signal lines were routed on top and bottom of the \glspl{pcb} while the \gls{low-voltage} chip power was routed between the boards, as shown in \Xreffigure*{preamplifier-module}.
+    Keeping the power and signal lines separate helped to reduce potential sources of noise in the board, as well as isolating their corresponding circuit traces to the inside and outside layers respectively.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    The ground planes of the two \glspl{pcb} were connected via aluminum standoffs, also acting as structural elements.
+    Joining the \gls{pcb} assembly to the end cap, six aluminum angle brackets formed a ground connection between the \glspl{pcb} and the bulkhead connections, securing the boards in place.
+    \Gls{low-voltage} power was again supplied via banana sockets for direct connection to a variable \gls{dc} power supply.
+    Independent \gls{high-voltage} bias lines were routed to each \gls{pcb} via \gls{shv} connectors, requiring two external power supplies at matched voltage.
+    Due to their large form factor, \gls{bnc} connectors were replaced with \glspl{lemo-00}, another standard \SI{50}{\ohm} terminator used in the nuclear industry for high density cabling applications.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    The original sensor board concept is depicted in \Xreffigure{lise-imager-cad-design}, featuring a thin \gls{alumina} substrate.
+    The substrate was to be mounted directly to the base of the enclosure and wires would be solder between the substrate board and the \gls{preamp} \glspl{pcb}.
+    Eventually this design was shelved for a standard \gls{pcb} approach as described in the following \Xrefsection{chapter-3:multi-channel-system:sensor-board-design}.
+    In both iterations, the sensor board was placed on the opposite side of the enclosure, locating the \gls{preamp} assembly outside of the neutron beam.
+    Because the enclosure is aluminum, little neutron shielding would be offered to the readout electronics, potentially damaging the circuits, creating secondary radiation noise, and activating various constituent components.
+% ============================================================================ %
+\end{document}%

@@ -1,0 +1,56 @@
+% ./appendices/image-processing/super-sampling.tex
+% ============================================================================ %
+\documentclass[../../main.tex]{subfiles}
+\begin{document}%
+% ============================================================================ %
+    \section{Super-Sampling}%
+    \label{app:image-processing:super-sampling}%
+    % ======================================================================== %
+    Radiographic image \gls{super-sampling} outlines a technique to provide enhanced image resolution in a few channel pixel detector, or a pixel pitch limited device.
+    In the early \gls{lise} semiconductor systems, the device functioned as a counter (single channel) or a 16-channel pixel detector.
+    With such few channels, any decrease in pixel size to enhance resolution would result in a subsequent decrease in pixel active area.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    To overcome this limitation, larger pixels of pitch \Xvariable{P_{x} \times P_{y}} were used to maximize coverage area and conform to the dimensional requirements for wirebonding.
+    In the experimental setup, the imaging target was translated in both directions perpendicular to the beam axis, sweeping across the sensor active area.
+    By sub-stepping the target at intervals smaller than the pixel pitch \Xvariable{P_{u} \times P_{v}} each pixel captures a averaged response corresponding to the region of the target in front of the pixel.
+    Plotting the response for each channel, shown in \Xreffigure*{lise-16ch-mosaic}, demonstrates the ability of a single physical pixel to resolve an image using precise target manipulation.
+    For a single acquisition position, the sensor will capture data for the physical \Xmath{M_{0}\times N_{0}} pixels, producing the base image \Xvariable{f(x,y)} given by \Xrefequation{super-sampling-single-acquisition}.
+    % ======================================================================== %
+    \Xequationfile{super-sampling-single-acquisition}%
+    % ======================================================================== %
+    The matrix is also shown as a series of indexed pixels, each channel \Xvariable{f_{i}} assigned an integer value spanning \Xmath{[1,M_{0}N_{0}]} in \Xrefequation{super-sampling-pixel-index}.
+    % ======================================================================== %
+    \Xequationfile{super-sampling-pixel-index}%
+    % ======================================================================== %
+    As previously mentioned, the few channel image suffers from poor resolution as a result of maximizing the pixel pitch.
+    Instead, the intensity value \Xvariable{f_{i}} from each physical pixel will be recorded as a single virtual pixel \Xvariable{f_{i}(u,v)} of size \Xvariable{P_{u}\times P_{v}} spanning the \Xmath{M\times N} sub-steps, shown in \Xrefequation{super-sampling-single-channel}.
+    % ======================================================================== %
+    \Xequationfile{super-sampling-single-channel}%
+    % ======================================================================== %
+    Each virtual image will be offset \Xvariable{\Delta u}[] and \Xvariable[]{\Delta v} along the respective direction for the stitching process, shown in \Xrefequation{super-sampling-matrix-spacing:a}.
+    % ======================================================================== %
+    \Xequationfile{super-sampling-matrix-spacing}%
+    % ======================================================================== %
+    If the fractions \Xvariable{P_{x}/P_{u}}[] or \Xvariable[]{P_{y}/P_{v}} do produce integer quotients, a constant value \Xvariable{C} is introduced in \Xrefequation{super-sampling-matrix-spacing:b}, further sub-dividing each virtual pixel into sub-pixels of size \Xvariable{P_{u}/C \times P_{v}/C}[]. 
+    The expanded matrix size \Xvariable{M^{*}\times N^{*}} takes a similar form as \Xrefequation{mosaic-stitch-matrix-size}, shown here as \Xrefequation{super-sampling-matrix-size:a} and \Xrefequation{super-sampling-matrix-size:b}, depending on the sub-division of the virtual pixels.
+    % ======================================================================== %
+    \Xequationfile{super-sampling-matrix-size}%
+    % ======================================================================== %
+    The virtual images from each physical pixel are mapped to the larger composite image space.
+    The remapping image function is given by \Xvariable{f^{*}_{i}(u,v)} as seen in \Xrefequation{super-sampling-shifted-function}.
+    % ======================================================================== %
+    \Xequationfile{super-sampling-shifted-function}%
+    % ======================================================================== %
+    Using this image function, the final composite image is produced following \Xrefequation{mosaic-stitch-shifted-tally} and \Xrefequation{mosaic-stitch-composite}.
+    The response from each channel noticeably varies, attributed to inconsistencies in electronic coupling at the contact-wirebond interface.
+    If the wirebond disrupts the thin film metal contact on the sensor surface, subsequently the electrical field through that cross-section of the sensor will also be distorted.
+    This affects both the charge transport properties as well as the signal formation on the contact surface for the affected pixel.
+    The composite image may be formed from all, or a subset of available channels to enhance the final image, as shown in \Xreffigure*{lise-16ch-mosaic-composite}.
+    Numbering the channels from left to right and top to bottom, channels 7, 10, and 12 were omitted to generate \Xreffigure{lise-16ch-mosaic-composite:b}.
+    This comparison shows the minor improvement obtained by eliminating poor performing channels.
+    The lower left region more clearly resolves the last couple of line pairs, however a pixel sized blank space exists having removed the edge pixel.
+    Both images show nearly identical right halves, resolving the same line pair resolution based on visual inspection.
+% ============================================================================ %
+\end{document}%

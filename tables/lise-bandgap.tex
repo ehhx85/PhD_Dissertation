@@ -1,0 +1,88 @@
+% ./tables/lise-bandgap.tex
+% ============================================================================ %
+\documentclass[../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \Xtable%    
+    \begin{table}%
+    % ======================================================================== %
+        \caption%
+            [Bandgap for {\glstext{lise}}]%
+            {Bandgap for \glschemical{lise}}%
+        \label{tbl:lise-bandgap}%
+        % ==================================================================== %
+        \sisetup{%
+            table-number-alignment = center,%
+            table-figures-integer = 1,%            
+            table-figures-decimal = 1,%
+            table-figures-uncertainty = 1,%
+            table-space-text-post = \textsuperscript{\emph{aaa}},%
+            separate-uncertainty = false,%
+        }%         
+        % ==================================================================== %
+        \begin{tabu}{%
+            S[table-format = 2.3]%
+            r%
+            l%
+            p{0.50in}%
+            l%S[table-format = 2.3]%
+            r%
+            l%
+        }%
+        % ==================================================================== %
+            \toprule%
+            {\centering\boldmath$E_{g}$ (\si{\electronvolt})} &%
+            \multicolumn{2}{c}{%
+                {\centering\textbf{Source}}%
+            }&%
+            &%
+            {\centering\boldmath$E_{g}$ (\si{\electronvolt})} &%
+            \multicolumn{2}{c}{%
+                {\centering\textbf{Source}}%
+            }\\%
+            \toprule%
+            % ================================================================ %
+            1.88 \textsuperscript{\emph{r}} & \citeauthor*{Kamijoh_1981} & (\citeyear*{Kamijoh_1981}) &&%
+            2.63 \textsuperscript{\emph{y}} & \citeauthor*{Ma_2009} & (\citeyear*{Ma_2009}) \\%
+            % ================================================================ %
+            \cmidrule{1-3}\cmidrule{5-7}%
+            % ================================================================ %
+            2.03 \textsuperscript{\emph{r}} & \citeauthor*{Beister_1991} & (\citeyear*{Beister_1991}) &&%
+            2.86 \textsuperscript{\emph{y}} & \citeauthor*{Petrov_2010} & (\citeyear*{Petrov_2010}) \\%
+            % ================================================================ %
+            \cmidrule{1-3}\cmidrule{5-7}%
+            % ================================================================ %
+            2.90 \textsuperscript{\emph{y}} & \citeauthor*{Beister_1991} & (\citeyear*{Beister_1991}) &&%
+            2.85 & \citeauthor*{Tupitsyn_2012} & (\citeyear*{Tupitsyn_2012}) \\%
+            % ================================================================ %
+            \cmidrule{1-3}\cmidrule{5-7}%
+            % ================================================================ %
+            2.83 \textsuperscript{\emph{y}} & \citeauthor*{Eifler_2000} & (\citeyear*{Eifler_2000}) &&%
+            2.03 \textsuperscript{\emph{r}} & \citeauthor*{Cui_2013} & (\citeyear*{Cui_2013}) \\%
+            % ================================================================ %
+            \cmidrule{1-3}\cmidrule{5-7}%
+            % ================================================================ %
+            2.85 & \citeauthor*{Weise_1996} & (\citeyear*{Weise_1996}) &&%
+            2.85 \textsuperscript{\emph{y}} & \citeauthor*{Cui_2013} & (\citeyear*{Cui_2013}) \\%
+            % ================================================================ %
+            \cmidrule{1-3}\cmidrule{5-7}%
+            % ================================================================ %
+            2.83 \textsuperscript{\emph{y}} & \citeauthor*{Isaenko_2005} & (\citeyear*{Isaenko_2005}) &&%
+            2.99 \textsuperscript{\emph{y}} & \citeauthor*{Wiggins_2016} & (\citeyear*{Wiggins_2016}) \\%
+            % ================================================================ %
+            \bottomrule%
+            % ================================================================ %
+            \multicolumn{7}{l}{%
+                \begin{minipage}{5.00in}%
+                \begin{scriptsize}%
+                    $^r$ red color crystal\\%
+                    $^y$ yellow color crystal%
+                \end{scriptsize}%            
+                \end{minipage}%
+            }%
+        % ==================================================================== %
+        \end{tabu}%
+    % ======================================================================== %
+    \end{table}%
+% ============================================================================ %
+\end{document}%

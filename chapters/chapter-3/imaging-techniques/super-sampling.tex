@@ -1,0 +1,23 @@
+% ./chapters/chapter-3/imaging-techniques/super-sampling.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}
+\begin{document}%
+% ============================================================================ %
+    \subsection{Super-Sampling}%
+    \label{sec:chapter-3:imaging-techniques:super-sampling}%
+    % ======================================================================== %
+    The \gls{super-sampling} technique comprises a combination of experimental and analytically methods to enhance image resolution (see \Xrefappendix{image-processing:super-sampling}).
+    In general, a pixel based digital imaging device maintains a lower resolution limit based on the physical size of the pixels.
+    The spatial sampling frequency \Xvariable{f_s} is related to the size of the pixels \Xvariable{D_p} by equation \Xrefequation{nyquist-frequency:a}.
+    % ======================================================================== %
+    \Xequationfile{nyquist-frequency}%
+    % ======================================================================== %
+    To prevent distortion and accurately represent the analog signal in digital space, the Nyquist frequency \Xvariable{f_N} is defined as half the spatial frequency, shown in \Xrefequation{nyquist-frequency:b}.
+    The Nyquist frequency implies a physical resolution limit of twice the pixel pitch, requiring smaller pixels to achieve higher resolution.
+    As a method to overcome this limitation, \gls{super-sampling} achieves sub-pixel resolution by scanning a region at position intervals (or sub-steps) smaller than the pixel pitch.
+    For a single pixel channel, each sub-step creates a virtual pixel of equivalent size, capturing the subtle changes in intensity unresolved by the larger physical pixel.
+    The resulting map of virtual pixels contains the original image, sampled at a higher rate attributed to the pixel size reduction.
+    The trade off for the enhanced resolution is increased imaging time, requiring \Xmath{N^2} samples where \Xmath{N} is the ratio of sub-steps to pixel pitch, and the associated setup cost from high-fidelity positioning stages.
+    This method was tested in simulations and physical experiments to obtain resolutions less than half the pixel pitch \cite{Herrera_2016}.
+% ============================================================================ %
+\end{document}%

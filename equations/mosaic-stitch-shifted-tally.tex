@@ -1,0 +1,27 @@
+% ./equations/mosaic-stitch-shifted-tally.tex
+% ============================================================================ %
+\documentclass[../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \Xequation%    
+    % ======================================================================== %
+    \def\tmp{%
+        \left\{%
+        \begin{array}{ll}%
+            0, & f_{i}^{*} = 0 \\%
+            1, & f_{i}^{*} > 0 \\%
+        \end{array}%
+        \right.%
+    }%
+    % ======================================================================== %
+    \begin{equation}%
+        g_{i}^{*}(x,y) =%
+        \begin{bmatrix}%
+            \tmp && \dots && \tmp \\%
+            \vdots && \ddots && \vdots \\%
+            \tmp && \dots && \tmp \\%
+        \end{bmatrix}%
+        \label{eq:mosaic-stitch-shifted-tally}%
+    \end{equation}%     
+% ============================================================================ %
+\end{document}%

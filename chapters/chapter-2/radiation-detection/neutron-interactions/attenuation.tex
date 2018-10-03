@@ -1,0 +1,33 @@
+% ./chapters/chapter-2/radiation-detection/neutron-interactions/attenuation.tex
+% ============================================================================ %
+\documentclass[../../../../main.tex]{subfiles}
+\begin{document}
+% ============================================================================ %
+    \subsubsection{Attenuation}%
+    \label{sec:chapter-2:radiation-detection:neutron-interactions:attenuation}%
+    % ======================================================================== %
+    A radiation source flux describes the number of particles passing through a unit surface area per unit time.
+    Neutron flux is often designated as \Xvariable{\phi} given in units of (\si{\neutronflux}), and includes neutrons passing through the area in all directions.
+    For neutron beams of approximately monodirectional source flux, the intensity \Xvariable{I(x)} quantifies the neutron flux along the beam axis.
+    As the neutron beam front passes through an interacting material of differential thickness \Xvariable{dx} the intensity will attenuate, or gradually decrease, proportional to the total macroscopic interaction cross section \Xvariable{\Sigma_{tot}} as given by \Xrefequation{neutron-interaction-rate}.
+    % ======================================================================== %
+    \Xequationfile{neutron-interaction-rate}%        
+    % ======================================================================== %
+    With the change in intensity given by \Xvariable{dI(x)} this equation captures the neutron removal rate at any linear position \Xvariable{x} in the uniform attenuating material.
+    For a thin, absorbing material, with a small target area, neutrons are assumed to either pass straight through, or interact corresponding to one of the cross sections, removing them from the incident beam \Xvariable{I_{0}}[].
+    Using the material thickness as the path distance \Xvariable{x} the total beam attenuation can be found by integrating \Xrefequation{neutron-interaction-rate}. 
+    The resulting intensity of the exiting beam is given as \Xvariable{I(x)} and the transmission fraction \Xvariable{I/I_{0}} is given by \Xrefequation{neutron-attenuation}.
+    % ======================================================================== %
+    \Xequationfile{neutron-attenuation}%
+    % ======================================================================== %
+    Furthermore, the transmission fraction indicates the probability that a neutron will pass through an attenuating material of thickness \Xvariable{x}[].
+    Along the same lines, the total macroscopic cross section also dictates the mean free path \Xvariable{\lambda} of the neutron, shown in \Xrefequation{neutron-mean-free-path}.
+    % ======================================================================== %
+    \Xequationfile{neutron-mean-free-path}%
+    % ======================================================================== %
+    The \gls{mfp} represents the average linear distance a neutron may travel through the attenuating material before a collision removes the neutron.
+    This parameter is useful when designing detection systems, specifying a required thickness of material to capture the anticipated radiation source.
+    More generally, radiation cross sections are a function of the incident radiation energy, creating energy dependent forms of the equations derived in this section.
+    For practical analysis, cross sections are often averaged across a range of energies, mentioned in \Xrefsection{chapter-2:radiation-detection:types-of-radiation}, binning together particles of approximately equivalent behavior in the system.
+% ============================================================================ %
+\end{document}%

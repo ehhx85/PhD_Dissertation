@@ -1,0 +1,25 @@
+% ./chapters/chapter-2/radiation-detection/neutron-interactions/gadolinium.tex
+% ============================================================================ %
+\documentclass[../../../../main.tex]{subfiles}
+\begin{document}%
+% ============================================================================ %
+    \subsubsection{Gadolinium}%
+    \label{sec:chapter-2:radiation-detection:neutron-interactions:gadolinium}%
+    % ======================================================================== %
+    Gadolinium, a heavy metal lanthanide, possesses the largest cross sections of any element.
+    Out of the 6 stable isotopes of gadolinium, the isotopes \isotope[155]{Gd} and \isotope[157]{Gd} exhibit the largest neutron cross sections of \SI{65000}{\barn} and \SI{255000}{\barn}, respectively \cite{Chadwick_2011}. 
+    These two isotopes occur at \SI{14.80}{\percent} and \SI{15.65}{\percent} natural abundance, respectively.
+    Similar to \isotope[113]{Cd}, these two isotopes of gadolinium also follow the \Xmath{1/v} trend with a large drop off between \SIrange{0.1}{1.0}{\electronvolt} preceding the resonance region (see \Xreffigures{cross-section-064-gd-155-total}{cross-section-064-gd-157-total}).
+    As with many of the heavier elements, gadolinium favors \gls{gamma-ray} production in response to neutrons.
+    The \gls{gd155-neutron-gamma} reaction is shown in \Xrefequation{reaction-gadolinium-155}, resulting in \gls{gamma-ray} production yielding a large \gls{q-value}.%
+    % ======================================================================== %
+    \Xequationfile{reaction-gadolinium-155}%
+    % ======================================================================== %
+    Having a larger neutron cross section, \isotope[157]{Gd} is commonly used in enriched material, interacting with neutrons following the \gls{gd157-neutron-gamma} reaction shown in \Xrefequation{reaction-gadolinium-157}.%
+    % ======================================================================== %
+    \Xequationfile{reaction-gadolinium-157}%
+    % ======================================================================== %
+    Gadolinium contrasting agents are utilized in \gls{mri}, generally considered to be safe in small doses, and are a warranted risk compared to the underlying ailment.
+    However, for patients recieving multiple \glspl{mri}, an increase in free \ce{Gd^{3+}} ion concentration may lead to toxic effects in multiple biological systems \cite{Semelka_2016,Rogosnitzky_2016}.
+% ============================================================================ %
+\end{document}%

@@ -1,0 +1,34 @@
+% ./chapters/chapter-2/advanced-detectors/microchannel-plates.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}
+\begin{document}%
+% ============================================================================ %
+    \subsection{Microchannel Plates}%
+    \label{sec:chapter-2:advanced-detectors:microchannel-plates}%
+    % ======================================================================== %
+    One of the most common technologies implemented in \gls{high-res} imaging, glass \glspl{mcp} have been able to produce high spatial resolution, down to \Xmath{\sim}\SI{10}{\micro\meter}.
+    The typical \gls{mcp}, as implemented by \citeauthor*{Tremsin_2005}, utilizes the \gls{b10-neutron-alpha} reaction by doping the glass channels with the neutron sensitive isotope.
+    When a neutron is absorbed by the \isotope[10]{B} in the channel wall, the resulting secondary products may either stop in the wall, or scatter into the pores, creating an electron avalanche.
+    The electron avalanche is required to register a detection event, so the pore geometry has been driven by the desire to maximize secondary particle escape from the wall material.
+    For this reason, the early design analysis indicated that a square pore design would minimize the ``no-escape" zones (where an event goes undetected), followed by a hexagonal geometry and lastly a circular geometry \cite{Tremsin_2005}.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    In the following tests at \gls{hfir}, \citeauthor*{Tremsin_2008} used the hexagonal channel geometry, with a \SIrange{6}{10}{\micro\meter} channel diameter and a \SIrange{2}{3}{\micro\meter} wall thickness. 
+    Within the \gls{mcp} glass, the reaction products have a range of \SIlist[list-units={repeat}]{2;3.5}{\micro\meter}, for the \gls{alpha-particle} and \isotope[7]{Li}, respectively.
+    Noting these values, the secondary products would only be capable of traveling a distance spanning a maximum of two channels.
+    A performance comparison between the \gls{mcp} and \gls{medipix2} readouts traded resolution for acquisition bandwidth.
+    The \gls{xdl} readout of the \gls{mcp} achieved resolution \Xmath{\sim}\SI{30}{\micro\meter} at an acquisition rate of \SI{0.5}{\mega\hertz} while the \gls{medipix2} produced a pixel limited \SI{55}{\micro\meter} resolution at over \SI{100}{\mega\hertz}.
+    Backing the \gls{mcp} stack with a \gls{timepix} produced a hybrid system, capable of higher resolution in the \gls{mcp} readout mode or higher counting rates with the \gls{timepix} detector.
+    The system produced a minimum, sub-\SI{15}{\micro\meter} resolution, limited by the pore spacing parameter \cite{Tremsin_2008, Vallerga_2008}.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    The next year (\citeyear*{Tremsin_2009}), \citeauthor*{Tremsin_2009} tested the \gls{mcp}-\gls{medipix2} system at \gls{psi}, capturing an image of the \gls{siemens-star}.
+    Again, the imager demonstrated a sub-\SI{15}{\micro\meter} resolution with the \SI{11}{\micro\meter} hexagonal pore pattern visible in the image \cite{Tremsin_2009, Tremsin_2009a}.
+    In \citeyear*{Tremsin_2011}, \citeauthor*{Tremsin_2011} revisited \gls{psi} to conduct \glspl{ct-neutron} of multiple samples.
+    They were able to separate the lower density layering in a wood block and the individual gunpowder grains (\Xmath{\sim}\SI{400}{\micro\meter} size) in a bullet using \gls{ct-neutron}, captured with \num{201} projections across \SI{180}{\degree} at \SI{150}{\second} exposures \cite{Tremsin_2011}.
+    In a separate experiment, \citeauthor*{Tremsin_2011a} captured a \gls{ct-neutron} of a set of bolts at \SI{8}{\second} exposures, capable of distinguishing the individual bodies in the volume data \cite{Tremsin_2011a}.
+    Later experiments in \citeyear*{Tremsin_2015} used the \gls{mcp} to capture hydrogen cracks in \ce{Zr} alloy, edge effects from a \ce{TiN} coating on \ce{Al}, and magnetic field imaging using polarized neutrons \cite{Tremsin_2015}.
+% ============================================================================ %
+\end{document}%

@@ -1,0 +1,59 @@
+% ./tables/spin-coater-recipe.tex
+% ============================================================================ %
+\documentclass[../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \Xtable%
+    \begin{table}%
+    % ======================================================================== %
+        \caption%
+            [\Glstext{spin-coater} negative resist recipe]%
+            {\Gls{spin-coater} negative resist recipe}%
+        \label{tbl:spin-coater-recipe}%
+        % ==================================================================== %
+        \begin{tabu}{ c c c p{4.50in} }%
+        % ==================================================================== %
+            \toprule%
+            % ================================================================ %
+            \centering\textbf{Step} &%
+            \centering\textbf{$T_{ramp}$} &%
+            \centering\textbf{$T_{dwell}$} &%
+            \centering\textbf{Description}\\%
+            % ================================================================ %
+            \toprule%            
+            % ================================================================ %
+            S00 &
+            \SI{0}{\second} &
+            \SI{0}{\second} &
+            Sequence startup, defines wafer as \SI{2}{\inch} outer diameter.\\%
+            % ================================================================ %
+            S01 &
+            \SI{10}{\second} &
+            \SI{2}{\second} &
+            Initial ramp to \SI{500}{RPM}.
+            This step allows the wafer to auto-center on the chuck.\\%
+            % ================================================================ %
+            S02 &
+            \SI{15}{\second} &
+            \SI{25}{\second} &
+            Ramp to full spin coating speed of \SI{3000}{RPM}.
+            This step planarizes coating.\\%
+            % ================================================================ %
+            S03 &
+            \SI{25}{\second} &
+            \SI{10}{\second} &
+            Ramp down to \SI{1000}{RPM} to slow wafer and continue evaporating solvent.\\%
+            % ================================================================ %
+            S04 &
+            \SI{5}{\second} &
+            \SI{2}{\second} &
+            Final ramp down to stationary.
+            Sample is ready once it has come to rest.\\%
+            % ================================================================ %
+            \bottomrule%            
+        % ==================================================================== %
+        \end{tabu}%
+    % ======================================================================== %
+    \end{table}%
+% ============================================================================ %
+\end{document}%

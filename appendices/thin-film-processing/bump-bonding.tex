@@ -1,0 +1,34 @@
+% ./appendices/thin-film-processing/bump-bonding.tex
+% ============================================================================ %
+\documentclass[../../main.tex]{subfiles}
+\begin{document}%
+% ============================================================================ %
+    \section{Bump Bonding}%    
+    \label{app:thin-film-processing:bump-bonding}%
+    % ======================================================================== %
+    As the channel density increases in a pixelated imaging device, the previously described wire bonding techniques are no longer viable.
+    Flip chip bump bonding offers a method of directly coupling the pixelated sensor to an identically pixelated readout \gls{asic}.    
+    Instead of bonding micron-thick wires from the detector pixels to the readout bonding pad, the pixels are electrically coupled to the associated \gls{asic} pixel via bump bonds \cite{Alimonti_2006,Alimonti_2013}.
+    The bump ball diameters for this technology range from \SIrange{20}{40}{\micro\meter}, resulting in a bond height of \SIrange{10}{15}{\micro\meter} \cite{Adam_1999}.
+    The applicable pixel pitches span from \SIrange{20}{50}{\micro\meter}, suitable for the \SI{55}{\micro\meter} \gls{timepix} system, common in \gls{high-res} radiation detection.
+    The process has been illustrated below (\Xreffigure*{bump-bond-process}) courtesy \citeauthor*{book:Rossi_2006} (\citeyear*{book:Rossi_2006}), describing the original processing methodology detailed by \citeauthor*{Broennimann_2006} (\citeyear*{Broennimann_2006}) \cite{book:Rossi_2006, Broennimann_2006}.
+    The flip chip bump bond facility used to process the \gls{lisepix} system applied the larger indium bump bonds to the \gls{timepix}, slightly altering the following process to accommodate \gls{lise} processing temperature limits.
+    Step (\Xsubreffigure{bump-bond-process:a}) illustrates the chip coated with a capping layer such as \ce{SiO_2}, to insulate the underlying \gls{asic} circuitry.
+    This capping layer exposes only the bonding pad for each pixel, precisely covering the edges of the contact to minimize current leakage.
+    In Step (\Xsubreffigure{bump-bond-process:b}), the chip is coated in photoresist, and a thin base layer (\ce{Au}) is sputtered into the bonding well, creating a cradle for the bump bond up to the capping layer.
+    Step (\Xsubreffigure{bump-bond-process:c}) follows a similar process as Step (\Xsubreffigure{bump-bond-process:b}), depositing a roughly \SI{5}{\micro\meter} thick layer of indium, with a \SI{50}{\micro\meter} diameter, to form the bump bond (described for a \SI{100}{\micro\meter} pixel pitch design) \cite{book:Rossi_2006}.
+    After wet lift off, Step (\Xsubreffigure{bump-bond-process:d}) shows the \gls{asic} prepared with the bonding metals.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    A similar sequence, following Steps (\Xsubreffigure{bump-bond-process:a}{\--}\Xsubreffigure{bump-bond-process:d}), is applied to the \gls{lise} sensor using a smaller thickness of \SI{2}{\micro\meter} and diameter of \SI{20}{\micro\meter} for the indium deposit.
+    Step (\Xsubreffigure{bump-bond-process:e}) shows the effects of the \SI{180}{\celsius} reflow process, providing the activation energy for the indium to reform into a spherical bead. 
+    The reflow is only applied to the \gls{asic} side and not the thinner indium on the sensor side.
+    This prevents thermal shock in the \gls{lise} crystal along with lithium off-gassing which can negatively effective the device sensitivity.
+    In Step (\Xsubreffigure{bump-bond-process:f}) the bumped \gls{asic} chip and the sensor are brought into alignment.
+    As the sensor may be opaque and has metallized contacts, this process is performed blind, relying the on precision positioning stage to approximate the alignment.
+    During the bonding process, Step (\Xsubreffigure{bump-bond-process:g}), the two substrates are compressed, roughly \SI{1.0}{\gram} per bump, and reflowed again, this time at a lower temperature of \SI{100}{\celsius}.
+    The indium coat on the sensor side helps the bump bond to wet the contact, self-aligning each pixel to position the chip.
+    Step (\Xsubreffigure{bump-bond-process:h}) shows the final bump bond, with the indium creating a spherical interconnect between the two contacts. 
+% ============================================================================ %
+\end{document}%

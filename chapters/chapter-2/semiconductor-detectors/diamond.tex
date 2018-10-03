@@ -1,0 +1,47 @@
+% ./chapters/chapter-2/semiconductor-detectors/diamond.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}
+\begin{document}%
+% ============================================================================ %
+    \subsection{Diamond}%
+    \label{sec:chapter-2:semiconductor-detectors:diamond}%
+    % ======================================================================== %
+    Among its wide range of applications, diamond has demonstrated radiation detection capabilities.
+    Early on, \citeauthor*{Kania_1993} proposed the use of an undoped, intrinsic diamond as an ohmic semiconductor detector with a material resistivty over \SI{E12}{\ohmcm} \cite{Kania_1993}.
+    As a generalized ``solid ionization chamber", the diamond detector could theoretically convert any ionizing radiation that interacted with the lattice into a detectable signal.
+    As the \gls{cvd} growth process became more reliable, the simple detector was fabricated by depositing thin film metal contacts on both faces of the crystal to form electrodes, tested by \citeauthor*{Behnke_1998}.
+    They confirmed a larger resistivity, exceeding \SI{E13}{\ohmcm}, noting the polarisation effect created from trapped charge carriers \cite{Behnke_1998}.
+    The high bandgap of diamond (\Xmath{E_g = \SI{5.5}{\electronvolt}}) eliminated the need for additional doping to suppress leakage current at room temperature.
+    However, with a bandgap \num{5} times larger than silicon, more energy is required for each charge carrier pair, reducing material sensitivity.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    A decade later, \citeauthor*{Pernegger_2005} was able to successfully apply the \gls{tct} to diamonds under \gls{alpha-particle} radiation  from a \isotope[241]{Am} source, characterizing charge carrier transport times.
+    The tests were conducted with a sample measuring \SI[product-units=power]{4 x 4}{\milli\meter}, with an electrical field of \SI[per-mode=symbol]{1}{\volt\per\micro\meter} applied across the \SI{470}{\micro\meter} thick sensor \cite{Pernegger_2005}.
+    \citeauthor*{Pomorski_2006} confirmed the high speed operation of the diamond, demonstrating the materials nanosecond pulse response, unintuitively favoring hole drift over electron drift \cite{Pomorski_2006}.
+    They also studied the signal degradation apparent after high flux charged particle bombardment.
+    While the radiation hard diamond did not see an increase in leakage current or drift velocity, the sensor required annealing to respond with the same pre-irradiation signal amplitude \cite{Pomorski_2007}.
+    Because of its radiation hardness, \citeauthor*{Wallny_2007} of the RD42 Diamond Detector Collaboration proposed diamond strip and pixel detectors for beam monitoring in the high radiation environment seen in the \gls{atlas} experiment at the \gls{lhc} \cite{Wallny_2007}.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    Being one of the hardest materials known, diamond can be polished down and maintain an extremely smooth surface (\Xmath{R_{a}\sim\SI{5}{\nano\meter}}), eliminating electronic trapping sites.
+    However, the smooth surface creates difficulties in the contact metal adhesion process.    
+    \citeauthor*{Galbiati_2009} demonstrated the use of a diamond-like carbon as a tunneling junction to effectively coupled the \ce{Pt} and \ce{Au} metal contacts \cite{Galbiati_2009}.    
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    Diamond has been proposed as a potential fast neutron detector for its radiation hardness and high energy resolution.
+    \citeauthor*{Pillon_2011} studied fast neutron detection through the \gls{c12-neutron-alpha} reaction as demonstrated in \Xrefequation{reaction-carbon-12} \cite{Pillon_2011}.
+    % ======================================================================== %
+    \Xequationfile{reaction-carbon-12}%
+    % ======================================================================== %
+    They also explored the possibility of broad spectrum neutron detection by applying a \gls{lif} converter layer (\SIrange[range-phrase = --]{0.5}{4.0}{\micro\meter}) to the surface of the diamond.
+    The \gls{li6-neutron-alpha} reaction converts a neutron to an \glsname{alpha-particle}, escaping the thin conversion layer and depositing in the diamond for secondary detection.
+    While limited by size, the system resolved neutron interactions across a broad energy range and demonstrated utility as a dose monitor \cite{Angelone_2011}.
+    Recently shown by \citeauthor*{Wulz_2017}, deep channels were etched into the surface of electronics grade diamonds \cite{Wulz_2017}.
+    The vias measured \SI{30}{\micro\meter} diameter and penetrated the full \SI{150}{\micro\meter} thick diamond sensor.
+    Electroplating was used to fill each channel with chromium, creating a conductive wire through the sensor bulk.
+    The \gls{3d} diamond detector prototype successfully demonstrated a response to a \gls{pube} neutron source \cite{thesis:Wulz_2017}.
+% ============================================================================ %
+\end{document}%

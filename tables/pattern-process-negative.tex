@@ -1,0 +1,102 @@
+% ./tables/pattern-process-negative.tex
+% ============================================================================ %
+\documentclass[../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \Xtable%    
+    \begin{table}[p]%
+    % ======================================================================== %
+        \caption%
+            [Photolithography with negative photoresist for sensor fabrication]%
+            {Photolithography with negative photoresist for sensor fabrication}%
+        \label{tbl:pattern-process-negative}%
+        % ==================================================================== %
+        \begin{tabu}{ c p{5.50in} }%
+        % ==================================================================== %
+            \toprule%            
+            % ================================================================ %
+            \centering\textbf{Step} &%
+            \centering\textbf{Action}\\%
+            % ================================================================ %
+            \toprule%            
+            % ================================================================ %
+            \Xsubreffigure{photolithography-negative-sensor:a}%
+            &%
+            Prepare cleaned planchet.%
+            \\%
+            \midrule%
+            % ================================================================ %
+            \Xsubreffigure{photolithography-negative-sensor:b}%
+            &%
+            Apply \gls{apiezon-wax} to planchet at \SI{90}{\celsius}.%
+            \\%
+            \midrule%
+            % ================================================================ %
+            \Xsubreffigure{photolithography-negative-sensor:c}%
+            &%
+            Bond sensor to coated planchet at \SI{100}{\celsius}.%
+            \\%
+            \midrule%
+            % ================================================================ %
+            \Xsubreffigure{photolithography-negative-sensor:d}%
+            &%
+            Generously apply \gls{nr9-1000py} across substrate and run negative spin coating recipe (see \Xreftable{spin-coater-recipe}).
+            Follow with soft bake on hotplate at \SI{150}{\celsius} for \SI{60}{\second}.%
+            \\%
+            \midrule%
+            % ================================================================ %
+            \Xsubreffigure{photolithography-negative-sensor:e}%
+            &%
+            Install photomask in \gls{ma6}.
+            Load sensor wafer and align photomask.%
+            \\%
+            \midrule%
+            % ================================================================ %
+            \Xsubreffigure{photolithography-negative-sensor:f}%
+            &%
+            Expose resist for \SI{15}{\second} using distance contact on \gls{ma6}.%
+            \\%
+            \midrule%
+            % ================================================================ %
+            \Xsubreffigure{photolithography-negative-sensor:g}%
+            &%
+            Hard bake on hotplate at \SI{100}{\celsius} for \SI{60}{\second}.%
+            \\%
+            \midrule%
+            % ================================================================ %
+            \Xsubreffigure{photolithography-negative-sensor:h}
+            &%
+            Dispense \gls{rd6} across surface of sensor for \SIrange{8}{10}{\second}.
+            Immediately rinse the surface with \gls{di-water} to halt the development process.
+            Dry patterned surface using compressed nitrogen gun, driving all fluid from center outward.%
+            \\%
+            \midrule%
+            % ================================================================ %
+            \Xsubreffigure{photolithography-negative-sensor:i}
+            &%
+            Inspect resist pattern to ensure quality of development and appropriate sidewall taper.
+            Run metal deposition in the \gls{sputterer}.%
+            \\%
+            \midrule%
+            % ================================================================ %
+            \Xsubreffigure{photolithography-negative-sensor:j}            
+            &%
+            Soak patterned substrate in \gls{rr41} at \SI{80}{\celsius}.
+            \Gls{acetone} may be added sparingly to facilitate metal lift-off.
+            Add \gls{toluene} to remove the \gls{apiezon-wax}.%
+            \\%
+            \midrule%
+            % ================================================================ %
+            \Xsubreffigure{photolithography-negative-sensor:k}            
+            &%
+            If \gls{acetone} was used, a light \gls{ipa} pre-rinse will help to remove \gls{acetone} streaking.
+            Perform final rinse with \gls{methanol}.
+            Dry with compressed nitrogen gun.%
+            \\%
+            \bottomrule%
+            % ==================================================================== %
+        \end{tabu}%
+    % ======================================================================== %
+    \end{table}%
+% ============================================================================ %
+\end{document}%

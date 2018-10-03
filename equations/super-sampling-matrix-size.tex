@@ -1,0 +1,43 @@
+% ./equations/super-sampling-matrix-size.tex
+% ============================================================================ %
+\documentclass[../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \Xequation%
+    \def\tmpA{6}%
+    \def\tmpB{5.50in}%
+    \begin{subequations}%
+    % ======================================================================== %
+    \begin{equation*}%
+        \begin{tabu} to \tmpB { X[1,c,$$] X[\tmpA,l,$$] X[\tmpA,l,$$] }%
+                &%            
+            M^{*} = M + \max(\Delta u)%
+            &%
+            N^{*} = N + \max(\Delta v)\\%
+        \end{tabu}%
+        \hspace*{2.0em}%
+    \end{equation*}%
+    % ======================================================================== %
+    \begin{equation}%
+            \begin{tabu} to \tmpB { X[1,c,$$] X[\tmpA,l,$$] X[\tmpA,l,$$] }%
+                &%
+            M^{*} = M + \dfrac{P_{x}}{P_{u}} \cdot (M_{0} - 1)%
+            &% &%
+            N^{*} = N + \dfrac{P_{y}}{P_{v}} \cdot (N_{0} - 1)\\%
+        \end{tabu}%
+        \label{eq:super-sampling-matrix-size:a}%
+    \end{equation}% 
+    % ======================================================================== %
+    \begin{equation}%
+            \begin{tabu} to \tmpB { X[1,c,$$] X[\tmpA,l,$$] X[\tmpA,l,$$] }%
+                &%            
+            M^{*} = M + \dfrac{P_{x}}{P_{u}} \cdot (M_{0} - 1) \cdot C%
+            &% &%
+            N^{*} = N + \dfrac{P_{y}}{P_{v}} \cdot (N_{0} - 1) \cdot C\\%
+        \end{tabu}%
+        \label{eq:super-sampling-matrix-size:b}%
+    \end{equation}% 
+        \label{eq:super-sampling-matrix-size}%
+    \end{subequations}%
+% ============================================================================ %
+\end{document}%

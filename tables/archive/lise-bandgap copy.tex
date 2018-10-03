@@ -1,0 +1,64 @@
+% ./tables/lise-bandgap.tex
+% ============================================================================ %
+\documentclass[../main.tex]{subfiles}
+\begin{document}%
+% ============================================================================ %
+    \Xtable%    
+    \begin{table}[ht]%
+    % ======================================================================== %
+        \caption{Bandgap and electrical resistivity for \glssymbol{lise} compiled from various studies.}%
+        % ==================================================================== %
+        \sisetup{%
+            table-number-alignment = center,%
+            table-figures-integer = 1,%            
+            table-figures-decimal = 1,%
+            table-figures-uncertainty = 1,%
+            separate-uncertainty = false,%
+        }%         
+        % ==================================================================== %
+        \centering%
+        \begin{tabu}{%
+            S[table-format = 2.3]%
+            S[table-format = 2.3]%
+            l%
+        }%
+        % ==================================================================== %
+            \toprule%
+            {\centering\boldmath$E_{g}$ (\si{\electronvolt}) \-- red} &%
+            {\centering\boldmath$E_{g}$ (\si{\electronvolt}) \-- yellow} &%
+            {\centering\textbf{Source}} \\%
+            \toprule%
+            % ================================================================ %
+             1.88 & {\centering\--} & \citeauthor*{Kamijoh_1981} (\citeyear*{Kamijoh_1981})\\%
+            \midrule%
+            % ================================================================ %
+            2.03 & 2.90 & \citeauthor*{Beister_1991} (\citeyear*{Beister_1991})\\%
+            \midrule%
+            % ================================================================ %
+            {\centering\--} & 2.83 & \citeauthor*{Eifler_2000} (\citeyear*{Eifler_2000})\\%
+            \midrule%
+            % ================================================================ %
+            {\centering\--} & 2.83 & \citeauthor*{Isaenko_2005} (\citeyear*{Isaenko_2005})\\%
+            \midrule%
+            % ================================================================ %
+            {\centering\--} & 2.63 & \citeauthor*{Ma_2009} (\citeyear*{Ma_2009})\\%
+            \midrule%
+            % ================================================================ %
+            {\centering\--} & 2.86 & \citeauthor*{Petrov_2010} (\citeyear*{Petrov_2010})\\%
+            \midrule%
+            % ================================================================ %
+            {\centering\--} & 2.85 & \citeauthor*{Tupitsyn_2012} (\citeyear*{Tupitsyn_2012})\\%
+            \midrule%
+            % ================================================================ %
+            2.03 & 2.85 & \citeauthor*{Cui_2013} (\citeyear*{Cui_2013})\\%
+            \midrule%
+            % ================================================================ %
+            {\centering\--} & 2.99 & \citeauthor*{Wiggins_2016} (\citeyear*{Wiggins_2016})\\%
+            \toprule%
+        % ==================================================================== %
+        \end{tabu}%
+        \label{tbl:lise-bandgap}%
+    % ======================================================================== %
+    \end{table}%
+% ============================================================================ %
+\end{document}%

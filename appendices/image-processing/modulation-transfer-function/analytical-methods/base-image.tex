@@ -1,0 +1,16 @@
+% ./appendices/image-processing/modulation-transfer-function/analytical-methods/base-image.tex
+% ============================================================================ %
+\documentclass[../../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \subsubsection{Base Image}%
+    \label{app:image-processing:modulation-transfer-function:analytical-methods:base-image}%
+    % ======================================================================== %
+    The base image served as the input matrix \Xvariable{(M\times N)} for the \gls{mtf} calculator after pre-processing, as described in \Xrefappendix{image-processing:preprocessing}.
+    Along with the pixel size \Xvariable{S_{pix}} and selected region of interest, the calculation process is automated to generate reliable, repeatable results.
+    The first processing step comprises plotting the raw intensity data in both pixel and distance axes to ensure proper pre-processing.
+    The pixel size is used to scale the input data (\Xreffigure*{mtf-raw}), providing a usable output value from the \gls{mtf} curve.
+    If the edge profile is aligned parallel to the horizontal pixel rows, the calculated resolution value would be lower limited by the pixel size.
+    For this reason, a slight angle is introduced during the experiment to create an edge profile spanning multiple pixel rows.
+% ============================================================================ %
+\end{document}%

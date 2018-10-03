@@ -1,0 +1,54 @@
+% ./tables/sensor-etch-process.tex
+% ============================================================================ %
+\documentclass[../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \Xtable%    
+    \begin{table}[p]%
+    % ======================================================================== %
+        \caption%
+            [\Glstext{lise} sensor \glstext{brometh} etching process]%
+            {\Gls{lise} sensor \gls{brometh} etching process}%
+        \label{tbl:sensor-etch-process}%
+        % ==================================================================== %
+        \begin{tabu}{ c p{5.00in} }%
+        % ==================================================================== %
+            \toprule%
+            \centering\textbf{Step} &%
+            \centering\textbf{Action}\\%
+            \toprule%
+            % ================================================================ %
+            1 & \textit{Prepare etching station}\\%
+            $(a)$ & Rinse 3 Pyrex glass beakers, \SI{150}{\milli\liter} volume or larger, with \gls{methanol}.\\%
+            $(b)$ & Dispose of rinse solution in etchant waste.\\%
+            $(c)$ & Fill each beaker with \SI{50}{\milli\liter} of \gls{methanol}.\\%
+            \midrule%
+            % ================================================================ %
+            2 & \textit{Mix etching solution}\\%
+            $(a)$ & Measure \SI{1.0}{\milli\liter} of bromine liquid in Pyrex graduated cylinder.\\%
+            $(b)$ & Pour bromine from graduated cylinder into one of the Pyrex beakers containing \gls{methanol}.\\
+            $(c)$ & Thoroughly rinse graduated cylinder with \gls{methanol}, and empty into etchant waste.\\%
+            \midrule%
+            % ================================================================ %
+            3 & \textit{Etch sensor}\\%
+            $(a)$ & Using ceramic tweezers, submerge sensor into the \gls{brometh} etching solution.\\% 
+            $(b)$ & Carefully agitate the sensor, etching for \SI{30}{\second}.\\%
+            $(c)$ & Dip sensor into the second beaker of \gls{methanol}, rinsing sensor for \SI{30}{\second}.\\%
+            $(d)$ & Dip sensor into the third beaker of \gls{methanol}, for a \SI{5}{\second} final clean.\\%
+            \midrule%
+            % ================================================================ %
+            4 & \textit{Inspect sensor surface}\\%
+            $(a)$ & Observe sensor underneath optical microscope to assess surface change.\\%
+            $(b)$ & If surface finish still shows large defects, repolish sensor.\\%
+            $(c)$ & If surface finish still shows small defects, repeat \textbf{Step 3}.\\%
+            \midrule%
+            % ================================================================ %
+            5 & After sensor shows desired optical surface finish, package to avoid oxidation and immediately follow with photolithography.\\%
+            % ================================================================ %
+            \bottomrule%
+        % ==================================================================== %
+        \end{tabu}%
+    % ======================================================================== %
+    \end{table}%
+% ============================================================================ %
+\end{document}%

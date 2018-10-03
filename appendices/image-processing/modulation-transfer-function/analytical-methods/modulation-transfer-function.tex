@@ -1,0 +1,33 @@
+% ./appendices/image-processing/modulation-transfer-function/analytical-methods/modulation-transfer-function.tex
+% ============================================================================ %
+\documentclass[../../../../main.tex]{subfiles}
+\begin{document}%
+% ============================================================================ %
+    \subsubsection{Modulation Transfer Function}%
+    \label{app:image-processing:modulation-transfer-function:analytical-methods:modulation-transfer-function}%
+    % ======================================================================== %
+    The \gls{cft} \Xvariable{F(\omega)} follows the integral shown in \Xrefequation{fourier-continuous} for a continuous spatial function \Xvariable{f(x)}[].
+    % ======================================================================== %
+    \Xequationfile{fourier-continuous}%
+    % ======================================================================== %
+    The forward \gls{dft} \Xvariable{f[k]} assumes the continuous spatial function is sampled across \Xvariable[]{N}[] data points, spaced \Xvariable[]{X}[] apart as seen in \Xrefequation{fourier-discrete}.
+    % ======================================================================== %
+    \Xequationfile{fourier-discrete}%
+    % ======================================================================== %
+    In the physical experiment, data is assumed periodic, evaluated at the frequency \Xvariable{\omega} and its harmonics given by \Xrefequation{fourier-sampling-frequency}.
+    % ======================================================================== %
+    \Xequationfile{fourier-sampling-frequency}%
+    % ======================================================================== %
+    The sampling spacing \Xvariable{X} is defined by the interpolation gain \Xvariable{G} and the pixel size \Xvariable{S_{pix}} to yield meaningful results as in, \Xrefequation{fourier-sampling-spacing}.
+    % ======================================================================== %
+    \Xequationfile{fourier-sampling-spacing}%
+    % ======================================================================== %
+    Substituting into \Xrefequation{fourier-discrete} yields the form used for the \gls{mtf} process, \Xrefequation{fourier-spatial}, which is properly scaled to units of line pairs per millimeter (\si{\linepairs}).
+    % ======================================================================== %
+    \Xequationfile{fourier-spatial}%
+    % ======================================================================== %
+    The \gls{mtf} is normalized to the maximum value, typically the value at the zero frequency, spanning a range of \Xmath{y=[0,1]}.
+    The resolution parameter is evaluated by fitting a spline to the \gls{mtf} curve and evaluating the abscissa for a \SI{10}{\percent} \gls{mtf} cut-off value, shown in \Xreffigure*{mtf-final-result}.
+    The \gls{mtf} calculator script plots the final curve with the spatial resolution displayed in values of line pairs per millimeter as well as the converted micron resolution value for the edge.
+% ============================================================================ %
+\end{document}%

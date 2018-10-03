@@ -1,0 +1,24 @@
+% ./chapters/chapter-3/imaging-techniques/fwhm-resolution.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \subsection{Full Width at Half Maximum Resolution Calculation}%
+    \label{sec:chapter-3:imaging-techniques:fwhm-resolution}%
+    % ======================================================================== %
+    Another common technique for evaluating the spatial resolution, the \gls{fwhm} measures the sharpness of a normally distributed signal.
+    The parameter describes the width of a normal distribution at an intensity equivalent to half the maximum intensity, evaluated at the mean.
+    For a given signal of sample data \Xvariable{x} with a mean \Xvariable{x_0} and standard deviation \Xvariable{\sigma} the normal distribution is given by the function \Xvariable{f(x)} shown in \Xrefequation{normal-distribution}. 
+    % ======================================================================== %
+    \Xequationfile{normal-distribution}%
+    % ======================================================================== %
+    As with the \gls{mtf} experiment, the step function from a line pair mask produces a smooth, periodic \gls{esf}.
+    Following the \gls{mtf} analysis in \Xrefappendix{image-processing:modulation-transfer-function}, the differentiated \gls{lsf} follows a normal distribution.
+    Applying a Gaussian fit to the \gls{lsf}, the standard deviation for the experimental distribution is used to evaluate the \gls{fwhm}, shown in \Xrefequation{fwhm:a}.
+    % ======================================================================== %
+    \Xequationfile{fwhm}%
+    % ======================================================================== %
+    The approximate value of the \gls{fwhm} is given by \Xrefequation{fwhm:b}, and may be evaluated using numerical methods as part of the image processing algorithm.
+    The spatial resolution calculated using the \gls{fwhm} is presented along with the \gls{mtf} calculation for complete performance comparison.
+% ============================================================================ %
+\end{document}%

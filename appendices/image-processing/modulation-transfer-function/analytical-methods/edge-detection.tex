@@ -1,0 +1,26 @@
+% ./appendices/image-processing/modulation-transfer-function/analytical-methods/edge-detection.tex
+% ============================================================================ %
+\documentclass[../../../../main.tex]{subfiles}
+\begin{document}%
+% ============================================================================ %
+    \subsubsection{Edge Detection}%
+    \label{app:image-processing:modulation-transfer-function:analytical-methods:edge-detection}%
+    % ======================================================================== %
+    The first step in the edge detection process applies the Canny edge detector to the cropped \gls{roi} \cite{Canny_1986}, generating the binary image shown in \Xreffigure*{mtf-canny}.
+    The Canny edge detection algorithm is automated as a \gls{matlab} function, but may be generalized to \num{4} individual steps common among software packages.
+    Step (1) reduces the image noise by preprocessing with a Gaussian filter, typically \num{5x5} in size. 
+    In step (2), a Sobel kernel is applied along both directions to evaluate the intensity gradients and associated angle for each pixel \cite{book:Shih_2010}.
+    Step (3), suppresses all non-maximum pixels, effectively determining if a pixel falls along the edge based on its gradient direction and magnitude compared to neighboring pixels.  
+    The final step (4) applies thresholding hysteresis to extend pixels that fall along an edge, effectively creating a binary image of only the pixels forming edge lines.
+    \par%
+    The Hough transform has been implemented in a vast range of image processing methods to detect lines or edges in image data \cite{Duda_1972,Hart_2009}.
+    To evaluate colinear points in a sample image, the location of each Cartesian point can be represented by the Hesse normal form \Xrefequation{hesse-form}.
+    % ======================================================================== %
+    \Xequationfile{hesse-form}%
+    % ======================================================================== %
+    The length \Xvariable{\rho_{i}} of the line from the origin to the perpendicular intersection at point position \Xvariable{(x,y)} depends on the angle \Xvariable{\theta_{i}} between the line and the \Xmath{x}-axis.
+    The image is sampled across the range \Xvariable{\SI{-90}{\degree}\leq\theta_{i}<\SI{90}{\degree}} and non-zero entries are calculated and tallied, shown in \Xreffigure*{mtf-hough}.
+    The Hough transform function returns a simple data set in this instance, because the input is a binary, few line image.
+    The transform data is evaluated to find the data peak, indicating the primary edge angle used in the alignment process.
+% ============================================================================ %
+\end{document}%

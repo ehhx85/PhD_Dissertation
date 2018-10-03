@@ -1,0 +1,30 @@
+% ./chapters/chapter-4/semiconductor-16-channel/version-1.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \subsection{LISe Pixel Detector v1}%
+    \label{sec:chapter-4:semiconductor-16-channel:version-1}%
+    % ======================================================================== %
+    In the first \gls{lise16} experiments, a large portion of the allotted experiment time consisted of system setup and calibration.
+    At the time, the \gls{caen} acquisition electronics were brand new, switching from the previous analog electronics to a fully digital pulse processing system.
+    Because the flux at \gls{cg1d} was significantly higher than the \gls{pube} source at \gls{university-tennessee}, the threshold settings were completely different.    
+    After manually calibrating the set points to correctly register spectra for each of the 16 channels, the automated acquisition system was ready.
+    As mentioned, a custom \gls{labview} application controlled both the acquisition timing as well as the linear drives for the sample positioning stage.
+    Interfacing with the in-house motor controller required some on-site changes to the control software, but the final result was a fully automated acquisition system for neutron imaging with the \gls{super-sampling} technique.
+    The scan consisted of \SI{200}{\micro\meter} steps across a \num{101x9} array, generating a total of \num{909} acquisition locations, covering an area of \SI{20x1.6}{\milli\meter}.
+    With each exposure lasting \SI{10}{\second} and a generous \SI{5}{\second} slew window, the total experiment run time lasted right at \SI{4}{\hour} \cite{Herrera_2016}.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    The \gls{lise16} scanned the stainless steel bolt, shown in \Xreffigure*{bolt-comparison}, receiving an estimated neutron fluence of \Xmath{\sim\SI{4E11}{\neutronfluence}} across the duration of experimentation.
+    Artificial color has been added to the image to contrast the open beam region (green) from the bolt attenuated region (yellow).
+    The two regions are separated with bands of black to enhance the overall contrast and show clear transition between the open beam and object image.
+    The semiconductor data from the \gls{lise16} is outlined in red and superimposed on the comparison image captured using the \gls{scintillator-screen}.
+    Two data points have been marked in red to capture the edge profile of the bolt and the center of the bolt where attenuation is greatest. 
+    Approximately half-way through the automated experiment, the in-house motor control system power failed and had to be manually reset upon return to the line, leaving the system exposed to the open beam for \SI{10.5}{\hour} before subsequent acquisition resumed.
+    The resulting reduction in signal is seen in the intensity profile overlaid on the bottom of the bolt.
+    The roughly \SI{20}{\percent} decrease in efficiency was attributed to a combination of positive bias on the beam facing contact, where the interaction rate was highest, and the poor charge carrier transport properties for holes in this material.
+    Because the electrons provided the majority of the detection pulse, damage induced on the beam side during extended operation magnified performance degradation, specifically interfering with electron collection \cite{Herrera_2016}.
+% ============================================================================ %
+\end{document}%

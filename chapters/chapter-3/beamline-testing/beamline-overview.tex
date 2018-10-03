@@ -1,0 +1,33 @@
+% ./chapters/chapter-3/beamline-testing/beamline-overview.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \subsection{Beamline Overview}%
+    \label{sec:chapter-3:beamline-testing:beamline-overview}%
+    % ======================================================================== %
+    The \gls{hfir} \gls{neutron-cold} source installed in the HB-4 beam tube contains a moderator vessel filled with \SI{0.5}{\liter} of supercritical hydrogen gas.
+    Installed in the beryllium reflector, the cryogenic moderating vessel maintains a temperature of only \SI{20}{\kelvin}, surrounded by deuterated water for cooling and additional moderation.
+    The \glspl{neutron-cold} scatter into the moderator vessel, losing energy, approaching \num{15} times lower energy than a \glspl{neutron-thermal}, eventually passing down the vacuum sealed beam tube to the experiment \glspl{beamline} \cite{Farrell_2001}.
+    The heavily thermalized beam passes through the beam shutter, into the Cold Guide Hall (right side of \Xreffigure*{hfir-beamline}), feeding sub-thermal neutrons to multiple experimental stations.
+    The \gls{cg1} houses multiple detector development experiments; \gls{cg1a} harbors prototyping neutron detectors while \gls{cg1d} is dedicated to neutron imaging experiments (see \Xreffigure{hfir-beamline:b}).
+    The beam guide exiting \gls{cg1} measures \SI{150 x 25.4}{\milli\meter}.
+    The \gls{cg1d} aperture system is located downstream of the guide and is positioned to accept the highest neutron flux available at \gls{cg1} \cite{Crow_2011}.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    The majority of \gls{lise} neutron imaging experiments were conducted on the \gls{cg1d} line, utilizing the fixed \gls{scintillator-screen} based \gls{ccd} imager for device comparison and positioning.
+    At \gls{cg1d}, the neutron beam was transmitted through a \SI{4.5}{\meter} helium filled flight tube, subject to a \SI{600}{\milli\meter} diameter chopper, operating at rotational frequencies from \SIrange{5}{100}{\hertz}.
+    The \gls{neutron-cold} beam spectrum followed a Maxwell-Boltzmann distribution with a cutoff near \SI{0.81}{\angstrom} and a peak at \SI{2.6}{\angstrom}.
+    Minor Bragg edges are visible in the open beam, attributed to the aluminum windows in the reactor, cold neutron source, beam tube, and at the entrance and exit of the \gls{cg1d} flight tube.
+    Across the multiple beam times, an average flux on the order of \SI{E7}{\neutronflux} provided significant contrast, forming images in a matter of \si{\milli\second} to \si{\minute} \cite{Bilheux_2014}.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    The \Xmath{L/D} ratio characterizes the geometry of neutron \glspl{beamline} with \Xvariable{l} representing the target to detector plane distance \Xvariable{D} indicating the diameter of the source aperture, and the distance \Xvariable{L} spanning the length from the aperture and the detector image plane, illustrated in \Xreffigure*{beam-geometry} \cite{ASTM:E748-16}.
+    The \gls{beamline} geometry creates a fixed detector distance (\Xmath{L=}\ \SI{6.6}{\meter}), while a motorized control system mechanically adjusts the aperture diameter (\Xmath{D=}\ \SIlist[list-units=single]{3.3; 4.1; 8.2; 11; 16}{\milli\meter}).
+    The resulting \Xmath{L/D} ratio spans from \numrange{400}{2000}, depending on aperture selection \cite{Santodonato_2015}.
+    To facilitate maximum resolution and edge contrast, the target distance \Xvariable{l} is kept to a minimum by positioning the target at the surface of the detector enclosure or imaging plate.
+    The aperture is selected to adjust the neutron flux, helping to keep acquisition times low while preventing over saturation in the sensor.
+% ============================================================================ %
+\end{document}%

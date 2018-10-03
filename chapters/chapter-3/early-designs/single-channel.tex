@@ -1,0 +1,25 @@
+% ./chapters/chapter-3/early-designs/single-channel.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}
+\begin{document}%
+% ============================================================================ %
+    \subsection{Single Channel Counting Detector}%
+    \label{sec:chapter-3:early-designs:single-channel}%
+    % ======================================================================== %
+    The prototype \gls{lise} single channel detector was designed around a \gls{to} header, shown in \Xreffigure*{lise-to-header}.
+    Commonly used for transistors, rectifiers, and integrated circuits, the TO-3 packaging specification provided an ample mounting pedestal for the \gls{lise} sensor, typically used by power electronics as a heatsink.
+    Two signal leads are integrated into the packaging, backfilled with a glass insulator.
+    The top of the leads serve as a bonding pad, facilitating wirebonds to the top contact.
+    While the packaging was useful in handling the sensor, an enclosure was required for \gls{emi} shielding, as common with most radiation detectors.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    A simple enclosure was designed to accommodate the specific \gls{to} header, shown in \Xreffigure*{to-header-enclosure}.
+    The enclosures fabricated in this work all utilized an aluminum construction with beveled flanges to create a light-tight seal.
+    Both softer and lighter than steal, aluminum may be formed into rigid enclosures that are easy to machine and relatively neutron transparent.
+    Standoffs were machined from aluminum cylinder stock (\Xreffigure{to-header-enclosure:a}), providing the ground connection to the enclosure (\Xreffigure{to-header-enclosure:b}).
+    A bulkhead mounted \gls{shv} (\Xreffigure{to-header-enclosure:c}) provided a matched connection to couple with one of the \glspl{preamp} discussed in \Xrefsection{chapter-3:early-designs:basic-readout}.
+    The center pin of the \gls{shv} connector carried the \gls{high-voltage} bias, connected to the \gls{to} header via pin clamp, soldered to the back lead.
+    The assembled enclosure is shown in \Xreffigure{to-header-enclosure} along with the TO-3 package for reference.
+% ============================================================================ %
+\end{document}%

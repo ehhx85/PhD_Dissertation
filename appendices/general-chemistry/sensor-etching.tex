@@ -1,0 +1,53 @@
+% ./appendices/general-chemistry/sensor-etching.tex
+% ============================================================================ %
+\documentclass[../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \section{Sensor Etching}%
+    \label{app:general-chemistry:sensor-etching}%
+    % ======================================================================== %
+    The raw sensor is cut and shaped from the larger, cylindrical crystal boule after growth.
+    The individual radiation sensor is extracted from the bulk using a diamond wire saw, with wire diameters ranging from \SIrange{100}{500}{\micro\meter}.
+    While the saw gives excellent shape control, creating cuboid sensors from the cylindrical boule, the edges are rough and leave the crystal surface in a stressed state.
+    This creates defect sites which create problems for metal adhesion, as well as offer recombination centers for charge trapping, negatively effecting the electrical performance.
+    To return the crystal surface to a pristine, optically smooth state, the sensor is first treated with a mechanical polish and subsequent chemical etch.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    Depending on the sensor chemical composition, aqueous etching may be accomplished using a variety of solutions including: \ce{HF}, \ce{HCl}, \ce{NH_4OH}, and \ce{Br_2}. 
+    Halogen molecules, in particular the \ce{Br_2}, have been used for a range of materials including I-III-VI semiconductors \cite{Causier_2011,Shen_2016}.
+    It was shown for \ce{CdZnTe} radiation detectors, a \SI{5.0}{\percent} \gls{brometh} solution successfully removed the surface oxides introduced during sawing and handling \cite{Rouse_2002}.
+    In removing the oxides with the acidic etchant, the surface was left \ce{Te}-rich.
+    The \SI{20}{\angstrom} \ce{Te}-rich surface was removed \gls{latin:in-situ} via \ce{Ar} sputtering before metalization, revealing a stoichiometric surface.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    After opting to use the \gls{brometh} etchant, establishing a material specific procedure was required.
+    Typically, bromine concentrations of \SIrange{1.0}{5.0}{\percent} by volume, are used for primary etching, followed by weaker \SI{0.05}{\percent} wet etch or chemical polish \cite{Aspnes_1981}.
+    The use of dilute etchant with low abrasion polishing pads protects the pad material while offering a finer polish with minimal residue.
+    For softer materials, such as \gls{lise}, the chemical polish is removed from the sequence, using a milder wet etching series.
+    The required chemicals for the general etching process are listed in \Xreftable*{sensor-etch-chemicals}.
+    Because the \gls{brometh} etch is frequently applied in semiconductor processing, the fundamental chemical reactions and imposed safety concerns are often overlooked.
+    To better understand the etching mechanism, the following reactions have been listed (\Xrefequationrange{bromine-methanol-reaction-1}{bromine-methanol-reaction-4}) as discussed by \citeauthor*{Bowman_1990} \cite{Bowman_1990}.
+    % ======================================================================== %
+    \Xequationfile{bromine-methanol-reaction-1}%
+    \Xequationfile{bromine-methanol-reaction-2}%
+    \Xequationfile{bromine-methanol-reaction-3}%
+    \Xequationfile{bromine-methanol-reaction-4}%
+    % ======================================================================== %
+    The study investigated the reaction dynamics of concentrated \gls{brometh} solutions ranging from \SIrange{10.0}{25.0}{\percent}. 
+    While all of these reactions may not be present in the dilute \SI{1.0}{\percent} concentration solution, they should be anticipated.
+    Any contaminants, an inherent consequence of impurities produced by polishing the sensor material, may present themselves as inhibitors or catalysts, unpredictably altering the reaction rate.
+    The general sensor etching process has been summarized in \Xreftable*{sensor-etch-process}.
+    The etching sequence utilizes 3 separate Pyrex beakers to effectively etch the sensor while avoiding surface staining.
+    While the first beaker holds the primary etchant (deep red color), the second beaker will become contaminated with bromine and dissolved sensor material, turning a light yellow color.
+    The second beaker will halt the etching process, diluting the remaining bromine adsorbed on the sensor surface.
+    The third beaker serves as a final rinse removing any remaining surface contamination, permitting safe handling of the sensor.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    Because the \gls{lise} sensors are relatively soft, the polishing and etching process should be implemented gradually.
+    It was discovered from experimentation, excessive polishing would create a bowed surface, non-ideal for bump bonding.
+    Consecutively cycling between polishing and etching helped to approach an ideal surface for contact patterning.
+% ============================================================================ %
+\end{document}%

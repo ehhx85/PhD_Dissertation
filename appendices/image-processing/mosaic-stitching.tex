@@ -1,0 +1,42 @@
+% ./appendices/image-processing/mosaic-stitching.tex
+% ============================================================================ %
+\documentclass[../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \section{Mosaic Stitching}%
+    \label{app:image-processing:mosaic-stitching}%
+    % ======================================================================== %
+    When prototyping a new crystalline imaging material, the availability of sensor samples may be limited by growth experimentation.
+    With each trial, the electronic quality of the single crystals improves, along with stochiometric refinement.
+    However, in early sensor design, the available imaging area is limited, representing only a fraction of the boule cross-sectional area.
+    This section details the mosaic stitching methodology applied to increase the effective area for smaller sensors, using multiple frames as seen in \Xreffigure*{power-t-mosaic-stitching-layout}.
+    As a scintillator, the \gls{lise} sensor was only able to capture a portion of the \gls{power-t} imaging target.
+    Using \Xvariable{K=3} different object positions, the full image is visible across the sensor active area, with a degree of overlap.
+    It should also be noted that each of the \Xvariable[]{K}[] images are already cleaned and averaged from the raw acquisition, as described in \Xrefappendix{image-processing:preprocessing}.
+    First, \Xrefequation{mosaic-stitch-matrix-size} determines the expanded matrix of size \Xvariable{M^{*}\times N^{*}} to span the increased image dimensions introduced by the largest image position shifts \Xvariable{\Delta x}[] and \Xvariable[]{\Delta y}[].
+    % ======================================================================== %
+    \Xequationfile{mosaic-stitch-matrix-size}%
+    % ======================================================================== %
+    In this example, the top left image sees a vertical shift \Xvariable{\Delta y>0} the bottom center sees a horizontal shift \Xvariable{\Delta x>0} and the top right requires both \Xvariable{\Delta x>0}[] and \Xvariable[]{\Delta y>0}[].
+    The expanded image \Xvariable{f^{*}_{i}(x,y)} is preallocated with a zero matrix to boost processing speed and ensure any unmapped values do not affect the final result. 
+    These image shifts are applied in \Xrefequation{mosaic-stitch-shifted-function} where the pixel map incorporates a pixel sized shift across the image.
+    % ======================================================================== %
+    \Xequationfile{mosaic-stitch-shifted-function}%
+    % ======================================================================== %
+    Because the stitching process is based on an averaging function, the number of images used to average a pixel will range span \Xvariable[]{[1,K]}[].
+    While the images are being remapped to the expanded matrix \Xvariable{f^{*}_{i}(x,y)} an equivalent sized binary matrix \Xvariable{g^{*}_{i}(x,y)} is created to tally the locations containing active pixel data, as in \Xrefequation{mosaic-stitch-shifted-tally}.
+    % ======================================================================== %
+    \Xequationfile{mosaic-stitch-shifted-tally}%
+    % ======================================================================== %
+    The finalized stitched mosaic image \Xvariable{h(x,y)} is formed from dividing the summed expanded image \Xvariable{F^{*}(x,y)} by the summed counting matrix \Xvariable{G^{*}(x,y)} as seen in \Xrefequation{mosaic-stitch-composite}.
+    % ======================================================================== %
+    \Xequationfile{mosaic-stitch-composite}%
+    % ======================================================================== %
+    This process is visually demonstrated in \Xreffigure*{power-t-mosaic-stitching-comparison}.
+    The end result is an image spanning an area larger than the original sensor, while maintaining feature contrast and spatial resolution across overlapping regions.
+    It should also be noted the edges of sensor area were cropped to produce a perfect rectangular area, before stitching.
+    Leaving the as-cut sensor outline created artifacts due to inconsistent averaging across those pixels.
+    These edge pixels have varying response due to multiple factors: large surface roughness at the edge interface, scattering at sharp crystal edges, inconsistent material thickness, light escaping from the side of the sensor, etc. 
+    The cropping was conducted iteratively, removing only enough rows and columns to eliminate the sporadic averaging.
+% ============================================================================ %
+\end{document}%

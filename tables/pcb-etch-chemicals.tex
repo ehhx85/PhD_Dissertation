@@ -1,0 +1,59 @@
+% ./tables/pcb-etch-chemicals.tex
+% ============================================================================ %
+\documentclass[../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \Xtable%    
+    \begin{table}%
+    % ======================================================================== %
+        \caption%
+            [\Glstext{pcb} wet etching chemicals]%
+            {\Gls{pcb} wet etching chemicals}%
+        \label{tbl:pcb-etch-chemicals}%
+        % ==================================================================== %
+        \begin{tabu}{ p{1.5in} c c p{1.5in} }%
+        % ==================================================================== %
+            \toprule%            
+            \centering\textbf{Name} &%
+            \centering\textbf{Formula} &%
+            \centering\textbf{Concentration} &%
+            \centering\textbf{Usage}\\%
+            \toprule%            
+            % ================================================================ %
+            Acid waste &%
+            - &%
+            acid solution &%
+            waste\\%
+            % ================================================================ %
+            \Glsaltname{baking-soda} &%
+            \glschemical{baking-soda} &%
+            pure powder &%
+            acid neutralization\\%
+            % ================================================================ %
+            Copper &%
+            \ce{Cu} &%
+            metallic strip &%
+            ion source / rate test\\%
+            % ================================================================ %
+            \Glsname{di-water} &%
+            \glschemical{di-water} &%
+            pure liquid &%
+            cleaning / dilution\\%
+            % ================================================================ %
+            \Glsname{hcl} &%
+            \glschemical{hcl} &%
+            \SI{37}{\percent} &%
+            chlorine source\\%
+            % ================================================================ %
+            \Glsname{h2o2} &%
+            \glschemical{h2o2} &%
+            \SI{3}{\percent} and \SI{35}{\percent} &%
+            oxygen source\\%
+            % ================================================================ %
+            \bottomrule%            
+        % ==================================================================== %
+        \end{tabu}%
+    % ======================================================================== %
+    \end{table}%
+% ============================================================================ %
+\end{document}%

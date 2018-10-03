@@ -1,0 +1,36 @@
+% ./chapters/chapter-4/scintillator-array/open-beam.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \subsection{Open Beam}%
+    \label{sec:chapter-4:scintillator-array:open-beam}%
+    % ======================================================================== %
+    The first version \gls{lise-scint} array predominately measured \gls{ly} and neutron absorption efficiency.
+    The sensors were spread further apart and functioned as independent open beam areas.
+    In the second version of the \gls{lise-scint} array experiment, the sensors were attached to the aluminum backing plate in close proximity to one another.
+    The resulting array provided a pseudo open beam area, shown in \Xreffigure*{lise-scintillator-array-open-beam}, demonstrating the concept of tiling multiple, smaller scintillators together to create a large \gls{fov}.
+    Each open beam was produced from a series of \SI{20}{\frames} at \SI{15}{\second} exposures.
+    In the earlier \gls{lise-scint} imaging experiments, the sensors were attached with reflective, aluminum tape, boosting the \gls{ly} by reflecting any photons traveling in the opposite direction of the beam.
+    It was hypothesized that the reflective backing, while increasing the \gls{ly}, would also introduce blurring from the back scattered photons.
+    To test this hypothesis, two parallel experiments were conducted using the reflective aluminum backing as well as an anti-reflective, theatrical tape featuring a highly absorbing black coating \cite{Lukosi_2017}. 
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    The \gls{lise} samples used in the experiment ranged from \num{5} to well over \num{20} times the thickness of the \SI{50}{\micro\meter} \gls{scintillator-screen}.
+    While \gls{lif-zns} is traditionally applied as a thin film, being relatively opaque to its own scintillation light, \gls{lise} is optically transparent, favoring photon transport in the visible spectrum.
+    Nonetheless, a back scattered photon must travel an additional distance at least the thickness of the \gls{lise} crystal, increasing the probability of scattering before exiting the sensor.
+    The experimental \gls{ly}, listed in \Xreftable*{lise-scintillator-light-yield}, confirms the theory that back scattered scintillation light boosts overall \gls{ly}, which can also be seen in the open beam comparison image.
+    The light yield was calculated using a large, rectangular \gls{roi} across each \gls{lise} sample, with an identical \gls{roi} evaluated in the open beam image using the \gls{scintillator-screen}.
+    Because the exact positioning would be impossible to replicate when exchanging the adhesive, this comparison eliminates variation due to positioning and nonuniformities in the beam \cite{Lukosi_2017}.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    As an observational note, in \gls{lise-01} there is a smoothly curved response edge, showing a significant drop in light yield across an abnormally sharp edge.
+    This aberation exists inside the material, the phenomena being previously identified in the top half of \gls{lise-6-1} and in \gls{lise-6-3}, also originating from boule {{\#}010515} (see \Xreffigure{lise-scintillator-array:a}).
+    Evaluated with the \gls{mtf} method, the edge response in \gls{lise-6-1} fell off within \SI{80}{\micro\meter}, exhibiting a broader change in color from reddish to chartreuse over the length of the crystal.
+    A similar \gls{ly} transition edge was evaluated in \gls{lise-01}, showing an additional parallel band following the primary transition edge.
+    In both samples, this abrupt \gls{ly} edge produces a dark region on the concave side, and a noticeably brighter region on the convex side.
+    Based on the geometry and curvature of the internal transition, this specific growth produced a higher grade scintillator material on the outsie of the boule, with a redder, lower \gls{ly} material towards the center \cite{Lukosi_2016a}.
+% ============================================================================ %
+\end{document}%

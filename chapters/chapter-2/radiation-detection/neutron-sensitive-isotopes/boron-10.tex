@@ -1,0 +1,31 @@
+% ./chapters/chapter-2/radiation-detection/neutron-interactions/boron-10.tex
+% ============================================================================ %
+\documentclass[../../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \subsubsection{Boron-10}%
+    \label{sec:chapter-2:radiation-detection:neutron-interactions:boron-10}%
+    % ======================================================================== %
+    The most common isotope for slow neutron absorption, \isotope[10]{B} is commonly integrated into nuclear reactor systems for neutron moderation.
+    In solid form, borosillicate control rods are strategically placed throughout the core matrix, while boric acid is dissolved in reactor cooling water to control neutron flux.  
+    With a large thermal cross section of \SI{3840}{\barn}, and significant natural abbundance of \SI{19.9}{\percent}, this isotope also makes an effective low energy neutron counter \cite{Chadwick_2011}.
+    Following the \Xmath{1/v} trend (see \Xreffigure{cross-section-004-b-10-total}), neutrons react with \isotope[10]{B} following one of two \gls{b10-neutron-alpha} reactions, shown in \Xrefequation{reaction-boron-10}.
+    % ======================================================================== %
+    \Xequationfile{reaction-boron-10}%
+    % ======================================================================== %
+    Only about \SI{6}{\percent} of reactions branch to the ground state, releasing the full \gls{q-value} for the reaction, while the remaining \SI{94}{\percent} of neutrons produce an excited \isotope[7]{Li}\Xmath{^*} nucleus \cite{book:Knoll_2010}.
+    The smaller \gls{q-value} will generate the primary detection peak in proportional counters such as \ce{BF_3} gaseous detectors.
+    The \isotope[10]{B} enriched gas offers a high molecular density of the neutron sensitive isotope while performing well as a proportional gas.
+    Because the daughter products may travel around \SI{1}{\centi\meter} in the proportional gas, there is a chance one or both of the particles may impact the wall, depositing only a portion of their energy in the gas.
+    Termed the ``wall effect'', the resulting spectrum will contain two broad continuum across lower energies, with drop off energies corresponding to the kinetic energy of the daughter products.
+    Furthermore, these detectors become susceptible to interference from \glspl{gamma-ray} interacting with the tube wall.
+    \Glsplname{gamma-ray} scattering into the tube generate electrons which ionize the proportional gas, resulting in non-neutron energy counts.
+    As the flux increases, the resulting counts increase in energy, potentially contaminating the neutron signature.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    As with lithium, \isotope[10]{B} may be integrated into scintillating devices, offering enhanced signal response time.
+    Used in neutron \gls{tof} measurements, conversion layers incorporating \isotope[10]{B} provide scintillation light in response to neutrons, but are limited in thickness, and thus overall efficiency, by self attenuation \cite{book:Knoll_2010}.
+    Plastic scintillators offer increased \isotope[10]{B} concentration and response time, but suffer from increased gamma sensitivity as the secondary electrons may overwhelm the response of the reaction products.
+% ============================================================================ %
+\end{document}%

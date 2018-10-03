@@ -1,0 +1,29 @@
+% ./equations/charge-induction-value.tex
+% ============================================================================ %
+\documentclass[../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \Xequation%    
+    % ======================================================================== %
+    \begin{equation}%
+        Q^{*} =%
+        eN_{0}%
+        \left\{%
+            \dfrac{v_{h}\tau_{h}^{*}}{W}%
+            \left(%
+                1-\exp\left[%
+                    \dfrac{-x_{i}}{v_{h}\tau_{h}^{*}}%
+                \right]%
+            \right)%
+            +%
+            \dfrac{v_{e}\tau_{e}^{*}}{W}%
+            \left(%
+                1-\exp\left[%
+                    \dfrac{(x_{i}-W)}{v_{e}\tau_{e}^{*}}%
+                \right]%
+            \right)%
+        \right\}%
+        \label{eq:charge-induction-value}%
+    \end{equation}%
+% ============================================================================ %
+\end{document}%

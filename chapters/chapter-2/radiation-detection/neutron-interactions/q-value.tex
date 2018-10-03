@@ -1,0 +1,73 @@
+% ./chapters/chapter-2/radiation-detection/neutron-interactions/q-value.tex
+% ============================================================================ %
+\documentclass[../../../../main.tex]{subfiles}
+\begin{document}%
+% ============================================================================ %
+    \subsubsection{Reaction Q-Value}%
+    \label{sec:chapter-2:radiation-detection:neutron-interactions:q-value}%
+    % ======================================================================== %
+    Nuclear reactions are defined in a similar manner as their chemical analogs.
+    Each reaction is characterized by a set of parent species, and their resulting daughter products.
+    In a nuclear reaction, the reacting species include the two nuclei or nucleons, one being the target nucleus \Xvariable{a} and the other being the incident radiation particle \Xvariable{b}[].
+    Ternary reactions occur with such low probability, due to the speed at which reactions occur, and are only considered in special applications.
+    The resulting daughter products include a combination of two or more nuclei, nucleons or photons, denoted \Xvariable[]{c}[] and \Xvariable[]{d}[].
+    The shorthand for a nuclear reaction is written as \Xmath{a(b,d)c} where the corresponding full reaction is shown in \Xrefequation{reaction-general-form} \cite{book:Lamarsh_2001}.
+    % ======================================================================== %
+    \Xequationfile{reaction-general-form}%
+    % ======================================================================== %
+    Nuclear reactions abide by a set of physical conservation laws summarized by the following: conservation of nucleons, conservation of charge, conservation of momentum, and conservation of energy.
+    Conservation of nucleons requires the total number of protons and neutrons be the same before and after the reaction, although the number of each nucleon type, protons or neutrons, may change.
+    Conservation of charge requires the total charge from positive and negative carries to be maintained across the reaction, typically balanced at zero, or neutral charge.
+    The conservation of momentum and conservation of energy are implemented to develop an expression for the nuclear reaction \gls{q-value} as it relates to the kinetic energy of the daughter products. 
+    The momentum of a non-zero mass particle can be described in terms of wavelength \Xvariable{\lambda} and Planck's constant \Xvariable{h}[].
+    Alternatively, the momentum may be represented using the mass of the particle \Xvariable{m} and its speed \Xvariable{v} with both forms shown in \Xrefequation{momentum-definition}.
+    % ======================================================================== %
+    \Xequationfile{momentum-definition}%
+    % ======================================================================== %
+    Using a frame of reference where the target \Xvariable{a} is stationary, and assuming the incident particle \Xvariable{b} has negligible kinetic energy, the total momentum before the reaction is approximately zero.
+    Conservation of momentum requires that the total momentum after the reaction also be approximately zero, indicated by \Xrefequation{momentum-balance}.
+    % ======================================================================== %
+    \Xequationfile{momentum-balance}%
+    % ======================================================================== %
+    When the two non-zero mass products are generated at the reaction site, they are emitted in opposite directions with velocities inversely proportional to their mass, following \Xrefequation{momentum-products:b}, to fulfill the conservation of momentum law.
+    % ======================================================================== %
+    \Xequationfile{momentum-products}%
+    % ======================================================================== %
+    The next step rewrites the conservation of momentum in terms of particle energy.
+    The energy \Xvariable{E} of a particle is related to its mass \Xvariable{m} using the speed of light \Xvariable{c} as given by the \Xrefequation{energy-definition:a}.
+    For a non-relativistic particle, the energy is given by \Xrefequation{energy-definition:b}, using the rest mass \Xvariable{m_{0}} and speed \Xvariable{v} where \Xvariable{v\ll c}[].
+    % ======================================================================== %
+    \Xequationfile{energy-definition}%
+    % ======================================================================== %
+    Combing \Xrefequation{momentum-definition} and \Xrefequation{energy-definition:b}, the non-relativistic momentum of each daughter product can be written in terms of kinetic energy, shown in \Xrefequation{momentum-energy}.
+    % ======================================================================== %
+    \Xequationfile{momentum-energy}%
+    % ======================================================================== %
+    Following the momentum balance given in \Xrefequation{momentum-products:a}, the final conservation of momentum equation can be written in terms of kinetic energy in \Xrefequation{momentum-energy-balance}.
+    % ======================================================================== %
+    \Xequationfile{momentum-energy-balance}%
+    % ======================================================================== %
+    The conservation of energy relationship, given by \Xrefequation{q-value-energy}, dictates the total kinetic energy imparted to the daughter products is equivalent to the \gls{q-value} for the reaction.
+    % ======================================================================== %
+    \Xequationfile{q-value-energy}%
+    % ======================================================================== %
+    Simultaneously solving \Xrefequation{momentum-energy-balance} and \Xrefequation{q-value-energy} will yield the kinetic energies of the emitted daughter products in the nuclear reaction.
+    The \gls{q-value} for the reaction comes from the mass balance between the parent and daughter species.
+    Using the rest mass energy from \Xrefequation{energy-definition:a}, the total energy conservation equation for the reaction can be written as \Xrefequation{energy-total-balance}.
+    % ======================================================================== %
+    \Xequationfile{energy-total-balance}%
+    % ======================================================================== %
+    Rewriting the equation, the change in kinetic energy is produced from the change in rest mass, illustrated in \Xrefequation{energy-kinetic-vs-mass}.
+    % ======================================================================== %
+    \Xequationfile{energy-kinetic-vs-mass}%
+    % ======================================================================== %
+    The mass of an isotope is slightly less than the sum of the mass of its individual constituent nucleons, known as the mass defect.
+    When these individual nucleons bind into larger nuclei, a portion of the mass is converted into binding energy, providing the force that holds the nucleus together.
+    The mass defect, or binding energy, accounts for the change in total mass between the parent and daughter nuclei, defining for the \gls{q-value} for a particular nuclear reaction as in \Xrefequation{q-value-mass}.
+    % ======================================================================== %
+    \Xequationfile{q-value-mass}%
+    % ======================================================================== %
+    Using \Xrefequation{energy-kinetic-vs-mass} and \Xrefequation{q-value-mass} it can be shown that \Xrefequation{q-value-energy} will be the result when the parents are assumed stationary.
+    These equations show the origin of the \gls{q-value} and its relation to the kinetic energy of daughter products in a nuclear reaction.
+% ============================================================================ %
+\end{document}%

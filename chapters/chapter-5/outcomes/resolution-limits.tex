@@ -1,0 +1,24 @@
+% ./chapters/chapter-5/outcomes/resolution-limits.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \subsection{Resolution Limits}%
+    \label{sec:chapter-5:outcomes:resolution-limits}%
+    % ======================================================================== %
+    Based on the construction of the \gls{lisepix} system and the material optimization at the time of \gls{lise-scint} experiments, it remains unclear if the maximum achievable material resolution has been reached.
+    Recently, the \gls{ternary-chalcogenide} chemistry was modified to incorporate gallium, reducing the isotopic concentration of indium in the compound while tuning the scintillation properties.
+    Furthermore, \citeauthor*{Wiggins_2015} showed the \SI{512}{\nano\meter} emission peak from \gls{xeol} measurements overlapped with the tail end of the absorption spectrum \cite{Wiggins_2015}.
+    Refinements in the chemical composition and growth process may be able to tune the \gls{lise-scint}, providing equivalent results as tested in this research, while offering higher light output to increase contrast and reduce exposure time.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    The single prototype \gls{lisepix} system may also see improvements in spatial resolution through fabrication refinement along with the potential for \gls{super-sampling}.
+    As a basic concept, the \gls{super-sampling} technique was able to achieve resolutions roughly half the size of the pixel pitch, implying a \gls{super-sampling} experiment with a \SI{55}{\micro\meter} pixel pitch, such as the \gls{lisepix}, could provide resolution beyond \SI{34}{\micro\meter} and the theoretical material limit. 
+    While the computational load could be handled by present single server grade \glspl{pc}, the mechanical positioning would present the major obstacle.
+    Motorized linear drives and stages are commercially available with sub micron resolution, with the popularity of \gls{3d} printing driving down the cost and improving the device performance \cite{Campbell_2014}.
+    Hypothetically, a pristine \gls{lisepix} system using current technology could operate in tandem with a micro-positioning stage, sweeping a \num{11x11} array of positions at \SI{5}{\micro\meter} intervals perpendicular to a neutron beam line.
+    Using a \SI{1}{\second} exposure window with \SI{10}{\frames} would result in a total experiment run time of \SI{20}{\minute}, potentially achieving a spatial resolution around \SI{20}{\micro\meter} or less.
+    Compared to the cost, complexity, and acquisition time of current ultra \gls{high-res} neutron imagers, this avenue may present a more fiscally sensible option for beam line facilities to enhance their imaging capabilities.
+% ============================================================================ %
+\end{document}%

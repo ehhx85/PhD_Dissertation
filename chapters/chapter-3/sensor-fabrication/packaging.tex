@@ -1,0 +1,36 @@
+% ./chapters/chapter-3/sensor-fabrication/packaging.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \subsection{Packaging and Electronic Coupling}%
+    \label{sec:chapter-3:sensor-fabrication:packaging}%
+    % ======================================================================== %
+    The final step in fabricating the radiation detection system is coupling the sensor to the readout electronics.
+    Electronic coupling takes many forms, including permanent and non-permanent mounting solutions.
+    In the laboratory, crystal samples may be readily exchanged for testing using non-permanent, spring loaded contact systems.
+    Generally the sensor is placed on a conducting pad, and held down by the very small compressive force from a helical or cantilever type spring.
+    Because the sensor is removable, the sample may be cleaned and properly stored in between testing to preserve the material quality and sensitive surfaces.
+    Some characterization systems have specialized substrate mounting to subject the sensor to low vacuum or a temperature gradient, also requiring a non-permanent coupling solution. 
+    Furthermore, probe stations with microscopic positioning are essential for testing individual channels in pixelated devices.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    After a sensor demonstrates preliminary radiation sensitivity and favorable electronic behavior, the sensor is installed in a more permanent configuration.
+    In single channel counters and few channel pixel detectors, wirebonding achieves a semi-permanent bond (see \Xrefappendix{thin-film-processing:wire-bonding}). 
+    The sensor is first mounted to a substrate carrier or \gls{pcb} using high purity silver paste if a bottom contact is present, or non-conductive crystal bonding wax if the device only utilizes the top surface.
+    A micron scale metal wire is then bonded between each pixel on the detector and a corresponding bond pad on the substrate carrier or \gls{pcb}, forming an electrical connection with the appropriate node in the readout system.
+    The substrate carrier or \gls{pcb} may be removed from the detection system, with minor soldering, when not actively in use to store the sensitive crystal.
+    This method of coupling is considered semi-permanent because the wires may be carefully pulled from the crystal, and the bonding paste or wax may be chemically dissolved, returning the sensor with only cosmetic imperfections.
+    Generally, wirebonding offers enhanced contact performance over compression methods, creating a consistent electrical junction that is more resistant to electromechanical vibrations and shock. 
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    The most preferred method of coupling in refined imaging systems is flip-chip bump bonding (see \Xrefappendix{thin-film-processing:bump-bonding}). 
+    This technique places the active sensor in proximal contact with the readout electronics, reducing signal line losses and undesirable electronic interference.
+    Each pixel on the detector is directly bonded to its corresponding channel on the readout \gls{asic} using a micron scale bead of metal, typically indium.
+    This bonding scheme creates the most robust mechanical union, however, removing the bonded sensor from the \gls{asic} can be difficult to near impossible without significantly damaging both the \gls{asic} and the sensor.
+    The sensor/\gls{asic} stack is mounted to a readout \gls{pcb} and wirebonded to applicable signal bond pads similar to the previous coupling explanation.
+    Using a combination of techniques, an imaging device with thousands of channels may be feasibly constructed with only tens of wirebonds, reducing the overall package form and simplifying the design.
+% ============================================================================ %
+\end{document}%

@@ -1,0 +1,20 @@
+% ./equations/super-sampling-pixel-index.tex
+% ============================================================================ %
+\documentclass[../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \Xequation%    
+    % ======================================================================== %
+    \begin{equation}%
+        f(x,y)%
+        =%     
+        \begin{bmatrix}%
+            f_{1} && f_{2} && \dots && f_{N_{0}} \\%
+            f_{N_0+1} && f_{N_0+2} && \dots && f_{2N_0} \\%
+            \vdots && \vdots && \ddots && \vdots \\%
+            f_{(M_{0}-1)\cdot N_{0}+1} && f_{(M_{0}-1)\cdot N_{0}+2}  && \dots && f_{M_{0}N_{0}} \\%
+        \end{bmatrix}%
+        \label{eq:super-sampling-pixel-index}%
+    \end{equation}%
+% ============================================================================ %
+\end{document}%

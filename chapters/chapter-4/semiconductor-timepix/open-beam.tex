@@ -1,0 +1,28 @@
+% ./chapters/chapter-4/semiconductor-timepix/open-beam.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \subsection{Open Beam}%
+    \label{sec:chapter-4:semiconductor-timepix:open-beam}%
+    % ======================================================================== %    
+    As with previous experiments, the \gls{lisepix} system was tested at \gls{hfir} on \gls{cg1d}. 
+    With prototype systems, the first experiment captures the open beam image, verifying neutron response, pixel electronic operation and exposure window timing.    
+    The neutron source at \gls{hfir} provided a neutron fluence of \SI{4.5E6}{\neutronfluence} across the sensor area, or \SI{300}{\neutronrate} across each \SI{55 x 55}{\micro\meter} pixel.    
+    Shown in \Xreffigure*{timepix-open-beam}, the imager responded to the neutron beam across the active sensor area, with a diminished response in the lower left corner.
+    The acquisition settings used were \SI{50}{\frames} at \SI{1}{\second} exposures with the sensor biased at \SI{300}[+]{\volt}.
+    Configured with the \SI{16}{\milli\meter} beam aperture to maximize neutron flux, \Xmath{L/D=375} for this setup \cite{Herrera_2018}.
+    The smooth curvature and abrupt transition in contrast suggested a material or phase gradient, similar to \Xreffigure{lise-scintillator-array}, instead of a mechanical defect.
+    A key difference is the direction of contrast transition, with the inner concave region creating a more intense semiconductor signal and the outer, convex region exhibiting a weaker electronic pulse.
+    This behavior functions opposite of the same phenomena observed in the \glspl{lise-scint}, suggesting the scintillation and semiconductor mechanisms are complementary constituents of the total neutron response.
+    % ======================================================================== %    
+    \par%
+    % ======================================================================== %    
+    The variation between bright and dark response regions was characterized to determine relative intensity difference and intensity homogeneity, shown in \Xreffigure{timepix-open-beam:b}.
+    Each \gls{roi} consists of approximately equivalent number of pixels, with the bright \gls{roi} concentrated around the same area as in the \gls{pube} analysis, demonstrating the largest contrast and smoothest response.
+    The bright \gls{roi} yielded a mean intensity of \num{0.0086(8)}, while the dark \gls{roi} returned a more modest \num{0.00520(178)}, equating to a \SI{40}{\percent} intensity reduction across the sharp gradient.
+    The open beam response image showed less deviation in intensity across the sensor, as expected, due to the energy and spatial uniformity of the neutron beam.
+    Furthermore, the more luminous beam and lower neutron energies highlighted the true functional edge of the sensor area, not visible in the \gls{pube} experiments.
+    The gradual drop off and rounded corners at the periphery are likely attributed to the omission of a guard ring as previously noted \cite{Herrera_2018}.
+% ============================================================================ %
+\end{document}%

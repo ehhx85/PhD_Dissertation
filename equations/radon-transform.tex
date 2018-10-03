@@ -1,0 +1,33 @@
+% ./equations/radon-transform.tex
+% ============================================================================ %
+\documentclass[../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \Xequation%    
+    % ======================================================================== %
+    \begin{subequations}%
+    % ======================================================================== %
+        \begin{equation}%
+            P_{\theta}(t) =%
+            \int_{(\theta,t)\textrm{line}}%
+            f(x,y)\ ds%            
+            \label{eq:radon-transform:a}%
+        \end{equation}%
+        % ==================================================================== %
+        Applying a delta function, the equation can be rewritten,%
+        % ==================================================================== %
+        \begin{equation}%
+            P_{\theta}(t) =%
+            \int_{-\infty}^{\infty}%
+            \int_{-\infty}^{\infty}%
+            f(x,y)\delta%
+            (x \cos{\theta} + y \sin{\theta - t})%
+            \ dx\ dy%
+            \label{eq:radon-transform:b}%
+        \end{equation}%
+        % ==================================================================== %
+        \label{eq:radon-transform}%
+    % ======================================================================== %
+    \end{subequations}%
+% ============================================================================ %
+\end{document}%

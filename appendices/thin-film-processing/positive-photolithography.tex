@@ -1,0 +1,75 @@
+% ./appendices/thin-film-processing/positive-photolithography.tex
+% ============================================================================ %
+\documentclass[../../main.tex]{subfiles}
+\begin{document}%
+% ============================================================================ %
+    \section{Positive Photolithography}%    
+    \label{app:thin-film-processing:positive-photolithography}%
+    % ======================================================================== %
+    Photolithography using \gls{pr1-1000a} finds use in masking substrates for etching, both aqueous and ion based.
+    \Gls{pr1-1000a} is a photopolymer which softens, becoming soluble in developer, when exposed to photon emissions.
+    This particular process will be described as it applies to \glspl{pcb} for copper trace wet etching.
+    The photolithography chemicals for the \gls{pr1-1000a} process are listed in \Xreftable*{pattern-process-pos-chemicals}.
+    The positive photolithography process, \Xreffigure*{photolithography-positive-pcb}, shows the sequential stages used to fabricate general \glspl{pcb}.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    Step (\Xsubreffigure{photolithography-positive-pcb:a}) begins with a clean \gls{pcb} substrate of desired size to accommodate the circuit design.
+    The board should be large enough to minimize the signal traces proximity to the edge of the \gls{pcb}, generally using a trim ring to outline the board.
+    Most commercial grade \gls{pcb} substrates come pre-coated with a protective layer to inhibit surface oxidation and ensure nominal cladding thickness.
+    This protective layer is removed using a scouring pad and \gls{acetone} to scrub the surface, dissolving the plastic and priming the metal surface to bond with the photoresist.
+	A final rinse with \gls{ipa} then \gls{methanol} leaves a dry, clean surface, free of streaking and contaminants.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    Step (\Xsubreffigure{photolithography-positive-pcb:b}) involves spin coating the \gls{pcb} with \gls{pr1-1000a}.
+    The process also uses the \gls{spin-coater}, however disposable pipettes deliver the larger volume of resist required to coat the entire \gls{pcb} surface.
+    The spin coating recipe also varies with the size of the board, requiring slower speeds for larger boards to adequately spread the resist across the surface.
+    The overall spin cycle follows a similar profile as with the negative process recipe.
+    Once coated, the \gls{pcb} is heated to \SI{120}{\celsius} for \SI{120}{\second} on the hot plate.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    Step (\Xsubreffigure{photolithography-positive-pcb:c}) follows a more traditional sequence using the \gls{ma6}.
+    The photomask is installed and the \gls{pcb} centered in the chuck.
+    The alignment process benefits from the larger scale pattern, typically having fiducial markers at each corner to guide the edge.
+	Furthermore, the photomasks for \gls{pcb} fabrication typically only have a single design across the quartz plate.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    Step (\Xsubreffigure{photolithography-positive-pcb:d}) exposes the photoresist to the same \SI{365}{\nano\meter} \gls{uv} radiation.
+    Here, the hard contact setting is used, with only a \SI{4}{\second} exposure time. 
+    The shorter time minimizes the sidewall angle and undercut, producing the thickest mask possible to protect the surface during wet etching.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    Step (\Xsubreffigure{photolithography-positive-pcb:e}) shows the softened photoresist after exposure.
+    Because the pattern is generally much larger, the features are visible by the naked eye.
+    The pattern should be inspected near the edges to ensure the resist was fully spread across the surface, and the pattern transferred to all regions where metal should be covered.
+    If the \gls{pcb} is pre-drilled for through hole components, the area around the holes should also be reviewed.
+    The metallization near holes is crucial for component electrical conductivity and establishing an appropriate surface for soldering.  
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    Step (\Xsubreffigure{photolithography-positive-pcb:f}) exposes the bare copper with the desired trace pattern protected by the insoluble resist.
+    The \gls{pr1-1000a} is less sensitive to over development so the \gls{rd6} resist remover is liberally applied to the surface until the pattern is clearly developed.
+    All excess resist must be removed, otherwise spots of metal may remain across the board, shorting traces or leading to signal breakdown.
+    After development, the \gls{pcb} is rinsed with \gls{di-water} and dried with compressed nitrogen.
+    An optional anneal may be conducted on the hot plate at \SI{145}{\degree} for \SI{5}{\minute} to further dry the resist and enhance adhesion for wet etching.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    Step (\Xsubreffigure{photolithography-positive-pcb:g}) shows the \gls{pcb} etching process detailed in \Xrefappendix{general-chemistry:pcb-etching}.
+    For more exotic \glsplural{pcb} that use other cladding materials, the process will be similar, using an etchant that reacts with the specific cladding metal and not the photoresist.
+    After the etching process is complete, the \gls{pcb} will still have a thin layer of resist covering the copper traces.
+    This layer is dissolved using \gls{acetone}, followed by a clean with \gls{ipa} and \gls{methanol} to remove and surface films and remaining contamination.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    Step (\Xsubreffigure{photolithography-positive-pcb:h}) illustrates the final, one-sided, \gls{pcb}.
+    Once the \gls{pcb} has be cleaned and dried, the pattern is inspected under a low power \gls{lm} to determine if any shorts or breaks exist in the trace pattern.
+    As the bare copper layer will begin to oxidize, the \gls{pcb} components should be immediately soldered to the board.
+    Furthermore, a protective insulating coating, such as Konform, should be applied to the surface to encapsulate the bare metal.
+    The steps conducted in the positive photolithography process have been summarized in \Xreftable*{pattern-process-positive}.
+% ============================================================================ %
+\end{document}%

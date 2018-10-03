@@ -1,0 +1,25 @@
+% ./chapters/chapter-4/semiconductor-timepix/pube-source.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \subsection{Plutonium / Beryllium Source}%
+    \label{sec:chapter-4:semiconductor-timepix:pube-source}%
+    % ======================================================================== %    
+    Preliminary testing for the \gls{lisepix} system was conducted in the neutron irradiation laboratory at \gls{university-tennessee}.
+    The \SI{2}{\curie} \gls{pube} source provided an isotropic neutron field of around \SI[per-mode={symbol}]{2E6}{\neutron\per\second}.
+    Shown in \Xreffigure*{timepix-pube}, each frame counted interactions for a \SI{600}{\second} window, averaging a series of \num{150} frames to produce a single neutron radiograph.
+    While this configuration is not suited for neutron imaging, an overnight count helps to ensure the sensor response, system automated functionality, and assess any potential for signal drift over extended periods of operation.
+    % ======================================================================== %    
+    \par%
+    % ======================================================================== %    
+    For safety reasons, the \gls{pube} source is typically stored in a shielded safe or in a thick ($>$ \SI{6}{\inch}) \gls{plastic:pe} moderating enclosure, surrounded by \SI{2}{\inch} thick paraffin wax blocks to provide significant thermalization and shielding.
+    Under special circumstances, the source may be uncovered, exposing the detector to the raw spectrum emitted from the \gls{pube} source.
+    The \gls{lisepix} system was tested in both configurations, measuring a thermal baseline, and a higher energy mixed spectrum to test the sensitivity to \glspl{neutron-fast}.
+    A clear neutron baseline signal is established in the thermalized response (\Xreffigure{timepix-pube:a}) with the raw intensity scale given to offer an absolute comparison with the less resolved bare response (\Xreffigure{timepix-pube:b}). 
+    \citeauthor*{Lukosi_2016} simulated the expected response across varying energy ranges, anticipating a drop in overall interaction by a factor of \num{1000} at higher neutron energies \cite{Lukosi_2016}.
+    Because the spectra emitted from the source and enclosure are not true thermal or fast energy spectrum, and certainly not mono-energetic, a \gls{mcnp} simulation would be required to evaluate a more representative flux in each configuration, providing a quantifiable comparison of device efficiency across each energy range.
+    The selected \gls{roi} (shown in \Xreffigure{timepix-pube:c}) was evaluated in \gls{imagej} to provide a measure of uniformity across the broader active area, with an average intensity value of \num{0.00140(49)}.
+    This experiment illustrates the broad sensitivity to neutrons across the entire energy spectrum, however, the usage of heavily \isotope[6]{Li} enriched material predisposes this specific composition for thermal neutron detection \cite{Herrera_2018}.
+% ============================================================================ %
+\end{document}%

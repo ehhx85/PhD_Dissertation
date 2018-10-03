@@ -1,0 +1,88 @@
+% ./tables/lise-thermomechanical-properties.tex
+% ============================================================================ %
+\documentclass[../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \Xtable%    
+    \begin{table}[p]%
+    % ======================================================================== %
+        \caption%
+            [Thermomechanical properties of {\glstext{lise}}]%
+            {Thermomechanical properties of \glschemical{lise}}%
+        \label{tbl:lise-thermomechanical-properties}%
+        % ==================================================================== %
+        \sisetup{%
+            table-number-alignment = right,%
+            table-figures-integer = 1,%            
+            table-figures-decimal = 1,%
+            table-figures-uncertainty = 1,%
+            separate-uncertainty = true,%
+        }%         
+        % ==================================================================== %
+        \begin{tabu}{ l c c l r l }%
+        % ==================================================================== %
+            \toprule%
+            {\centering\textbf{Material Property}} &%
+            {\centering\textbf{Symbol}} &%
+            {\centering\textbf{Value}} &%
+            &%
+            \multicolumn{2}{c}{%
+                {\centering\textbf{Source}}%
+            }\\% 
+            \toprule%
+            % ================================================================ %
+            Microhardness & $HK$ & \num{1.75(004)} & \si{\giga\pascal} & \citeauthor*{Petrov_2010} & (\citeyear*{Petrov_2010})\\%
+            % ================================================================ %
+            \midrule%
+            % ================================================================ %
+            Melting Point & $T_m$ & \num{904} & \si{\celsius} & \citeauthor*{Kamijoh_1981} & (\citeyear*{Kamijoh_1981})\\%
+            % ================================================================ %
+            && \num{915(5)} && \citeauthor*{Isaenko_2005} & (\citeyear*{Isaenko_2005})\\%
+            % ================================================================ %
+            && \num{905} && \citeauthor*{Isaenko_2008} & (\citeyear*{Isaenko_2008})\\%
+            % ================================================================ %
+            && \num{915(5)} && \citeauthor*{Petrov_2010} & (\citeyear*{Petrov_2010})\\%
+            % ================================================================ %
+            && \num{915} && \citeauthor*{Tupitsyn_2012} & (\citeyear*{Tupitsyn_2012})\\%
+            % ================================================================ %
+            \midrule%
+            % ================================================================ %
+            Thermal Conductivity & $K_x$ & \num{4.74(25)} & \si{\thermalconductivity} & \citeauthor*{Petrov_2010} & (\citeyear*{Petrov_2010})\\%
+            % ================================================================ %
+            & $K_y$ & \num{4.68(25)} & & & \\%
+            % ================================================================ %
+            & $K_z$ & \num{5.46(32)} & & & \\%
+            % ================================================================ %
+            & $K_z$ & \num{5.42(27)} && \citeauthor*{thesis:Giltnane_2016} & (\citeyear*{thesis:Giltnane_2016})\\%
+            % ================================================================ %
+            \midrule%
+            % ================================================================ %
+            Heat Capacity & $C_p$ & \num{99.770} & \si{\heatcapacity} & \citeauthor*{Kuhn_1987} & (\citeyear*{Kuhn_1987})\\%
+            % ================================================================ %
+            && \num{96.045} && \citeauthor*{Gmelin_1995} & (\citeyear*{Gmelin_1995})\\%
+            % ================================================================ %
+            && \num{98.1} && \citeauthor*{Yelisseyev_2004} & (\citeyear*{Yelisseyev_2004})\\%
+            % ================================================================ %
+            && \num{98.1} && \citeauthor*{Petrov_2010} & (\citeyear*{Petrov_2010})\\%
+            % ================================================================ %
+            \midrule%
+            % ================================================================ %
+            Standard Enthalpy & $\Delta H$ & \num{20.17} & \si{\enthalpy} & \citeauthor*{Gmelin_1995} & (\citeyear*{Gmelin_1995})\\%
+            % ================================================================ %
+            \midrule%
+            % ================================================================ %
+            Entropy & $S$ & \num{146.6} & \si{\heatcapacity} & \citeauthor*{Gmelin_1995} & (\citeyear*{Gmelin_1995})\\%
+            % ================================================================ %
+            \bottomrule%
+            % ================================================================ %
+            \multicolumn{6}{l}{%
+                \begin{scriptsize}%
+                    Note: Thermodynamic parameters reported were evaluated at room temperature.
+                \end{scriptsize}%            
+            }%
+        % ==================================================================== %
+        \end{tabu}%
+    % ======================================================================== %
+    \end{table}%
+% ============================================================================ %
+\end{document}%

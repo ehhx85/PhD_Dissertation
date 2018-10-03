@@ -1,0 +1,38 @@
+% ./chapters/chapter-3/imaging-techniques/ct-with-scintillator.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}
+\begin{document}%
+% ============================================================================ %
+    \subsection{Computational Tomography w/ Scintillator}%
+    \label{sec:chapter-3:imaging-techniques:ct-with-scintillatotr}%
+    % ======================================================================== %
+    One of the most instrumental applications of neutron imaging, \glsreset{ct-neutron}\gls{ct-neutron} investigates the internal structure of materials.
+    Along with \gls{ct-x-ray} and \gls{ct-electron}, \gls{ct-neutron} offers a complementary set of \gls{ndt} techniques.
+    The experimental setup at \gls{cg1d} operates as a cone beam \gls{ct-micro} system, using the neutron beam to project \gls{2d} image slices of the target on the detector plane.
+    Rotating the target stage at fixed intervals provided multiple image cross-sections for reconstruction of a \gls{3d} solid object.
+    In the second round of \gls{lise} scintillator array experiments, the top two samples (5A and 5B in \Xreffigure{lise-scintillator-array:b}) represented the largest continuous \gls{fov} to date.
+    Having demonstrated similar capabilities as the in-house \gls{andor-ccd}, these two \gls{lise} samples were selected for the first \gls{ct-neutron} experiment.
+    Using a \textit{halyomorpha halys} specimen encased in aluminum foil as the target, the \gls{ct-neutron} scan covered \SI{183}{\degree} of rotation at \SI{0.25}{\degree} increments, at \SI{30}{\second} per frame.
+    The experiment produced \num{734} tomographic slices, processed on the \gls{ornl} Neutron Sciences server for facilities users, after image cleanup \cite{website:ORNL:Neutron_Sciences}.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    On the \gls{ornl} server, \gls{octopus} provided a variety of tools for compiling raw \gls{ct} data into \gls{3d} solid bodies.
+    While the software provided basic pre-processing functionality, the non-standard data set created by a curved detection area required additional correction.
+    The standard \gls{octopus} pre-preprocess includes: image cropping, spot filtering, and image normalization, similar to general neutron radiography (see \Xrefappendix{image-processing:preprocessing}). 
+    An additional feature removes ring artifacts, caused by aberrations in pixel performance near edge transitions, producing unusual intensity fluctuations and ghosting.
+    After pre-processing, the software generates one or more sinograms for each input image by applying the \gls{radon-transform}, as described by \citeauthor*{book:Kak_2002} shown in \Xreffigure{projection-geometry}.
+    As a basic example, a projection at an angle \Xvariable{\theta} may be described by a set of parallel lines \Xvariable{t_i} perpendicularly intersecting the projection plane, given by the expression shown in \Xrefequation{radon-transform-lines}.
+    % ======================================================================== %
+    \Xequationfile{radon-transform-lines}%
+    % ======================================================================== %
+    The \gls{radon-transform} \Xvariable{P_{\theta}(t)} describes the line integral for the object defined by \Xmath{f(x,y)} at a distance \Xvariable{s} from the projection plane, taking the form shown in \Xrefequation{radon-transform}.
+    % ======================================================================== %
+    \Xequationfile{radon-transform}%
+    % ======================================================================== %
+    Spanning the \Xmath{(\theta,t)} space, the sinograms measure the object density across various projections. 
+    The sinograms were processed by the software using a filtered back-projection formula (or \gls{inverse-radon-transform}) to rebuild the object \cite{book:Kak_2002,Zakaria_2010}.
+    % ======================================================================== %
+    \Xfigurefile{projection-geometry}%
+% ============================================================================ %
+\end{document}%

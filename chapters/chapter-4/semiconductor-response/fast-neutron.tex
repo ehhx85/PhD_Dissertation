@@ -1,0 +1,27 @@
+% ./chapters/chapter-4/semiconductor-response/fast-neutron.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \subsection{Fast Neutron Detection}%
+    \label{sec:chapter-4:semiconductor-response:fast-neutron}%
+    % ======================================================================== %
+    As a natural extension to the neutron detection capabilities of \gls{lise}, fast neutron detection typically presents a greater challenge across most materials.
+    Generally, neutron interaction cross sections tend to follow a \Xmath{1/v} relationship, with many of the prominent \gls{neutron-thermal} absorbers exhibiting orders of magnitude drop in performance at \gls{neutron-fast} energies (see \Xrefappendix{nuclear-cross-sections:neutron-sensitive-isotopes}).
+    Comparing \Xreffigures{cross-section-003-li-6}{cross-section-003-li-7} it becomes apparent that as the neutron energy exceeds \SI{E4}[\sim]{\electronvolt}, the neutron interaction cross sections for \isotope[6]{Li} and \isotope[7]{Li} are roughly equivalent, within a factor of \num{2}.
+    Using \gls{lise} with natural concentrations of \isotope[6]{Li} will lower the sensor price and while increasing the accessibility, using the same refined growth process as \gls{lise6}.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    A multi-source exposure system, shown in  \Xreffigure*{lise-fast-sensor}, was designed and constructed to test \gls{lise} and \gls{lise6} samples, integrating a \gls{3d} printed button source holder within the enclosure.
+    With the sensor attached to the \gls{pcb} using \gls{silver-paste} and wirebonds, the sample could be repeatedly tested without interrupting the contact or damaging the sensor.
+    The enclosure was designed to support swappable sensor \glspl{pcb}, each carrying a discrete sample.
+    By desoldering the board wires, the wirebond and sensor were left untouched for later reuse, facilitating experimental repeatability.
+    The enclosure featured an integrated \gls{cr110} and \gls{cr150} for versatile use with standard \gls{nim} or \gls{vme} electronics.
+    The button source carrier tray mounted directly underneath the sensor \gls{pcb}, aligning the source with a via running through the base contact underneath the sensor.
+    Using the \gls{3d} printed shutter (blue sword shape), the underlying \gls{alpha-particle} or \gls{beta-particle} source could be blocked.
+    This enclosure was meant to test a variety of \gls{lise} sensors with \gls{pube} neutrons, facilitating a variety of combinations using the moderated or bare \gls{pube} source, with and without the addition of injected charged particles.
+    Initial exposures with natural lithium showed a response to \gls{alpha-particle} injection, as expected for a semiconductor grade sample, as well as a broad spectrum for various \gls{pube} configurations.
+    The signal was not as prominent as the \gls{lise6} testing and the results remain inconclusive, requiring further testing.
+% ============================================================================ %
+\end{document}%

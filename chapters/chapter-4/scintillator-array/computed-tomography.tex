@@ -1,0 +1,32 @@
+% ./chapters/chapter-4/scintillator-array/computed-tomography.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \subsection{Computed Tomography}%
+    \label{sec:chapter-4:scintillator-array:computed-tomography}%
+    % ======================================================================== %
+    \Xsupplementfile{ct-scan-raw}%
+    \Xsupplementfile{ct-scan-cleaned}%
+    \Xsupplementfile{ct-scan-filtered}%
+    % ======================================================================== %
+    One of the most bold objectives in the \gls{lise} neutron imaging experiments was producing a \gls{ct-neutron} scan.
+    Using samples \gls{lise-5a}, \gls{lise-5b} and \gls{lise-07}, a large enough area was available to capture the bulk of a \textit{halyomorpha halys} specimen.
+    The scan used the rotational stage at \gls{cg1d}, sweeping \SI{183}{\degree} at \SI{0.25}{\degree} increments for a total of \num{733} projections, each across a \SI{60}{\second} exposure window.
+    A scan was performed with each backing, lasting around \SI{13}{\hour} a piece.
+    For comparison, a \gls{ct-neutron} was also conducted with the \gls{scintillator-screen} across the same intervals at \SI{15}{\second} exposures.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    A sample of the raw \gls{lise-scint} scan is shown in \Xreffigure*{lise-scintillator-ct-insect-raw}, with the full scan available for download (\Xrefsupplement{ct-scan-raw}).
+    The raw image exhibited significant salt-and-pepper (speckling) noise, as well as shadowing and overexposure along the crystal edges.
+    The reflective backing also highlighted the split between \gls{lise-5a} and \gls{lise-5b}, along with a surface chip in \gls{lise-07}.
+    Initial attempts to use this data with the \gls{octopus} imaging software produced abnormal volume artifacts, encapsulating the insect volume inside a shell corresponding to the edge of the crystals.
+    To overcome the deficit in imaging area, the image data was cleaned, removing the regions around the edges of the sensors and the dark field region (see \Xrefsupplement{ct-scan-cleaned}).
+    After cropping the outlying region and replacing their values with a saturated open beam, a despeckling filter was applied, producing the sample projection shown in \Xreffigure*{lise-scintillator-ct-insect-filtered}.
+    The final cleaned and filtered data was sufficient to run the \gls{ct} analysis in \gls{octopus} (see \Xrefsupplement{ct-scan-filtered}).
+    A comparison between the \gls{scintillator-screen} and the \gls{lise-scint} array is shown in \Xreffigure*{scintillator-insect-comparison}.
+    The legs and lower abdominal features are visible in both reconstructed volumes.
+    The internal structure of the shield shaped body can also be seen, as well as the rostrum (probing mouth part) in the \gls{lise-scint} reconstruction.
+% ============================================================================ %
+\end{document}%

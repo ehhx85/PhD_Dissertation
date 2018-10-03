@@ -1,0 +1,72 @@
+% ./tables/lise-optoelectronic-properties.tex
+% ============================================================================ %
+\documentclass[../main.tex]{subfiles}
+\begin{document}%
+% ============================================================================ %
+    \Xtable%    
+    \begin{table}[ht]%
+    % ======================================================================== %
+        \caption{Optoelectronic properties for \glssymbol{lise}.}%
+        \label{tbl:lise-optoelectronic-properties}%
+        % ==================================================================== %
+        \sisetup{%
+            table-number-alignment = right,%
+            table-figures-integer = 1,%            
+            table-figures-decimal = 1,%
+            table-figures-uncertainty = 1,%
+            separate-uncertainty = true,%
+            bracket-numbers = false,%
+        }%         
+        % ==================================================================== %
+        \centering%
+        \begin{tabu}{ l c c l r l }%
+        % ==================================================================== %
+            \toprule%
+            {\centering\textbf{Material Property}} &%
+            {\centering\textbf{Symbol}} &%
+            {\centering\textbf{Value}} &%
+            &%
+            \multicolumn{2}{c}{%
+                {\centering\textbf{Source}}%
+            }\\% 
+            \toprule%
+            % ================================================================ %
+            Absorption Coefficient & $\alpha$ & \Update{\num{2.00E4}} & \si{\per\centi\meter} & \citeauthor*{Beister_1991} & (\citeyear*{Beister_1991})\\%
+            % ================================================================ %
+            && \num{0.04} && \citeauthor*{Isaenko_2006} & (\citeyear*{Isaenko_2006})\\%
+            % ================================================================ %
+            \midrule%
+            % ================================================================ %
+            Photocurrent Peak & $\lambda$ & \num{445} & \si{\nano\meter} & \citeauthor*{Tupitsyn_2012} & (\citeyear*{Tupitsyn_2012})\\%
+            % ================================================================ %
+            \midrule%
+            % ================================================================ %
+            Transparency Range && \numrange[range-phrase = --]{0.60}{12.0} & \si{\micro\meter} & \citeauthor*{Isaenko_2001} & (\citeyear*{Isaenko_2001})\\%
+            % ================================================================ %
+            && \numrange[range-phrase = --]{0.63}{10.0} && \citeauthor*{Badikov_2003} & (\citeyear*{Badikov_2003})\\%
+            % ================================================================ %
+            && \numrange[range-phrase = --]{0.60}{13.0} && \citeauthor*{Yelisseyev_2004} & (\citeyear*{Yelisseyev_2004})\\%
+            % ================================================================ %
+            && \numrange[range-phrase = --]{0.47}{13.3} && \citeauthor*{Isaenko_2005} & (\citeyear*{Isaenko_2005})\\%
+            % ================================================================ %
+            \midrule%
+            % ================================================================ %
+            Electron Mobility & $\mu_{e}$ & \num{122(6)} & \si{\mobility} & \citeauthor*{Hamm_2018} & (\citeyear*{Hamm_2018})\\%
+            % ================================================================ %
+            \midrule%
+            % ================================================================ %
+            Electron Lifetime & $\tau_{e}$ & \num{45(1)} & \si{\nano\second} & \citeauthor*{Hamm_2018} & (\citeyear*{Hamm_2018})\\%
+            % ================================================================ %
+            \midrule%
+            % ================================================================ %
+            Electron Mobility Lifetime Product & $\mu_{e}\tau_{e}$ & \num{3E-6} & \si{\mobilitylifetime} & \citeauthor*{Bell_2015} & (\citeyear*{Bell_2015})\\%
+            % ================================================================ %
+            && \num{5.5(12)E-6} && \citeauthor*{Hamm_2018} & (\citeyear*{Hamm_2018})\\%
+            % ================================================================ %
+            \toprule%
+        % ==================================================================== %
+        \end{tabu}%
+    % ======================================================================== %
+    \end{table}%
+% ============================================================================ %
+\end{document}%

@@ -1,0 +1,52 @@
+% ./chapters/chapter-2/scintillator-detectors/glass.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \subsection{Glasses}%
+    \label{sec:chapter-2:scintillator-detectors:glass}%
+    % ======================================================================== %
+    Glass scintillators offered some of the earliest forms of neutron detection.
+    Lithium and boron based silicate glasses utilize experience derived from centuries of usage, more readily available than many of the polymers today.
+    Though manufacture requires high temperatures to melt and form the glass (\SI{500}[>]{\celsius}), the resulting material properties offer favorable characteristics for challenging environments.
+    Often transparent, glasses allow scintillation light to pass through the bulk, in may cases with a quick response time (\SI{100}[<]{\nano\second}).
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    In \citeyear*{Bollinger_1959}, \citeauthor*{Bollinger_1959} noted a lack of suitable \gls{neutron-thermal} detectors for \gls{tof} spectroscopy.
+    Two glass scintillators containing boron were reported: the Type GL-55 with composition \ce{Na2O} : \ce{B2O3} : \ce{Al2O3} : \ce{Ce2O3} at a ratio of (1:3:1.3:0.1) and the Type GL-127 with composition \ce{Na2O} : \ce{B2O3} : \ce{SiO2} : \ce{Al2O3} : \ce{Ce2O3} at a ratio of (1:1:1.5:1.3:0.1).
+    The decay time constants for the glass were measured to be \SIlist{0.045;0.2;10}{\micro\second} \citeyear*{Bollinger_1959}.
+    \citeauthor*{Firk_1961} presented the results of \ce{Li2O} : \ce{SiO2} : \ce{Al2O3} : \ce{Ce2O3} at a ratio of (0.355:0.075:0.02:0.55) enriched to \SI{95}{\percent} \isotope[6]{Li}.
+    The glass demonstrated excellent time resolution and better neutron/\gls{gamma-ray} sensitivity over boron-loaded glasses at the time \cite{Firk_1961}.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    \citeauthor*{Katagiri_2004} tested a \ce{Ce^3+} doped (\SI{1}{\percentmole}) scintillating glass consisting of \ce{^6Li^11BP} at a composition of \SIlist{45;20;35}{\percentweight}.
+    The \SI{4x5x1}{\milli\meter} sample demonstrated \SI{63.3}{\percent} \gls{neutron-thermal} efficiency \cite{Katagiri_2004}.   
+    \citeauthor*{Mizukami_2004} sought to expand the acquisition rate of lithium-loaded glass scintillators for high rate \gls{tof} spectroscopy. 
+    They coupled an array of \num{8x8} glass scintillators to a \gls{pmt} operating with \num{64} discrete channels.
+    In this way, the combined counts from each channel would be able to surpass the saturation limited count rate from a single larger scintillator.
+    For this configuration, a total detector count rate of \SI{15.4}{\mega\countrate} (\SI{8.3}{\mega\countrate\per\centi\meter\squared}) was achievable in a \gls{neutron-thermal} beam \cite{Mizukami_2004}.    
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    \citeauthor*{Ishii_2005} synthesized \num{5} mixture ratios of \ce{B2O3}/\ce{Li2O} glass (\SIrange{66}{90}{\percentweight} \ce{B2O3}).
+    To enhance light output, \num{6} recipes for \ce{CeO2} doping were used, maxing out at \SI{12.8}{\percentmole}.
+    While they reported a \gls{ly} of only \SI{9.2}{\percent}, compared to Bicron GS20 lithium glass, they demonstrated a much fast decay constant of \SI{45}{\nano\second} \cite{Ishii_2005}.
+    \citeauthor*{Matsumoto_2005} designed a miniature neutron detector using lithium-6 glass for active neutron field monitoring of inaccessible locations, such as inside a graphite pile.
+    The inner \isotope[6]{Li}-glass scintillator, a cylinder of \SI{1}{\milli\meter} diameter by \SI{2}{\milli\meter} long is coupled to a \SI{1}{\milli\meter} optical fiber, embedded in the end of the scintillator.
+    To reduce the interference from \gls{gamma-ray}, the original system was wrapped in \SI{40}{\micro\meter} of \ce{Al}, and placed inside a hollowed \ce{CsI(Tl)} scintillator.
+    The outer shell of \ce{CsI(Tl)} serves as a \gls{gamma-ray} detector, with the aluminum layer optically decoupling the shell from the inner \isotope[6]{Li} glass.
+    The small unit is designed to accurately measure neutron dose, overcoming the extensive time requirements of other methods, such as foil activation and subsequent \gls{naa} \cite{Matsumoto_2005}.   
+    \citeauthor*{Ban_2009} used a lithium glass stack to increase the peak separation between \glspl{neutron-ultra-cold} and \glspl{gamma-ray}.
+    The top layer in the stack consisted of \SI{100}{\micro\meter} GS3 glass (\SI{0.01}{\percent} \isotope[6]{Li}) while the bottom layer, also \SI{100}{\micro\meter} thick, consisted of GS20 glass (\SI{95}{\percent} \isotope[6]{Li}).
+    The resulting stack was senstive to \glspl{neutron-ultra-cold} with velocities as low as \SI{4}{\meter\per\second} \cite{Ban_2009}.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    \citeauthor*{Park_2016} tested a gadolinium and boron-loaded silicate glass, doped with \ce{Ce^3+} to enhance luminescence.
+    The glass was varied across compositions conforming to a \ce{25Gd2O3} : \ce{10CaO} : \ce{10SiO2} : \ce{(B_2O3)_{55-x}} : \ce{(CeF3)_x} recipe with doping ranging from \SIrange{0.05}{2.5}{\percentmole} \ce{Ce^3+}.
+    The absorption spectrum for the glass varied between \SIrange{330}{440}{\nano\meter} with \ce{Ce^3+} concentration exhibiting an emission peak at \SI{380}{\nano\meter}.
+    The experimental decay time constant was evaluated at \SI{36}{\nano\second} at the \SI{0.15}{\percent\mole} \ce{Ce^3+} \cite{Park_2016}.
+% ============================================================================ %
+\end{document}%

@@ -1,0 +1,117 @@
+% ./appendices/thin-film-processing/negative-photolithography.tex
+% ============================================================================ %
+\documentclass[../../main.tex]{subfiles}
+\begin{document}%
+% ============================================================================ %
+    \section{Negative Photolithography}%
+    \label{app:thin-film-processing:negative-photolithography}%
+    % ======================================================================== %
+    Photolithography with \gls{nr9-1000py} is used to create thin film metal contacts on semiconductor grade radiation sensors.
+    \Gls{nr9-1000py} describes a photopolymer which hardens, becoming insoluble to developing chemicals, after exposure to a prescribed spectra of light.
+    The hardened resist creates a film coating used to selective apply thin film material coatings to a semiconductor surface.
+    In particular, the method is used to fabricate the pixelated \gls{lise} imagers.
+    The photolithography chemicals for the \gls{nr9-1000py} process are listed in \Xreftable*{pattern-process-neg-chemicals}.
+    The negative photolithography process, \Xreffigure*{photolithography-negative-sensor}, shows the sequential stages used to fabricate the pixel detectors.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    Step (\Xsubreffigure{photolithography-negative-sensor:a}) begins with a clean stainless steel planchet, serving as the wafer.
+    The thin metal wafer is used in place of a standard silicon wafer to adapt to the spin coater and mask aligner chuck.
+    A small hole is drilled in the center of the planchet to allow solvent to reach the \gls{apiezon-wax} underneath the sensor.
+    The planchet is lightly polished and cleaned with solvents to remove residual \gls{apiezon-wax} and material contamination between solvents.
+    % ======================================================================== %
+    \par%    
+    % ======================================================================== %
+    Step (\Xsubreffigure{photolithography-negative-sensor:b}) shows the planchet pre-coated with \gls{apiezon-wax}.
+    The hole in the plancet is cover with a piece of \gls{kapton} on the back side.
+    The \gls{apiezon-wax} is shaved down and small flakes are placed in the center of the planchet.
+    On a hot plate, the \gls{apiezon-wax} is melted down at \SI{90}{\celsius}, using drops of \gls{toluene} to dilute the \gls{apiezon-wax} and disperse it to the edges of the planchet.
+    % ======================================================================== %
+    \par%    
+    % ======================================================================== %
+    Step (\Xsubreffigure{photolithography-negative-sensor:c}) illustrates the \gls{lise} sensor after bonding to the \gls{apiezon-wax} coated planchet.
+    Bringing the temperature up to \SI{100}{\degree}, the sensor should be allowed to sink into the \gls{apiezon-wax} so that the top surface is the only exposed area.
+    The bonding process serves to protect the sensor's back surface, which may already be metallized, as well as the sidewalls from further metal deposition.
+    If the sidewalls are coated in metal, there is potential for voltage breakdown, allowing charge to travel along the outside of the sensor instead of through the sensor bulk.
+    This step also serves as a dehydration bake, drying the surface of the sensor and removing water that may reduce metal adhesion.
+    Once bonded, the wafer should be placed on the workbench to slowly cool back to room temperature, preventing thermal shock in the sensor.
+    % ======================================================================== %
+    \par%    
+    % ======================================================================== %
+    Step (\Xsubreffigure{photolithography-negative-sensor:d}) follows the application of \gls{nr9-1000py}.
+    The \gls{nr9-1000py} is stored in a chilled refrigerator to prolong the chemical life, protecting the photosensitive compound.
+    For dispensing, a small quantity is stored at room temperature in a tinted dropper bottle, lowering the viscosity for spin coating.
+    The resist is applied via eye dropper to the surface of the \gls{lise} sensor, dispensing roughly \SI{50}{\micro\liter} of resist per drop.
+    Immediately after applying the photoresist, the layer is spread thin by the \gls{spin-coater} to a nominal \SI{1}{\micro\meter} thickness as described in \Xreftable*{spin-coater-recipe}.
+    Following spin coating, the wafer is removed using wafer tweezers and set on the hot plate for a \SI{60}{\second} pre-bake at \SI{150}{\celsius}.
+    The pre-bake helps to dry the resist, eliminating any residual moisture and allowing a slight anneal of the resist to homogenize thickness.
+    The wafer is set to cool on the table to slowly remove heat from the sample.
+    % ======================================================================== %
+    \par%    
+    % ======================================================================== %
+    Step (\Xsubreffigure{photolithography-negative-sensor:e}) shows the pattern transfer process, conducted in the \gls{ma6}.
+    The specific device mask is loaded into the contact printer and the wafer is aligned, positioning the pattern over the sensor area.
+    This is the step where the use of a substrate wafer is crucial.
+    Typically, the contact printer is used with a standard \SIrange{3}{4}{\inch} silicon wafer.
+    The entire mask pattern is transferred to the wafer, with extraneous features being removed along with the \gls{apiezon-wax}.
+    % ======================================================================== %
+    \par%    
+    % ======================================================================== %
+    Step (\Xsubreffigure{photolithography-negative-sensor:f}) shows the resist exposure process.
+    The photoresist on the crystal is exposed for 15 seconds using the I-line (365 nm) \gls{uv} radiation from the pressurized mercury vapor lamp. 
+    The \gls{uv} light chemically reacts with the photoresist, causing the exposed regions to harden through cross-linking of the polymeric bonds.
+    % ======================================================================== %
+    \par%    
+    % ======================================================================== %
+    Step (\Xsubreffigure{photolithography-negative-sensor:g}) captures the post-exposure bake, assisting the polymer cross-linking by applying \SI{100}{\celsius} via hot plate for \SI{60}{\second}.
+    This bake helps to remove the nitrogen component of the photo-compound which would be otherwise detrimental in the sputtering process due to off gassing.
+    The bake also facilitates the breakdown of unexposed regions for pattern development.
+    % ======================================================================== %
+    \par%    
+    % ======================================================================== %
+    Step (\Xsubreffigure{photolithography-negative-sensor:h}) follows the pattern development using \gls{rd6} for \SIrange{8}{10}{\second}.
+    The developer dissolves the soluble, unexposed regions, carrying away the polymer and leaving an exposed region mimicking the desired pattern.
+    Depending on the development time, some undercutting will occur where the developed photoresist leaves a slight negative grade sidewall profile.
+    This effectively creates a small (\SIrange{1}{5}{\micro\meter}) gap between the open channels and the edge of the resist.
+    Without this gap, lift-off can become either difficult or impossible.
+    % ======================================================================== %
+    \par%    
+    % ======================================================================== %
+    Step (\Xsubreffigure{photolithography-negative-sensor:i}) shows the metallized sensor.
+    Once the sample has been patterned, the crystal is inspected using an optical microscope.
+    This is the first point the pattern can be inspected without exposing the resist using the white light from the microscope.
+    After pattern inspection, the substrate wafer is loaded on the \gls{sputterer} chuck and vacuumed down to \SI{1.0}{\micro\torr} or less.
+    Reaching high-vacuum first helps to evacuate residual nitrogen along with moisture that has been adsorbed to the various surfaces.
+    One advantage of the \gls{apiezon-wax} is its ability to getter impurities in a high vacuum system.
+    After the system is evacuated, the pressure is adjusted to roughly \SI{4.0}{\milli\torr} for plasma sputtering.
+    A high-purity metallic target is the source of atoms for the uniform thin film deposited on the photoresist and exposed regions of the crystal.
+    % ======================================================================== %
+    \par%    
+    % ======================================================================== %
+    Step (\Xsubreffigure{photolithography-negative-sensor:j}) depicts the lift-off stage conducted in a solvent bath.
+    A glass petri dish containing \gls{rr41} is heated on the hot plate to \SI{80}{\celsius}.
+    Before placing the metallized wafer in the petri dish, scratches are made along the non-sensor areas using the ceramic tweezers, exposing the \gls{apiezon-wax} underneath.    
+    The scratches allow the resist remover to penetrate underneath the metal thin film, attacking the resist beneath.
+    Depending on the pattern complexity and coverage area, the development times will differ.
+    Introducing small amounts of \gls{acetone} into the solution will speed the dissolution process, however, too much \gls{acetone} can cause the loose metal film to re-adhere to the surface, shorting contacts.
+    Once the excess metal has been removed, exposing the final pattern, \gls{toluene} should be added to the solution to begin dissolving the \gls{apiezon-wax}.
+    As the petri dish holds a limited volume and the solvents are highly volatile, the solution will continuously evaporate and additional toluene must be introduced.
+    Typically, the solution will saturate, turning opaque black, requiring a fresh petri dish of pure toluene.
+    Repeating this process will eliminate the \gls{apiezon-wax}, now in solution, along with lifted metal that my contaminate the sensor surface.
+    % ======================================================================== %
+    \par%    
+    % ======================================================================== %
+    Step (\Xsubreffigure{photolithography-negative-sensor:k}) shows the finalized sensor, free from the planchet.
+    The metallized crystal should be removed from the toluene and rinsed in \gls{ipa} then \gls{methanol} to remove residual contaminants, providing a final clean before air drying with nitrogen.    
+    All devices require inspection using the optical microscope before integration with other electronics to characterize pixel size and metal film quality.
+    If the sensor has only been metallized on one side, these steps are repeated with the opposite side of the sensor exposed to the patterning process.
+    % ======================================================================== %
+    \par%    
+    % ======================================================================== %
+    The steps conducted in the negative photolithography process have been summarized in \Xreftable*{pattern-process-negative}.
+    As a preliminary validation test, a silicon wafer is patterned with aluminum metal, shown in \Xreffigure*{silicon-wafer-photolithography-test}.
+    Because the systems are designed for silicon wafers, the process parameters may be dialed in without the complications of the planchet carrier or fragile crystalline sensor.
+    The test wafer also serves to characterize the quality of new photomasks, ensuring the design and pattern scaling meets the requirements of the detector.
+    After the process sequence has been reviewed, the semiconductor grade sensors are patterned on both sides, taking great care to minimize stress on the sensor as well as material waste.
+% ============================================================================ %
+\end{document}%

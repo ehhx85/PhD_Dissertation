@@ -1,0 +1,21 @@
+% ./chapters/chapter-4/scintillator-single/power-t.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \subsection{Power-T Target}%
+    \label{sec:chapter-4:scintillator-single:power-t}%
+    % ======================================================================== %
+    The \gls{fdm} \gls{power-t} imaging target was the first object to be imaged with the \gls{lise-scint}.
+    With a simple geometry, large feature size, and relatively uniform density, the object served as a preliminary test for comparing the response of the \gls{scintillator-screen} and \textit{LISe-1}, shown in \Xreffigure*{power-t-scintillator-comparison}.
+    The image captured with the \gls{scintillator-screen} used \SI{5}{\frames} at \SI{60}{\second} exposures at a single location, using only a small fraction of the much larger \gls{fov}.
+    Because \gls{lise-1} had an area slightly smaller than the \gls{power-t} dimensions, a simple mosaic stitching experiment used \num{3} different positions, each capturing \SI{2}{\frames} at \SI{60}{\second} exposures.
+    The outline of each open beam section from \gls{lise-1} is visible in \Xreffigure{power-t-scintillator-comparison:b}, cropped to remove the inhomogeneous light output near the edges of the sensor.
+    While the image clarity is comparable at equivalent exposure windows, the \gls{scintillator-screen} produced a higher \gls{ly} and thus more contrast, creating a darker \gls{power-t} (see \Xreffigure{power-t-scintillator-comparison:a}), when the two images are normalized to the same scale.
+    In both images, the internal voiding is visible as a more transparent region in the center of the logo \cite{Lukosi_2016a}.
+    When parts are \gls{3d} printed using a \gls{fdm} process, the outer profile is traced in plastic filament, creating a continuous surface perpendicular to the build plate (the page in this case).
+    To conserve material and minimize sagging of the part as layers build and the plastic cools, the internal area is only partially filled using a varying web of plastic filament.
+    This web effectively creates a porous, internal structure (visible in larger objects), producing less neutron attenuation and a more transparent image.
+    The outline of the \gls{power-t} corresponds to the solid filament outline, effectively measuring the thickness of the part's sidewall, with only a small attenuating region in the lower leg of the object, likely due to a cross-over point along the nozzle tracing path.
+% ============================================================================ %
+\end{document}%

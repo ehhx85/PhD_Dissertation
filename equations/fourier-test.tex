@@ -1,0 +1,32 @@
+% ./equations/fourier-transform.tex
+% ============================================================================ %
+\documentclass[../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \Xequation%    
+    % ======================================================================== %
+    The \gls{dft} is found from the continuous \gls{lsf} profile evaluated at the $N$ uniformly sampled points in the interpolated curve.
+    Each sample is taken at an index,
+    % ======================================================================== %
+    \begin{equation}%
+        n = 0, \Delta x, 2\Delta x, ..., (N-1)\Delta x%
+    \end{equation}%
+    % ======================================================================== %
+    Where the interpolated sampling interval is defined by the pixel size, $x_{pix}$, and the interpolation gain, $g_{interp}$.
+    % ======================================================================== %
+    \begin{equation}%
+        \Delta x = x_{pix} \times g_{interp} %
+    \end{equation}%
+    % ======================================================================== %
+    \begin{equation}%
+        \omega = 0, \dfrac{1}{N\Delta x}, \dfrac{2}{N\Delta x}, ...\dfrac{n}{N\Delta x}, ...\dfrac{(N-1)}{N\Delta x} (Hz)%
+    \end{equation}%
+    % ======================================================================== %
+    \begin{equation}%
+        F(\omega) = \sum_{k=0}^{N-1} f(x) e^{-j \omega x}%
+    \end{equation}%
+    % ======================================================================== %
+
+
+% ============================================================================ %
+\end{document}%

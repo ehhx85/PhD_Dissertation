@@ -1,0 +1,21 @@
+% ./chapters/chapter-4/scintillator-array/resolution-calculations.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \subsection{Resolution Calculations}%
+    \label{sec:chapter-4:scintillator-array:resolution-calculations}%
+    % ======================================================================== %
+    In previous experiments, the resolution was qualified using the \gls{siemens-star} to be near \SI{100}{\micro\meter}.
+    To determine the calculated spatial resolution of each sample, a knife-edge test was conducted using the thin film gadolinium edge provided on the large \gls{siemens-star} mask (see \Xreffigure{psi-mask-large}).
+    Four vertical edge positions were captured with each backing to provide a sharp transition across all samples in the array, each acquired using \SI{5}{\frames} at \SI{30}{\second} exposures.
+    Following the methodology described in \Xrefsection{chapter-3:imaging-techniques:mtf-resolution}, a \gls{mtf} calculation was run for each backing material, shown in \Xreftable*{lise-scintillator-mtf}.
+    As expected, the anti-reflective backing provided a spatial resolution approximately half that of the reflective aluminum tape, as calculated with the \gls{mtf} method \cite{Lukosi_2017}.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    Furthermore, the spatial resolution was weakly dependent on the surface roughness and scintillator thickness, with the three highest performing samples spanning the range of thicknesses: \gls{lise-5b} (\SI{432}{\micro\meter}), \gls{lise-08} (\SI{904}{\micro\meter}), and \gls{lise-01} (\SI{1824}{\micro\meter}).
+    For sample thicknesses over \SI{300}{\micro\meter}, the resolution consistently approached the mid{\--}\SI{30}{\micro\meter} range (\gls{mtf} method), suggesting a minimum thickness required to prevent charged particle escape, while also confirming superior optical transparency to internally generated scintillation light.
+    The \gls{mtf} results prove the functionality of the \gls{lise-scint} as a \gls{high-res} neutron imager, with optimization in growth and preparation potentially seeing even further refinement in the spatial resolution \cite{Lukosi_2017}.
+% ============================================================================ %
+\end{document}%

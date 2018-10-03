@@ -1,0 +1,33 @@
+% ./equations/super-sampling-matrix-spacing.tex
+% ============================================================================ %
+\documentclass[../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \Xequation%
+    \def\tmp{5}%
+    \begin{subequations}%
+    % ======================================================================== %
+        \begin{equation}%
+            \begin{tabu} to 4.50in { X[1,c,$$] X[\tmp,l,$$] X[\tmp,l,$$] }%
+                &%                
+                \Delta {u} = \dfrac{P_{x}}{P_{u}} \cdot (x - 1)%
+                &%
+                \Delta {v} = \dfrac{P_{y}}{P_{v}} \cdot (y - 1)\\%
+            \end{tabu}%            
+            \label{eq:super-sampling-matrix-spacing:a}%
+        \end{equation}%   
+        % ==================================================================== %
+        \begin{equation}%
+            \begin{tabu} to 4.50in { X[1,c,$$] X[\tmp,l,$$] X[\tmp,l,$$] }%
+                &%
+                \Delta {u} = \dfrac{P_{x}}{p_{u}} \cdot (x - 1) \cdot C%
+                &%
+                \Delta {v} = \dfrac{P_{y}}{p_{v}} \cdot (y - 1) \cdot C\\%
+            \end{tabu}%            
+            \label{eq:super-sampling-matrix-spacing:b}%
+        \end{equation}%    
+    % ======================================================================== %
+    \label{eq:super-sampling-matrix-spacing}%
+    \end{subequations}%
+% ============================================================================ %
+\end{document}%

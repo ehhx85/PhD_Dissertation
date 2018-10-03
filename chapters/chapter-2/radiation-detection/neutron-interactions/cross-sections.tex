@@ -1,0 +1,41 @@
+% ./chapters/chapter-2/radiation-detection/neutron-interactions/cross-sections.tex
+% ============================================================================ %
+\documentclass[../../../../main.tex]{subfiles}
+\begin{document}
+% ============================================================================ %
+    \subsubsection{Cross Sections}%
+    \label{sec:chapter-2:radiation-detection:neutron-interactions:cross-sections}%
+    % ======================================================================== %
+    In the context of radiation interactions with materials, the term cross section describes the probability that a given type of radiation, will interact with a target particle.
+    Furthermore, nuclear cross sections \Xvariable{\sigma(E)} are given as an area, indicating the relative size of a target nucleus to a radiation particle with an energy \Xvariable{E}[].
+    The cross section value may be given in standard metric units of \SI{}{\centi\meter\squared} or in the the colloquial unit of barns used in nuclear engineering, with \Xvariable[]{\SI{1}{b}=\SI{E-24}{\centi\meter\squared}} representing a significantly large cross section.
+    The total cross section \Xvariable{\sigma_{tot}} is the summation of the scattering \Xvariable{\sigma_{scat}} and absorption \Xvariable{\sigma_{abs}} cross sections, shown in \Xrefequation{neutron-cross-section-total}.%
+    % ======================================================================== %
+    \Xequationfile{neutron-cross-section-total}%        
+    % ======================================================================== %
+    In a scattering interaction, \Xrefequation{neutron-cross-section-scattering}, the incident radiation is emitted as a byproduct at the same energy for elastic scattering \Xvariable{\sigma_{e}} or at a lower energy for inelastic scattering \Xvariable{\sigma_{i}}[].%
+    % ======================================================================== %
+    \Xequationfile{neutron-cross-section-scattering}%
+    % ======================================================================== %
+    Inelastic collisions will impart some of the energy from the incident particle to the target nucleus, leaving it in an excited state.
+    The nucleus may release radiation directly or through nuclear decay as it drops back to its lower energy ground state.
+    The absorption cross section \Xvariable{\sigma_{abs}} consists of more terms, varying with the target nucleus as described in \Xrefequation{neutron-cross-section-absorption}.%
+    % ======================================================================== %
+    \Xequationfile{neutron-cross-section-absorption}%        
+    % ======================================================================== %
+    Radiative capture \Xvariable{\sigma_{\gamma}} occurs when the incident particle is absorbed by the target nucleus, emitting one or more photons, typically in the gamma energy range.
+    In fissionable isotopes, the fission cross section \Xvariable{\sigma_{f}} describes events where the incident particle is absorbed, producing one or more neutron emissions following the decay of the target nucleus.
+    Particle emission cross sections are designated by their daughter particle such as the proton emission cross section \Xvariable{\sigma_{p}} and the alpha particle emission cross section \Xvariable{\sigma_{\alpha}}[].
+    When all the cross sections are considered, the total cross section for a given isotope may be expressed by its constituents as shown in \Xrefequation{neutron-cross-section-total-expanded}.
+    % ======================================================================== %
+    \Xequationfile{neutron-cross-section-total-expanded}%        
+    % ======================================================================== %
+    The microscopic cross sections \Xvariable{\sigma} are useful in describing the probability of interaction with a single target nucleus.
+    When describing bulk materials, the macroscopic cross section \Xvariable{\Sigma} is used to evaluate the probability per unit path length a reaction will occur.
+    For a pure, uniform material of microscopic cross section \Xvariable{\sigma_{tot}} and atomic number density \Xvariable{N} the total macroscopic cross section \Xvariable{\Sigma_{tot}} will be given by \Xrefequation{neutron-cross-section-macroscopic}.
+    % ======================================================================== %
+    \Xequationfile{neutron-cross-section-macroscopic}%
+    % ======================================================================== %
+    For mixed materials, the macroscopic cross section will account for stoichiometric variations, using the molecular number density and the appropriate microscopic cross sections for the included isotopes.
+% ============================================================================ %
+\end{document}

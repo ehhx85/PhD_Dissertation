@@ -1,0 +1,17 @@
+% ./chapters/chapter-3/beamline-testing/timepix-operation.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}
+\begin{document}%
+% ============================================================================ %
+    \subsection{Timepix Operation}%
+    \label{sec:chapter-3:beamline-testing:timepix-operation}%
+    % ======================================================================== %
+    The \gls{lisepix} system maintained a smaller footprint than its predecessor, the \gls{lise16}, shown in \Xreffigure*{timepix-beamline}.
+    The data processing module sat on top of the T-slotted aluminum extrusions, safely out of the neutron beam to protect the sensitive electronics.
+    The module only required two input cables, a standard ethernet patch cord to relay data to the acquisition computer, and a standard \gls{dc} power supply running off \SI{110}{\voltac}.
+    Hung from an aluminum mounting plate, the \gls{lisepix} imaging module took position immediately behind the imaging targets, roughly centered on the beam axis.
+    The blue, high-channel density ribbon cable connected the imaging \gls{pcb}, carrying the \gls{high-voltage} bias and \gls{asic} data to the readout module.
+    Positioned in front of the scintillator \gls{dark-box}, the \gls{lisepix} established an aperture distance of \Xmath{L=} \SI{6}{\meter}, tested with two aperture settings (\Xmath{D=} \SIlist[list-units=single]{8.2; 16}{\milli\meter}), resulting in \Xmath{L/D} ratios of \numlist{732; 375}, respectively.
+    Operating in \gls{medipix2} event counting mode, the \gls{high-voltage} bias of \SI{300}[+]{\volt} produced an internal electric field of \SI{545}{\electricfieldmm} in the sensor \cite{Herrera_2018}.
+% ============================================================================ %
+\end{document}%

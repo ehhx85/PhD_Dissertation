@@ -1,0 +1,31 @@
+% ./chapters/chapter-2/radiation-detection/types-of-radiation/neutrons.tex
+% ============================================================================ %
+\documentclass[../../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \subsubsection{Neutrons}%
+    \label{sec:chapter-2:radiation-detection:types-of-radiation:neutrons}%
+    % ======================================================================== %
+    Free neutrons are short lived particles (half-life of \SI{636.6(96)}{\second}) emitted from atomic nuclear interactions, with a mass slightly larger than a proton \cite{Christensen_1972}.
+    Unlike the other forms of radiation, neutrons do not possess an electric charge, predominately interacting with the nucleus of target atoms or molecules.
+    For this reason, they penetrate much deeper than other types of particle radiation, requiring multiple collisions to slow down and stop a neutron.
+    Typically, hydrogenous materials are used to moderate, or slow down neutrons, reducing their kinetic energy \cite{book:Knief_2008}.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    Neutrons are often categorized into energy ranges, based on their interaction characteristics and source of generation.
+    \Glspl{neutron-fast} are born from nuclear reactions with energies ranging from \SIrange{1.0}{20.0}{\mega\electronvolt} \cite{book:Turner_1995}.
+    These energies are characteristic of neutrons created during fission reactions in nuclear reactors.
+    Between energies ranging from \SI{1.0}{\electronvolt} to \SI{1.0}{\mega\electronvolt}, multiple sub-ranges are defined, typically useful in reactor engineering.
+    In context of neutron imaging, cadmium neutrons are those with energies between \SIrange{0.4}{0.5}{\electronvolt}, and strongly absorbed by the isotope \isotope[113]{Cd}.
+    \Glspl{neutron-thermal} have an energy ranging from \SIrange{0.025}{1.0}{\electronvolt},  with the thermal energy of \SI{0.025}{\electronvolt} defined as the most probable energy along a Maxwellian distribution for a particle in equilibrium with an environment at \SI{290}{\kelvin} \cite{book:Turner_1995}.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    As a neutron undergoes a series of collisions, it loses kinetic energy, finally arriving close to the \gls{neutron-thermal} energy.
+    Typically, isotopes have an exponentially larger probability of interaction with \glspl{neutron-thermal}, leading to the neutron's removal from most systems once they reach thermal energy.
+    \Glspl{neutron-cold}, those with energy less than \SI{0.025}{\electronvolt}, are generated in specially engineered systems.
+    To lower the neutron energy beyond the thermal energy, \gls{neutron-cold} sources utilize substances such as liquid deuterium at temperatures around \SI{20}{\kelvin}, further scattering the neutrons without absorbing them \cite{Farrell_2001, Quach_2007, Anghel_2009}.
+    The production of low energy \glspl{neutron-cold} accordingly maximizes the neutron wavelength, enhancing resolution in neutron imaging systems.
+% ============================================================================ %
+\end{document}%

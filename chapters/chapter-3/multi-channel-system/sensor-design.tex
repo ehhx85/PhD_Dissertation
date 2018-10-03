@@ -1,0 +1,28 @@
+% ./chapters/chapter-3/multi-channel-system/sensor-design.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \subsection{Sensor Design}%
+    \label{sec:chapter-3:multi-channel-system:sensor-design}%
+    % ======================================================================== %
+    The raw \gls{lise} crystal becomes a semiconductor detector through the negative photolithography process outlined in \Xrefappendix{thin-film-processing:negative-photolithography}.
+    A photomask template is drawn using a \gls{cad} editor such as \gls{autocad} and the schematic file is professionally processed into a \SI{5}{\inch} quartz photomask.
+    A completed sensor undergoes two rounds of lithography, one side producing the broadface contact and the other side receiving the pixel array and guard ring, shown in \Xreffigure*{lise-16ch-patterned}.
+    The \gls{lise16} sensor measured \SI{5x5}{\milli\meter} with a \SI{560}{\micro\meter} thickness as reported for the second version of the \num{4x4} array \cite{Herrera_2016}.
+    The sensor was bonded to the substrate \gls{pcb} using \gls{silver-paste} and the pixel metalization was wirebonded to the \gls{pcb} bond pads using the \gls{kns} \gls{wirebonder} following the process described in \Xrefappendix{thin-film-processing:wire-bonding}.
+    The first version of the sensor used larger \SI{1000}{\micro\meter} pixels to span the majority of the active area as shown in \Xreffigure*{lise-16ch-wirebonded}.
+    Initially, gold contacts demonstrated poor adhesion during wirebonding, due to the unrefined fabrication process.
+    To overcome this issue, \ce{In2Se3} contacts were deposited in attempts to form stronger covalent bonds with the crystal bulk.
+    While the first version of the sensor was bonded at each channel, some bonds did not make adequate electrical connection and others eventually broke during transport or operation; only two channels were able to effectively collect neutron data.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    Serving as a proof of concept, the v1 sensor demonstrated functional neutron detection paired with the \gls{preamp} and external acquisition electronics.
+    Lessons learned during processing and fabrication were applied in the second version sensor, shown in \Xreffigure{lise-16ch-wirebonded:b}.
+    A refined polishing and wet etch process resulted in reduced surface roughness and presence of scratching (see \Xrefappendix{thin-film-processing}).
+    Fine tuning the plasma sputtering process parameters, including substrate heating, improved the gold contact adhesion on the \gls{lise} crystal, returning to the original design.
+    Reducing the pixel pitch to \SI{500}{\micro\meter} focused the active array to the center of the crystal, far enough from the edge to avoid field effects.    
+    Depositing a layer of gold roughly \SI{150}{\nano\meter} thick proved sufficient to successfully wirebond all 16 channels and the surrounding guard ring.
+% ============================================================================ %
+\end{document}%

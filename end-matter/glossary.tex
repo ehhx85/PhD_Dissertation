@@ -1,0 +1,20 @@
+% ./end-matter/glossary.tex
+% ============================================================================ %
+\documentclass[../main.tex]{subfiles}
+\begin{document}%
+% ============================================================================ %
+    \begin{scriptsize}%
+        \printnoidxglossary[%
+            title = {Glossary},%
+            type = {mainX},%
+            style = {indexgroup},%
+            nogroupskip,%
+            nonumberlist = {false},%
+            nopostdot = {false},%
+            numberedsection,%
+        ]%
+    \end{scriptsize}%
+    % ======================================================================== %
+    \label{app:glossary}%
+% ============================================================================ %
+\end{document}%

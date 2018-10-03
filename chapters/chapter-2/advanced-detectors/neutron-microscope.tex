@@ -1,0 +1,29 @@
+% ./chapters/chapter-2/advanced-detectors/neutron-microscope.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \subsection{Neutron Microscope}%
+    \label{sec:chapter-2:advanced-detectors:neutron-microscope}%
+    % ======================================================================== %
+    The concept of a neutron microscope stems from the goal of advancing neutron imaging spatial resolution to the \SI{1}{\micro\meter} limit, commonly reached by \gls{x-ray} analogs.
+    The general approach to such a system varies, building off current technologies as a basis for extending present \gls{soa} capabilities.
+    While a true ``neutron microscope" stems from the application of \gls{neutron-cold} Wolter optics \cite{Hussey_2018}, other systems aim to achieve comparable results.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    \citeauthor*{Trtik_2015} explored the possibilities of a neutron microscope using an advanced optics stage coupled to a \gls{high-res} \gls{ccd} or \gls{scmos}.
+    Coupling the objective lens from a lithography instrument (\SI{0.8}{\micro\meter} resolving power) to a \gls{scmos} of \SI{6.5}{\micro\meter} pixel size, the effective image pixel size for the neutron microscope came to be \SI{1.5}{\micro\meter}.
+    With a thin \ce{Gd2O2S}:\ce{Tb} scintillation screen, the system was able to resolve down to \SI{7.6}{\micro\meter} while observing a \gls{fib} enhanced \gls{siemens-star}, milled to a \SI{12}{\micro\meter} period \cite{Trtik_2015}.
+    Pursuing higher neutron detection efficiency, the \SI{2.5}{\micro\meter} thick scintillator film was fabricated with \isotope[157]{Gd} enriched \ce{Gd2O2S}:\ce{Tb}, boosting the neutron sensitivity by over a factor of \num{3} \cite{Trtik_2015a}.
+    In the subsequent iteration, \citeauthor*{Trtik_2016} used the \ce{^{157}Gd2O2S}:\ce{Tb} scintillator screen with a custom designed, 13 lens objective.
+    With a further enhanced \gls{siemens-star} (\SI{8}{\micro\meter} period), the system produced a spatial resolution of \SI{5.4}{\micro\meter} using \num{33} frames captured with a \SI{30}{\second} exposure.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    \citeauthor*{Hussey_2017} described a similar approach underway at \gls{nist}, using a \gls{gadox} screen and centroiding of the output scintillation light.
+    Using two Nikon lenses as the objective and ocular lenses, and a Hamamatsu \gls{mcp} as an image intensifier, the effective pixel pitch measured \SI{1.625}{\micro\meter}.
+    Using event based neutron imaging detection, the system produced a spatial resolution of \SI{2}{\micro\meter}.    
+    They proposed that advances in hardware setup, such as coupling to a \gls{timepix} for hardware based centroiding, could produce an even lower spatial resolution of \SI{1}{\micro\meter} \cite{Hussey_2017}.
+% ============================================================================ %
+\end{document}%

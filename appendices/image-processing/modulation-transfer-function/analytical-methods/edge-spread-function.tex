@@ -1,0 +1,25 @@
+% ./appendices/image-processing/modulation-transfer-function/analytical-methods/edge-spread-function.tex
+% ============================================================================ %
+\documentclass[../../../../main.tex]{subfiles}
+\begin{document}%
+% ============================================================================ %
+    \subsubsection{Edge Spread Function}%
+    \label{app:image-processing:modulation-transfer-function:analytical-methods:edge-spread-function}%
+    % ======================================================================== %
+    After interpolation, the region of interest is flattened by plotting the edge profile, perpendicular to the edge axis, as a function of distance.
+    Shown in \Xreffigure*{mtf-esf-raw}, the edge profile demonstrates varying intensity in both white field and dark field regions.
+    Furthermore, the edge profile has a distinguishable width due to the edge angle imparted by the experimental setup.
+    Some vertical banding can be seen as an artifact of the finite interpolation gain.
+    For each interpolated edge profile \Xvariable{i} the edge angle \Xvariable{\theta} can be removed by offsetting the distance vector \Xvariable{d_{i}} using the calculated value from the Hough transform and the total distance along the edge axis \Xvariable{x_{i}}[] (\Xrefequation{edge-alignment}).
+    % ======================================================================== %
+    \Xequationfile{edge-alignment}%
+    % ======================================================================== %
+    The resulting edge profile, \Xreffigure*{mtf-esf-aligned}, shows a narrower edge transition and no longer has clear banding from the interpolation process.
+    The aligned \gls{esf} still exhibits varying intensity in the dark field and more prominently in the white field regions, due to varying pixel performance and inconsistencies in the open beam.
+    The distance vectors no longer correspond to the original binning after the alignment process.
+    Thus, the \gls{esf} curves are rebinned using the sampling rate in the raw \gls{esf} profile, generating the averaged \gls{esf} profile shown in \Xreffigure*{mtf-esf-averaged}.
+    The averaged \gls{esf} exhibits a significantly smoother white field as well as the dark field region.
+    The edge transition region also follows a smoother slope, benefiting the differentiation process.     
+    After calculating the \gls{lsf}, the edge inflection point was determined and the centered \gls{esf} plotted in \Xreffigure*{mtf-esf-centered}.
+% ============================================================================ %
+\end{document}%

@@ -1,0 +1,36 @@
+% ./equations/reaction-helium.tex
+% ============================================================================ %
+\documentclass[../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \Xequation%    
+    % ======================================================================== %
+    \begin{Xnuclearreaction}%
+    % ======================================================================== %
+    \begin{equation}%
+        \begin{array}{ D E F }%
+            &%
+            \isotope[3][2]{He}%
+            +%
+            n%
+            \rightarrow%
+            \isotope[3][1]{H}%
+            +%
+            p%
+            &%
+            \SI{0.764}{\mega\electronvolt}%
+        \end{array}%
+        \label{eq:reaction-helium-3}%
+    \end{equation}%
+    % ======================================================================== %
+    \begin{equation*}%
+        \begin{array}{ r p{0.50in} l }%
+            E_{T} = \SI{0.191}{\mega\electronvolt}%
+            &&%
+            E_{p} = \SI{0.573}{\mega\electronvolt}%
+        \end{array}%
+    \end{equation*}%
+    % ======================================================================== %
+    \end{Xnuclearreaction}%
+% ============================================================================ %
+\end{document}%

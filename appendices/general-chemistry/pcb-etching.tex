@@ -1,0 +1,76 @@
+% ./appendices/general-chemistry/pcb-etching.tex
+% ============================================================================ %
+\documentclass[../../main.tex]{subfiles}
+\begin{document}%
+% ============================================================================ %
+    \section{PCB Etching}%
+    \label{app:general-chemistry:pcb-etching}%
+    % ======================================================================== %
+    \Glspl{pcb} are essential components used in all semiconducting detection systems, and more generally computer based data acquisition electronics. 
+    A simple, one-sided \gls{pcb} consists of an insulating material, such as \gls{fr4} fiber laminates, clad with a thin layer of conducting material. 
+    Common applications utilize copper cladding deposited by electroplating or laminating, with film thicknesses ranging from \SIrange{0.5}{2.0}{oz\per ft\raiseto{2}} (\SIrange{18}{70}{\micro\meter}).
+    The copper etching process outlined in this section will follow successful patterning with the photolithography techniques described in \Xrefappendix{thin-film-processing:positive-photolithography}.
+    The etching process can be highly exothermic and should be conducted in a fume hood with the sash closed or at wrist level as shown in \Xreffigure*{etching-station}.
+    The correct \gls{ppe} should be used at all times and can be found in the \gls{sds} for the chemicals listed in \Xreftable*{pcb-etch-chemicals}.
+    The etching solution created in this method can be recovered and reused if fabricating a large number of \glspl{pcb}.
+    During prototyping, boards were either etched by themselves or as a pair and the solution was safely disposed as acid waste.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    An industry standard, cupric chloride etching provides a straightforward method for fabricating \glspl{pcb} in the laboratory environment.
+    Cupric chloride offers the following benefits over the alternative, ferric chloride: it does not contaminate the solution with iron, it creates a transparent solution for monitoring etch rate, the solution can be regenerated, and etch rate can be adjusted relatively easy.
+    While there are only four elements in this solution (\ce{H}, \ce{O}, \ce{Cl}, \ce{Cu}), the etch rate can be dramatically altered by the cupric chloride and cuprous chloride concentrations.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    The metallic copper is dissolved by aqueous copper(II) via the \gls{redox} reaction, yielding copper(I) (\Xrefequation{copper-etch-1}).
+    % ======================================================================== %
+    \Xequationfile{copper-etch-1}%
+    % ======================================================================== %
+    In a hydrochloric acid solution, cupric chloride will oxidize metallic copper (\Xrefequation{copper-etch-2}), dissolving the cladding into solution as cuprous chloride.
+    % ======================================================================== %
+    \Xequationfile{copper-etch-2}%
+    % ======================================================================== %
+    The etchant recharge mechanism relies on the oxidation of \ce{Cu1+} back to the usable \ce{Cu2+} form.
+    Illustrated in the partial reaction (\Xrefequation{copper-etch-3}), this depends on free \ce{Cl^{-}} ion concentration in the solution.
+    % ======================================================================== %
+    \Xequationfile{copper-etch-3}%
+    % ======================================================================== %
+    To initially charge the solution with cupric chloride, concentrated hydrogen peroxide is introduced to a piece of pure copper foil.
+    Under normal conditions, hydrogen peroxide will decompose on its own (\Xrefequation{copper-etch-4}) releasing oxygen gas.
+    % ======================================================================== %
+    \begin{subequations}%
+        % ==================================================================== %
+        \Xequationfile{copper-etch-4}%
+        % ==================================================================== %
+        The presence of free \ce{Cl^{-}} will catalyze the chain decomposition of \ce{H2O2} (\Xrefequation{copper-etch-5}) while leaving the \ce{Cl^{-}} in free solution, accelerating the release of oxygen (\Xrefequation{copper-etch-6}).
+        % ==================================================================== %
+        \Xequationfile{copper-etch-5}%
+        \Xequationfile{copper-etch-6}%
+        % ==================================================================== %
+    \end{subequations}%
+    % ======================================================================== %
+    Introducing oxygen to the solution will oxidize metallic copper to cupric oxide (\Xrefequation{copper-etch-7}).
+    % ======================================================================== %
+    \Xequationfile{copper-etch-7}%
+    % ======================================================================== %
+    Cupric oxide, in the presence of \ce{HCl}, will yield cupric chloride (\Xrefequation{copper-etch-8}).
+    % ======================================================================== %
+    \Xequationfile{copper-etch-8}%
+    % ======================================================================== %
+    Experimenting with the concentrated (\SI{>30}{\percent}) hydrogen peroxide, it was possible to readily pre-charge the solution with cupric chloride ions.
+    The initial piece of copper foil was sacrificially added to the solution with drops of concentrated \ce{H2O2}. 
+    Initially, oxygen gas quickly releases from \ce{H2O2} breakdown, accelerated by the free \ce{HCl}.
+    The oxygen will serve as the initial oxidizing agent, removing copper ions from the foil surface and converting them to the desirable cupric chloride.
+    As the free oxygen is consumed during copper oxidation, the freshly generated cupric chloride in the solution will take over as the primary etching agent.
+    Adding copper strips, and promoting dissolution with concentrated \ce{H2O2} charges the etching solution over a period of minutes, instead of days as seen with dilute \ce{H2O2}.
+    Given the amount of copper on the single sided \gls{preamp} \gls{pcb}, the board successfully etched, in a matter of minutes as shown in  \Xreffigure*{etching-process-over-time}.
+    Immediately after submersing the \gls{pcb} in the etching solution, the acid begins to attack the raw metal (\Xreffigure{etching-process-over-time:a}.).
+    Small gas bubbles form along favorable nucleation sites, such as crevices formed at the edges of the resist and the exposed copper.
+    After the first minute, broad regions of copper along the periphery have begun to dissolve as seen in \Xreffigure{etching-process-over-time:b}.
+    The outer trim ring begins to separate from the surrounding metal after about two and a half minutes, shown in \Xreffigure{etching-process-over-time:c}.
+    Approaching the five minute mark (\Xreffigure{etching-process-over-time:d}), the only remaining copper are the resist coated circuit traces and labels.
+    The copper etching process, as tested, has been summarized in \Xreftable*{pcb-etch-process}.
+    The technique has been shown to successfully prototype custom circuit designs, in-house, using the positive photolithography process in the \gls{mprf}. 
+% ============================================================================ %
+\end{document}%

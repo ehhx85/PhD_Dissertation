@@ -1,0 +1,23 @@
+% ./chapters/chapter-3/beamline-testing/imaging-targets/psi-test-masks.tex
+% ============================================================================ %
+\documentclass[../../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \subsubsection*{PSI Resolution Test Mask}%
+    \label{sec:chapter-3:beamline-testing:imaging-targets:psi-test-masks}%
+    % ======================================================================== %
+    \citeauthor*{Grunzweig_2007} described a resolution test mask for neutron imaging designed and fabricated by \gls{psi} \cite{website:Paul_Scherrer_Institute}.
+    Shown in \Xreffigure{psi-mask-small}, the target prescribes a \gls{siemens-star} design, a common resolution assessment tool in optical instrumentation.
+    The \gls{siemens-star} is constructed from spokes radiating outwards from the center of a circle.
+    The spokes form equally spaced, alternating bright and dark regions, typically on an attenuating background.
+    The design used in the \glsreset{siemens-star}\gls{siemens-star} utilizes \num{128} spokes across a \SI{20}{\milli\meter} diameter.
+    As the spokes get closer to the center, their period decreases, or the number of line pairs per unit length increases (in units of \si{\linepairs}).
+    Concentric rings indicate spoke periods of \SIlist[list-units=single]{50;100;200;300;400;500}{\micro\meter}, used for estimating the resolution of the imaging system.
+    In first approximation, the spatial resolution is determined by the period at the radius which no longer distinguishes transparent and attenuating spokes.
+    To create transparent and attenuating regions, the quartz mask contains a \SI{6}{\micro\meter} thin film of \ce{Gd} sandwiched between a \SI{25}{\nano\meter} adhesion layer and a \SI{1}{\micro\meter} capping layer.
+    The photo negatives in \Xreffigures*{psi-mask-small}{psi-mask-large} show the metalized layers as a reflective surface, with the transparent quartz mask indicated by the non-reflective regions.
+    In beam, the \ce{Gd} thin film heavily attenuates the thermal neutron flux, creating attenuating regions while the relatively neutron transparent quartz transmits with approximately open beam intensity. 
+    Also featured in the larger mask, a \SI[product-units=power]{24 x 24}{\milli\meter} grid, spaced at \SI{1}{\milli\meter} intervals, offers a means for measuring distortion and magnification \cite{Grunzweig_2007}.
+    The bottom of the mask contains a series of knife-edge line pairs, decreasing in spacing, to measure the \gls{mtf} as described in \Xrefappendix{image-processing:modulation-transfer-function}. 
+% ============================================================================ %
+\end{document}%

@@ -1,0 +1,30 @@
+% ./chapters/chapter-3/beamline-testing/imaging-targets/additive-manufacturing.tex
+% ============================================================================ %
+\documentclass[../../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \subsubsection*{Additive Manufacturing}%
+    \label{sec:chapter-3:beamline-testing:imaging-targets:additive-manufacturing}%
+    % ======================================================================== %
+    \Gls{am} has become an increasingly popular engineering tool for prototyping and production of complex specialty parts \cite{Thompson_2016}.
+    \citeauthor*{Santamaria_2015} used neutron imaging to actively investigate the water transport in a \gls{pefc}.
+    In this assembly, the manifold housing was fabricated from \gls{plastic:abs} using \gls{am} \cite{Santamaria_2015}.
+    \citeauthor*{Bilheux_2016} reported on the design verification analysis of an Inconel 718 turbine using neutron radiography to investigate the internal structure of the \gls{am} part \cite{Bilheux_2016}. 
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    In the first set of \gls{am} samples, the \gls{cns-y12} imaging target offered a low-cost, disposable, \gls{fdm} part for neutron imaging experiments (see \Xreffigure*{cns-imaging-target}).
+    Printed on an \gls{ultimaker-2}, the target was formed by melting \gls{plastic:pla} filament and tracing the \SI{1.00 x 0.75}{\centi\meter} logo, layer by layer, to gradually build a thickness of \SI{1.0}{\centi\meter}.
+    The nozzles on the \gls{ultimaker-2} may be swapped to adjust the ejected fillament diameter including \SIlist[list-units=single]{0.25;0.4;0.6;0.8}{\milli\meter} hardware \cite{website:Ultimaker}.
+    As the name implies, the filament fuses each successive layer into a semi-solid object, with some residual inter-filament porosity.
+    This method of construction creates unique internal density fluctuations similar to professionally manufactured \gls{am} parts.
+    A smaller \gls{power-t} imaging target was also produced using the same \gls{am} process, shown in \Xreffigure*{power-t-imaging-target}.
+    The \gls{power-t} exhibited rounding about the corners due to the smaller features approaching the resolution limits of the \gls{fdm} printer.
+    The target measured roughly \SI[product-units=power]{5 x 5}{\milli\meter} and \SI{5}{\milli\meter} thick, creating less attenuation and white field contrast than the \gls{cns-y12} target.
+    Both the \gls{cns-y12} target and the \gls{power-t} target were used in the first \gls{lise} scintillator array experiments \cite{Lukosi_2016a}.
+    A revised set of \gls{am} imaging targets were produced for the \gls{lisepix} experiments, using a higher fidelity \gls{sla} printer.
+    Shown in \Xreffigure{power-t-imaging-target:b}, the \gls{power-t} cube was printed on a \gls{form-2}, using the proprietary \gls{formlabs} v2 Clear Resin, at a \SI{25}{\micro\meter} layer thickness (see \Xrefsupplement*{neutron-imaging-target-stand}).
+    The \SI[product-units=power]{1 x 1 x 1}{\centi\meter} cube had the \gls{power-t} logo inscribed the full thickness of the part, with the logo measuring \SI{6}{\milli\meter} on a side \cite{Herrera_2018}.
+    Because the \gls{form-2} uses a resin bath for feed material, the resulting part exhibits minimal porosity and functions as a uniform, dense, plastic part.
+% ============================================================================ %
+\end{document}%

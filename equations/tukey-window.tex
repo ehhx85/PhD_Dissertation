@@ -1,0 +1,29 @@
+% ./equations/tukey-window.tex
+% ============================================================================ %
+\documentclass[../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \Xequation%    
+    % ======================================================================== %
+    \begin{equation}%
+        w(n)%
+        =%
+        \left\{%
+            \begin{array}{cl}%
+            \dfrac{1}{2} \left[ 1 + \cos\left( \dfrac{2 \pi n}{\alpha(N - 1)} - \pi \right) \right]%
+            &%
+            0 \leq n < \dfrac{\alpha (N - 1)}{2}%
+            \\[2ex]%
+            1%
+            &%
+            \dfrac{\alpha (N - 1)}{2} \leq n \leq (N - 1)(1 - \dfrac{\alpha}{2})%
+            \\[2ex]%
+            \dfrac{1}{2} \left[ 1 + \cos\left( \dfrac{2 \pi n}{\alpha(N - 1)} - \dfrac{2 \pi}{\alpha} + \pi \right) \right]%
+            &%
+            (N - 1)(1 - \dfrac{\alpha}{2}) < n \leq (N - 1)%
+            \end{array}%
+        \right.%
+        \label{eq:tukey-window}%
+    \end{equation}%
+% ============================================================================ %
+\end{document}%

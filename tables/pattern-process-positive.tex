@@ -1,0 +1,80 @@
+% ./tables/pattern-process-positive.tex
+% ============================================================================ %
+\documentclass[../main.tex]{subfiles}%
+\begin{document}
+% ============================================================================ %
+    \Xtable%    
+    \begin{table}[p]%
+    % ======================================================================== %
+        \caption%
+            [Photolithography with positive photoresist for \glstext{pcb} manufacturing]%
+            {Photolithography with positive photoresist for \gls{pcb} manufacturing}%
+        \label{tbl:pattern-process-positive}%
+        % ==================================================================== %
+        \begin{tabu}{ c p{5.50in} }%
+        % ==================================================================== %
+            \toprule%            
+            % ================================================================ %
+            \centering\textbf{Step} &%
+            \centering\textbf{Action}\\%
+            % ================================================================ %
+            \toprule%            
+            % ================================================================ %
+            \Xsubreffigure{photolithography-positive-pcb:a}%
+            &%
+            Clean \gls{pcb} surface and remove and protective layer with solvents as necessary.%
+            \\%
+            \midrule%
+            % ================================================================ %
+            \Xsubreffigure{photolithography-positive-pcb:b}%
+            &%
+            Generously apply \gls{pr1-1000a} across \gls{pcb} and run positive spin coating recipe.
+            Follow with soft bake on hotplate at \SI{120}{\celsius} for \SI{120}{\second}.%
+            \\%
+            \midrule%
+            % ================================================================ %
+            \Xsubreffigure{photolithography-positive-pcb:c}%
+            &%
+            Install photomask in \gls{ma6}. Load \gls{pcb} and align photomask.%
+            \\%
+            \midrule%
+            % ================================================================ % 
+            \Xsubreffigure{photolithography-positive-pcb:d}%
+            &%
+            Expose resist for \SI{4}{\second} using hard contact setting on \gls{ma6}.%
+            \\%
+            \midrule%
+            % ================================================================ %
+            \Xsubreffigure{photolithography-positive-pcb:e}%
+            &%
+            Visually inspect pattern for full exposure at edges of \gls{pcb} and through holes.%
+            \\%
+            \midrule%
+            % ================================================================ %
+            \Xsubreffigure{photolithography-positive-pcb:f}%
+            &%
+            Dispense \gls{rd6} across surface of \gls{pcb} until transferred pattern is well defined.
+            Rinse surface with \gls{di-water} to clean remaining \gls{rd6}.
+            Dry patterned surface using compressed nitrogen gun, driving all fluid from center outward.
+            Optional bake at \SI{145}{\celsius} for \SI{5}{\minute} to anneal resist.%
+            \\%
+            \midrule%
+            % ================================================================ %
+            \Xsubreffigure{photolithography-positive-pcb:g}%
+            &%
+            Etch copper layer as described in \Xrefappendix{general-chemistry:pcb-etching}.%
+            \\%
+            \midrule%
+            % ================================================================ %
+            \Xsubreffigure{photolithography-positive-pcb:h}%
+            &%
+            Dissolve remaining resist using \gls{acetone} to expose the patterned metal layer.
+            Remove surface residue with \gls{ipa}.%
+            \\%
+            \bottomrule%
+        % ==================================================================== %
+        \end{tabu}%
+    % ======================================================================== %
+    \end{table}%
+% ============================================================================ %
+\end{document}%

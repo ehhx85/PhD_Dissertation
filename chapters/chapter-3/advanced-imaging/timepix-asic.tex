@@ -1,0 +1,20 @@
+% ./chapters/chapter-3/advanced-imaging/timepix-asic.tex
+% ============================================================================ %
+\documentclass[../../../main.tex]{subfiles}
+\begin{document}%
+% ============================================================================ %
+    \subsection{Timepix ASIC}%
+    \label{sec:chapter-3:advanced-imaging:timepix-asic}%
+    % ======================================================================== %
+    The \glsname{timepix}, derived from the \gls{medipix2}, offers a \gls{high-res} multi-mode platform, applicable for neutron imaging.
+    The \gls{asic} contains a \num{256 x 256} array of pixels, each containing its own \gls{preamp} and discriminator with threshold input.
+    Consuming approximately \SI{13.5}{\micro\watt} of power, each \SI{55 x 55}{\micro\meter} pixel offers a dynamic counting range, spanning \numrange{0}{11810} in this system, registering events exceeding the threshold when operated in event counting mode.
+    To electronically couple the \gls{asic}, a \SI{20}{\micro\meter} octagonal anode caps each pixel \cite{Llopart_2007}.
+    Shown in \Xreffigure*{timepix-layering-diagram}, the \gls{asic} electrodes (colored black) align with the corresponding \SI{30}{\micro\meter} diameter gold \gls{lise} contacts (see \Xrefsupplement*{timepix-layer-diagram}).
+    Sandwiched between each pair of contacts, a \SI{35}{\micro\meter} diameter indium bump bond (colored silver) created an electrical contact and the mechanical bond between the \gls{lisepix} sensor and the \glstext{timepix} \gls{asic}.
+    The gold pixels on the \gls{lisepix} sensor measured \SI{100}{\nano\meter} thick, while the broadface contact on the other side presented a slightly thicker \SI{125}{\nano\meter} gold layer.    
+    Approximately \SI{9.0 x 7.0}{\milli\meter} in size, the \SI{550}{\micro\meter} thick crystal covered over a quarter of the available channels on the \gls{asic}.
+    After assessing the device response, the active area covered an effective array of \num{150 x 100} pixels, representing an area of \SI{8.25 x 5.50}{\milli\meter}, in accordance with the broadface contact dimensions \cite{Herrera_2018}.
+    The bonded \gls{lisepix} sensor and \gls{asic} are shown in \Xreffigure{timepix-layering-diagram:b}, where the wirebonds at the bottom of the image connect the \gls{asic} to the readout \gls{pcb}.
+% ============================================================================ %
+\end{document}%

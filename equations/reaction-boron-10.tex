@@ -1,0 +1,66 @@
+% ./equations/reaction-boron-10.tex
+% ============================================================================ %
+\documentclass[../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \Xequation%    
+    % ======================================================================== %
+    \begin{Xnuclearreactionsub}%
+    % ======================================================================== %
+    \begin{equation}%
+        \begin{array}{ D E F }%
+            & \isotope[10][5]{B} + n%
+            \rightarrow%
+            \isotope[7][3]{Li} + \alpha%
+            &%
+            \SI{2.792}{\mega\electronvolt}%
+        \end{array}%
+        \label{eq:reaction-boron-10:a}%
+    \end{equation}%
+    % ======================================================================== %
+    \XEquationSpace%
+    % ======================================================================== %
+    \begin{equation}%
+        \begin{array}{ D E F }%
+            &%
+            \isotope[10][5]{B}%
+            +%
+            n%
+            \rightarrow%
+            \isotope[7][3]{Li^*}%
+            +%
+            \alpha%
+            &%
+            \SI{2.310}{\mega\electronvolt}%
+        \end{array}%
+        \label{eq:reaction-boron-10:b}%
+    \end{equation}%
+    % ======================================================================== %
+    \XEquationSpace%
+    % ======================================================================== %
+    \begin{equation}%
+        \begin{array}{ D E F }%
+            &%
+            \isotope[7][3]{Li^*}%
+            \rightarrow%
+            \isotope[7][3]{Li}%
+            +%
+            \gamma (\SI{480}{\kilo\electronvolt})%
+            &%
+            \mathrm{(IT)}%
+        \end{array}%
+        \label{eq:reaction-boron-10:c}%
+    \end{equation}%
+    % ======================================================================== %
+    \begin{equation*}%
+        \begin{array}{ r p{0.50in} l }%
+            E_{\isotope[7]{Li}} = \SI{0.84}{\mega\electronvolt}%
+            &&%
+            E_{\isotope{\alpha}} = \SI{1.47}{\mega\electronvolt}%
+        \end{array}%
+    \end{equation*}%
+    % ======================================================================== %
+    \label{eq:reaction-boron-10}%
+    \end{Xnuclearreactionsub}%
+% ============================================================================ %
+\end{document}%

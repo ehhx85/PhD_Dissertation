@@ -1,0 +1,39 @@
+% ./front-matter/contents.tex
+% ============================================================================ %
+\documentclass[../main.tex]{subfiles}
+\begin{document}%
+% ============================================================================ %
+    \Xchapter%
+    \tableofcontents%
+    % ======================================================================== %
+    \Xchapter%
+    \listoftables%
+    % ======================================================================== %
+    \Xchapter%
+    \listoffigures%
+    % ======================================================================== %
+    \Xchapter%
+    \listofsupplements%
+    \AddSupplementaryFilesHeader%
+    % ======================================================================== %
+    \Xchapter%
+    % ======================================================================== %
+    \begin{scriptsize}%
+        \printnoidxglossary[%
+            title = {List of Terminology},%
+            type = {acronymX},%
+            %sort = {letter},%
+            style = {mcolindexgroup},%
+            nogroupskip = {false},%
+            nonumberlist = {true},%
+            nopostdot = {true},%
+        ]%
+    \end{scriptsize}%
+    % ======================================================================== %
+    \newpage%
+    % ======================================================================== %
+    \Xchapter%
+    \pagenumbering{arabic}%
+    \setcounter{page}{1}%
+% ============================================================================ %
+\end{document}%

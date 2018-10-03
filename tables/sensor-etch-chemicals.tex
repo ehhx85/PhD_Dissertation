@@ -1,0 +1,54 @@
+% ./tables/sensor-etch-chemicals.tex
+% ============================================================================ %
+\documentclass[../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \Xtable%    
+    \begin{table}%
+    % ======================================================================== %
+        \caption%
+            [Sensor \glstext{brometh} etching chemicals]%
+            {Sensor \gls{brometh} etching chemicals}%
+        \label{tbl:sensor-etch-chemicals}%
+        % ==================================================================== %
+        \begin{tabu}{ p{1.25in} c c p{1.25in} }%
+        % ==================================================================== %
+            \toprule%
+            \centering\textbf{Name} &%
+            \centering\textbf{Formula} &%
+            \centering\textbf{Concentration} &%
+            \centering\textbf{Usage}\\%
+            \toprule%
+            % ================================================================ %
+            Acid waste &%
+            - &%
+            acid solution &%
+            waste \\%
+            % ================================================================ %
+            \Glsname{brometh} &%
+            \glschemical{brometh} &%
+            5\% \glstext{bromine} &%
+            etching solution \\%
+            % ================================================================ %
+            \Glsname{bromine} &%
+            \glschemical{bromine} &%
+            pure liquid &%
+            halogen for etching \\%
+            % ================================================================ %
+            \Glsname{di-water} &%
+            \glschemical{di-water} &%
+            pure liquid &%
+            cleaning / dilution \\%
+            % ================================================================ %
+            \Glsname{methanol} &%
+            \glschemical{methanol} &%
+            pure liquid &%
+            solvent \\%
+            % ================================================================ %
+            \bottomrule%
+        % ==================================================================== %
+        \end{tabu}%
+    % ======================================================================== %
+    \end{table}%
+% ============================================================================ %
+\end{document}%

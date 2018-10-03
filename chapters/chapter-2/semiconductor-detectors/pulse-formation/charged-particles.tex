@@ -1,0 +1,26 @@
+% ./chapters/chapter-2/semiconductor-detectors/pulse-formation/charged-particles.tex
+% ============================================================================ %
+\documentclass[../../../../main.tex]{subfiles}%
+\begin{document}%
+% ============================================================================ %
+    \subsubsection{Charged Particle Interactions}%
+    \label{sec:chapter-2:semiconductor-detectors:pulse-formation:charged-particles}%
+    % ======================================================================== %
+    Interactions involving charged particle radiation generally interact with the orbital electrons of a target atom, instead of the nucleus.
+    Light charged particles include \glspl{beta-plus-particle}, \glspl{beta-minus-particle}, \glspl{delta-ray}, and \glspl{epsilon-ray}, all possessing the rest mass of an electron.
+    Heavy charge particles include species with a mass of a proton or greater.
+    While this definition includes all heave ions, typically the larger variations are found in extraterrestrial or nuclear reactor environments.
+    In neutron detection, smaller nuclei such as protons and \glspl{alpha-particle} are the most common forms of heavy charged particles.
+    % ======================================================================== %
+    \par%
+    % ======================================================================== %
+    Heavier charged particles may be slowed through Coulombic interactions with the electrons in the target material, generally carrying a positive electronic charge.
+    The charged particles exert an electromagnetic force on the outermost orbital electrons, potentially stripping them from the atom.
+    If the atom is not ionized, it may still be excited, potentially leading to other emissions \cite{book:Das_2003}.
+    These particles will follow a linear trajectory, releasing a majority of their energy close to the end of travel as described by their Bragg curve.
+    To determine the range of \glspl{triton-particle} and \glspl{alpha-particle} in \gls{lise}, the \gls{srim} software package was used to simulate 500 ions of each type traveling through the sensor, shown in \Xreffigure*{ion-travel} \cite{Ziegler_2010}.
+    The simulated trajectory cloud offers a statistical average for the range of each ion, evaluating to \SI{39.4}{\micro\meter} for a \gls{triton-particle} and \SI{7.44}{\micro\meter} for an \gls{alpha-particle} \cite{Lukosi_2016}.
+    Light particles experience the following loss mechanisms: elastic scattering, inelastic scattering, bremsstrahlung emission (braking radiation), and positron annihilation. 
+    These particles, typically negative, scatter off orbital electrons, potentially ejecting them as \glspl{delta-ray} \cite{book:Turner_1995}.
+% ============================================================================ %
+\end{document}%
